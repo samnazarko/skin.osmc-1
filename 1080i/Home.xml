@@ -27,7 +27,7 @@
                 <font>font_MainMenu</font>
                 <aligny>top</aligny>
                 <align>right</align>
-                <label>2Movies</label>
+                <label>TVShows</label>
             </control>
             <control type="button" id="9003">
                 <top>200</top>
@@ -36,12 +36,12 @@
                 <font>font_MainMenu</font>
                 <aligny>top</aligny>
                 <align>right</align>
-                <label>3Movies</label>
+                <label>Testing</label>
             </control>
         </control>
         <control type="group" id="700">
             <description>MOVIES</description>
-            <visible>Control.HasFocus(9001) | Container.HasFocus(700)</visible>
+            <visible>Control.HasFocus(9001) | Container.HasFocus(50)</visible>
             <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
             <control type="image">
                 <texture>mainbackground.png</texture>
@@ -49,12 +49,13 @@
         </control>
         <control type="group" id="700">
             <description>TVSHOWS</description>
-            <visible>Control.HasFocus(9002) | Control.HasFocus(50)</visible>
+            <visible>Control.HasFocus(9002) | Control.HasFocus(51) | Control.HasFocus(511)</visible>
             <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
+            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" delay="60" end="-100,0">Conditional</animation>
             <control type="image">
                 <texture>mainbackground.png</texture>
             </control>
-            <control type="panel" id="50">
+            <control type="panel" id="51">
                 <top>200</top>
                 <left>50</left>
                 <width>400</width>
@@ -63,8 +64,9 @@
                 <onright>-</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
+                <onclick>SetFocus(222)</onclick>
                 <scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="110" width="400">
+                <itemlayout height="85" width="400">
                     <control type="textbox">
                         <width>400</width>
                         <height>110</height>
@@ -75,7 +77,7 @@
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="110" width="120">
+                <focusedlayout height="85" width="400">
                     <control type="textbox">
                         <width>400</width>
                         <height>110</height>
@@ -85,7 +87,58 @@
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
-                <content>videodb://tvshows/titles/</content>
+                <content sortby="title" sortorder="ascending">videodb://tvshows/titles/</content>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <centerleft>600</centerleft>
+                    <centertop>540</centertop>
+                    <height>600</height>
+                    <width>400</width>
+                    <aspectratio align="top">keep</aspectratio>
+                    <texture>$INFO[Container(51).ListItem.Art(thumb)]</texture>
+                </control>
+            </control>
+            <control type="group" id="222">
+                <description>TVSHOWS</description>
+                <visible allowhiddenfocus="true">Control.HasFocus(511) </visible>
+                <animation effect="slide" time="600" delay="200" start="1920,0" end="200,0">Visible</animation>
+                <control type="image">
+                    <texture>mainbackground.png</texture>
+                </control>
+                <control type="panel" id="511">
+                    <top>200</top>
+                    <left>50</left>
+                    <width>400</width>
+                    <height>680</height>
+                    <onleft>51</onleft>
+                    <onright>-</onright>
+                    <onup>noop</onup>
+                    <ondown>noop</ondown>
+                    <scrolltime tween="sine" easing="out">200</scrolltime>
+                    <itemlayout height="110" width="400">
+                        <control type="textbox">
+                            <width>400</width>
+                            <height>110</height>
+                            <textcolor>black</textcolor>
+                            <font>font30_title</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="110" width="120">
+                        <control type="textbox">
+                            <width>400</width>
+                            <height>110</height>
+                            <font>font30_title</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </focusedlayout>
+                    <content sortby="title" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/]</content>
+                </control>
             </control>
         </control>
     </controls>
