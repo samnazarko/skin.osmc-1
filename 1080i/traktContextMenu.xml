@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <controls>
+        <control type="group">
+            <left>685</left>
+            <top>250</top>
+            <control type="image" id="2">
+                <width>550</width>
+                <height>500</height>
+                <texture border="40">sidepanel/Back.png</texture>
+            </control>
+                <control type="list" id="111">
+                    <width>500</width>
+                    <height>500</height>
+                    <onup>111</onup>
+                    <ondown>111</ondown>
+                    <onleft>111</onleft>
+                    <onright>111</onright>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout height="40" width="500">
+                        <control type="label">
+                            <width>500</width>
+                            <height>40</height>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <font>Size30</font>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="40" width="500">
+                        <control type="image">
+                            <top>2</top>
+                            <width>500</width>
+                            <height>40</height>
+                            <texture border="5" colordiffuse="$VAR[diffuseselect]">images/buttonselect2.png</texture>
+                            <colordiffuse></colordiffuse>
+                            <visible>Control.HasFocus(111)</visible>
+                        </control>
+                        <control type="label">
+                            <width>500</width>
+                            <height>40</height>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <font>Size30</font>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </focusedlayout>
+                </control>
+        </control>
+    </controls>
+</window>

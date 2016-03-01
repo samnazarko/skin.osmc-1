@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="icons">
+        <control type="group" description="Icons view">
+            <visible>Control.IsVisible(53)</visible>
+            <control type="group">
+                <control type="panel" id="53">
+                    <visible>!container.Content(episodes)</visible>
+                    <centerleft>960</centerleft>
+                    <top>100</top>
+                    <width>1920</width>
+                    <height>990</height>
+                    <onleft condition="!Skin.HasSetting(ViewsMenuOff)">9000</onleft>
+                    <onleft condition="Skin.HasSetting(ViewsMenuOff)">noop</onleft>
+                    <onright condition="!Skin.HasSetting(Scrollbars_Passive)">60</onright>
+                    <onright condition="Skin.HasSetting(Scrollbars_Passive)">noop</onright>
+                    <onup>53</onup>
+                    <ondown>53</ondown>
+                    <viewtype label="53">Grid</viewtype>
+                    <pagecontrol>60</pagecontrol>
+                    <scrolltime tween="sine" easing="inout">400</scrolltime>
+                    <preloaditems>2</preloaditems>
+                    <!--SQUARE-->
+                    <itemlayout condition="Container.Content(Files) | Container.Content(Addons) | Container.Content(tags) | [ListItem.IsFolder + !Container.Content(genres) + !Container.Content(tvshows)+ !Container.Content(movies) + !Container.Content(sets) + !Container.Content(seasons) + !Container.Content(actors) + !Container.Content(musicvideos)]" height="250" width="246">
+                        <control type="image">
+                            <centerleft>220</centerleft>
+                            <top>24</top>
+                            <width>225</width>
+                            <height>225</height>
+                            <texture colordiffuse="aa222222">images/white.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <top>24</top>
+                            <centerleft>220</centerleft>
+                            <width>225</width>
+                            <height>225</height>
+                            <texture fallback="DefaultFolder.png" background="true">$VAR[locandine]</texture>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                        </control>
+                        <control type="image">
+                            <top>24</top>
+                            <centerleft>220</centerleft>
+                            <width>225</width>
+                            <height>225</height>
+                            <texture border="2">images/dvdbox.png</texture>
+                        </control>
+                        <control type="textbox">
+                            <visible>!StringCompare(ListItem.Label,..) + [Container.Content(years) | Container.Content(directors) | Container.Content(countries) | Container.Content(tags)]</visible>
+                            <animation effect="slide" condition="Container.Content(years)" end="0,-31">Conditional</animation>
+                            <top>96</top>
+                            <centerleft>220</centerleft>
+                            <width>140</width>
+                            <height>90</height>
+                            <align>center</align>
+                            <font>size24</font>
+                            <autoscroll>false</autoscroll>
+                            <textcolor>black</textcolor>
+                            <shadowcolor>-</shadowcolor>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout condition="Container.Content(Files) | Container.Content(Addons) | Container.Content(tags) | [ListItem.IsFolder + !Container.Content(genres) + !Container.Content(tvshows)+ !Container.Content(movies) + !Container.Content(sets) + !Container.Content(seasons) + !Container.Content(actors) + !Container.Content(musicvideos)]" height="250" width="246">
+                        <control type="group">
+                            <animation effect="zoom" center="220,35" end="120" time="200" reversible="true">Focus</animation>
+                            <animation effect="zoom" center="220,35" start="120" end="100" time="100" reversible="true">Unfocus</animation>
+                            <include>Scrollanim</include>
+                            <control type="image">
+                                <animation effect="fade" start="0" end="100" time="100" reversible="false">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="50" reversible="false">Unfocus</animation>
+                                <centerleft>220</centerleft>
+                                <top>9</top>
+                                <width>256</width>
+                                <height>256</height>
+                                <texture colordiffuse="9f5555ff">images/white.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <centerleft>220</centerleft>
+                                <top>24</top>
+                                <width>225</width>
+                                <height>225</height>
+                                <texture colordiffuse="aa222222">images/white.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <top>24</top>
+                                <centerleft>220</centerleft>
+                                <width>225</width>
+                                <height>225</height>
+                                <texture fallback="DefaultFolder.png" background="true">$VAR[locandine]</texture>
+                                <aspectratio scalediffuse="false">keep</aspectratio>
+                            </control>
+                            <control type="image">
+                                <top>24</top>
+                                <centerleft>220</centerleft>
+                                <width>225</width>
+                                <height>225</height>
+                                <texture border="2">images/dvdbox.png</texture>
+                            </control>
+                            <control type="textbox">
+                                <visible>!StringCompare(ListItem.Label,..) + [Container.Content(years) | Container.Content(directors) | Container.Content(countries) | Container.Content(tags)]</visible>
+                                <animation effect="slide" condition="Container.Content(years)" end="0,-31">Conditional</animation>
+                                <top>96</top>
+                                <centerleft>220</centerleft>
+                                <width>140</width>
+                                <height>90</height>
+                                <align>center</align>
+                                <font>size24</font>
+                                <autoscroll>false</autoscroll>
+                                <textcolor>black</textcolor>
+                                <shadowcolor>-</shadowcolor>
+                                <info>ListItem.Label</info>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <!--SQUAREND-->
+                    <!--ACTORS-->
+                    <itemlayout condition="Container.Content(actors)" height="300" width="246">
+                        <control type="image">
+                            <centerleft>220</centerleft>
+                            <top>22</top>
+                            <width>228</width>
+                            <height>278</height>
+                            <texture>images/white.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <top>24</top>
+                            <centerleft>220</centerleft>
+                            <width>225</width>
+                            <height>225</height>
+                            <texture fallback="images/black.png" background="true">$VAR[locandine]</texture>
+                            <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                            <bordertexture border="4">images/dvdbox.png</bordertexture>
+                            <bordersize>1</bordersize>
+                        </control>
+                        <control type="label">
+                            <bottom>0</bottom>
+                            <centerleft>220</centerleft>
+                            <width>225</width>
+                            <height>60</height>
+                            <align>center</align>
+                            <font>fancy</font>
+                            <textcolor>black</textcolor>
+                            <shadowcolor>-</shadowcolor>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout condition="Container.Content(actors)" height="300" width="246">
+                        <control type="group">
+                            <animation effect="zoom" center="190,35" end="120" time="200" reversible="true">Focus</animation>
+                            <animation effect="zoom" center="190,35" start="120" end="100" time="100" reversible="true">Unfocus</animation>
+                            <control type="image">
+                                <animation effect="fade" start="0" end="100" time="100" reversible="false">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="50" reversible="false">Unfocus</animation>
+                                <centerleft>220</centerleft>
+                                <top>9</top>
+                                <width>256</width>
+                                <height>306</height>
+                                <texture colordiffuse="9f5555ff">images/white.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <centerleft>220</centerleft>
+                                <top>22</top>
+                                <width>228</width>
+                                <height>278</height>
+                                <texture>images/white.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <top>24</top>
+                                <centerleft>220</centerleft>
+                                <width>225</width>
+                                <height>225</height>
+                                <texture fallback="images/black.png" background="true">$VAR[locandine]</texture>
+                                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <bordertexture border="4">images/dvdbox.png</bordertexture>
+                                <bordersize>1</bordersize>
+                            </control>
+                            <control type="label">
+                                <bottom>0</bottom>
+                                <centerleft>220</centerleft>
+                                <width>225</width>
+                                <height>60</height>
+                                <align>center</align>
+                                <font>fancy</font>
+                                <textcolor>black</textcolor>
+                                <shadowcolor>-</shadowcolor>
+                                <info>ListItem.Label</info>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <!--ACTORSEND-->
+                    <!--GENRAL-->
+                    <itemlayout height="333" width="222">
+                        <control type="group">
+                            <control type="image">
+                                <centerleft>183</centerleft>
+                                <centertop>181</centertop>
+                                <width>220</width>
+                                <height>330</height>
+                                <texture background="true" fallback="DefaultGenreIcon.jpg">$VAR[locandine]</texture>
+                                <colordiffuse>FFEEEEEE</colordiffuse>
+                                <aspectratio>scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <centerleft>183</centerleft>
+                                <centertop>181</centertop>
+                                <width>220</width>
+                                <height>330</height>
+                                <texture>$VAR[dvdbox]</texture>
+                            </control>
+                            <control type="image" description="WatchStatus">
+                                <left>68</left>
+                                <top>317</top>
+                                <height>32</height>
+                                <width>60</width>
+                                <aspectratio align="left">keep</aspectratio>
+                                <texture>$VAR[WatchStatus]</texture>
+                            </control>
+                            <control type="image" description="Mpaa">
+                                <visible>!IsEmpty(ListItem.Mpaa)</visible>
+                                <left>250</left>
+                                <top>240</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[MPAAS,Mpaa/,.png]</texture>
+                            </control>
+                            <control type="image">
+                                <visible>ListItem.IsCollection</visible>
+                                <left>250</left>
+                                <top>310</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>badges/setsFO.png</texture>
+                            </control>
+                            <control type="textbox">
+                                <visible>Container.Content(genres) + !StringCompare(ListItem.Label,..)</visible>
+                                <top>20</top>
+                                <centerleft>183</centerleft>
+                                <width>284</width>
+                                <height>40</height>
+                                <font>Size22</font>
+                                <info>ListItem.Label</info>
+                                <centerleft>147</centerleft>
+                                <align>center</align>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="500" width="286">
+                        <control type="group">
+                            <animation effect="zoom" center="183,22" start="77" end="100" time="200" reversible="true">Focus</animation>
+                            <animation effect="zoom" center="183,22" start="100" end="77" time="50" reversible="true">Unfocus</animation>
+                            <control type="group">
+                                <animation effect="fade" start="0" end="100" time="100" reversible="false">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="50" reversible="false">Unfocus</animation>
+                                <control type="image">
+                                    <centertop>231</centertop>
+                                    <centerleft>183</centerleft>
+                                    <width>320</width>
+                                    <height>464</height>
+                                    <texture colordiffuse="$VAR[diffuseselect]">images/white.png</texture>
+                                    <aspectratio>stretch</aspectratio>
+                                </control>
+                                <control type="image">
+                                    <centertop>231</centertop>
+                                    <centerleft>183</centerleft>
+                                    <width>320</width>
+                                    <height>464</height>
+                                    <texture colordiffuse="$VAR[diffuseselect]">images/white.png</texture>
+                                    <aspectratio>stretch</aspectratio>
+                                </control>
+                            </control>
+                            <control type="image">
+                                <centertop>231</centertop>
+                                <centerleft>183</centerleft>
+                                <width>286</width>
+                                <height>430</height>
+                                <texture background="true" fallback="DefaultGenreIcon.jpg">$VAR[locandine]</texture>
+                                <aspectratio>scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <centertop>231</centertop>
+                                <centerleft>183</centerleft>
+                                <width>286</width>
+                                <height>430</height>
+                                <texture>$VAR[dvdbox]</texture>
+                            </control>
+                            <control type="group">
+                                <visible>!StringCompare(ListItem.Label,..) + !Skin.HasSetting(noinfosicon)</visible>
+                                <animation effect="fade" start="0" end="100" delay="2000" time="300">Focus</animation>
+                                <control type="image">
+                                    <centertop>231</centertop>
+                                    <centerleft>183</centerleft>
+                                    <width>286</width>
+                                    <height>430</height>
+                                    <texture colordiffuse="CC000000">images/white.png</texture>
+                                    <aspectratio>scale</aspectratio>
+                                </control>
+                                <control type="textbox">
+                                    <centerleft>183</centerleft>
+                                    <top>34</top>
+                                    <width>284</width>
+                                    <height>320</height>
+                                    <font>size24</font>
+                                    <align>center</align>
+                                    <label>$VAR[iconovertext]</label>
+                                    <aspectratio>scale</aspectratio>
+                                </control>
+                                <control type="image">
+                                    <visible>Container.Content(movies) | Container.Content(musicvideos)</visible>
+                                    <centerleft>183</centerleft>
+                                    <top>354</top>
+                                    <height>1</height>
+                                    <width>286</width>
+                                    <texture>lines/line1.png</texture>
+                                </control>
+                                <control type="image" description="Studio">
+                                    <visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+                                    <centerleft>183</centerleft>
+                                    <top>330</top>
+                                    <textcolor>orange</textcolor>
+                                    <width>161</width>
+                                    <height>109</height>
+                                    <texture colordiffuse="main">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+                                </control>
+                                <control type="group">
+                                    <centerleft>172</centerleft>
+                                    <top>360</top>
+                                    <control type="image">
+                                        <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+                                        <height>35</height>
+                                        <width>80</width>
+                                        <aspectratio>keep</aspectratio>
+                                        <texture>$INFO[ListItem.VideoResolution,badges/Video/,.png]</texture>
+                                    </control>
+                                    <control type="image">
+                                        <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                                        <top>40</top>
+                                        <height>35</height>
+                                        <width>80</width>
+                                        <aspectratio>keep</aspectratio>
+                                        <texture>$INFO[ListItem.VideoCodec,badges/Video/,.png]</texture>
+                                    </control>
+                                    <control type="image">
+                                        <visible>!IsEmpty(ListItem.FileExtension)</visible>
+                                        <left>85</left>
+                                        <height>35</height>
+                                        <width>80</width>
+                                        <aspectratio>keep</aspectratio>
+                                        <texture>$INFO[ListItem.FileExtension,badges/Video/,.png]</texture>
+                                    </control>
+                                    <control type="image">
+                                        <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                                        <left>170</left>
+                                        <height>35</height>
+                                        <width>80</width>
+                                        <aspectratio>keep</aspectratio>
+                                        <texture>$INFO[ListItem.AudioCodec,badges/Audio/,.png]</texture>
+                                    </control>
+                                    <control type="image">
+                                        <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                                        <left>170</left>
+                                        <top>40</top>
+                                        <height>35</height>
+                                        <width>80</width>
+                                        <aspectratio>keep</aspectratio>
+                                        <texture>$INFO[ListItem.AudioChannels,badges/,.png]</texture>
+                                    </control>
+                                </control>
+                            </control>
+                            <control type="image" description="WatchStatus">
+                                <left>36</left>
+                                <top>418</top>
+                                <height>32</height>
+                                <width>60</width>
+                                <aspectratio align="left">keep</aspectratio>
+                                <texture>$VAR[WatchStatus]</texture>
+                            </control>
+                            <control type="image" description="Mpaa">
+                                <visible>!IsEmpty(ListItem.Mpaa)</visible>
+                                <left>274</left>
+                                <top>306</top>
+                                <height>42</height>
+                                <width>42</width>
+                                <texture>$VAR[MPAAS,Mpaa/,.png]</texture>
+                            </control>
+                            <control type="image">
+                                <visible>ListItem.IsCollection</visible>
+                                <left>274</left>
+                                <top>395</top>
+                                <height>42</height>
+                                <width>42</width>
+                                <texture>badges/SetsFO.png</texture>
+                            </control>
+                            <control type="textbox">
+                                <visible>Container.Content(genres) + !StringCompare(ListItem.Label,..)</visible>
+                                <top>20</top>
+                                <centerleft>183</centerleft>
+                                <width>284</width>
+                                <height>100</height>
+                                <font>Size28</font>
+                                <info>ListItem.Label</info>
+                                <centerleft>147</centerleft>
+                                <align>center</align>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <!--GENRALEND-->
+                </control>
+            </control>
+            <control type="image" description="Line Split">
+                <centerleft>960</centerleft>
+                <top>98</top>
+                <width>1500</width>
+                <height>1</height>
+                <texture colordiffuse="main">lines/Line1.png</texture>
+            </control>
+            <include>60slider</include>
+            <!--<control type="group" description="Bottom Label">-->
+            <!--<visible>Container.Content(files) | Container.Content(Addons) | IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,sources://) | StringCompare(Container.FolderPath,videodb://movies/) | StringCompare(Container.FolderPath,videodb://tvshows/)</visible>-->
+            <!--<control type="image">-->
+            <!--<top>980</top>-->
+            <!--<centerleft>960</centerleft>-->
+            <!--<width>1500</width>-->
+            <!--<height>150</height>-->
+            <!--<texture colordiffuse="inverted" border="40">images/diffuserounded.png</texture>-->
+            <!--</control>-->
+            <!--<control type="label">-->
+            <!--<top>980</top>-->
+            <!--<centerleft>960</centerleft>-->
+            <!--<width>1500</width>-->
+            <!--<height>100</height>-->
+            <!--<align>center</align>-->
+            <!--<label>$VAR[TopLabel]</label>-->
+            <!--</control>-->
+            <!--</control>-->
+            <control type="label">
+                <top>40</top>
+                <centerleft>960</centerleft>
+                <width>1500</width>
+                <height>60</height>
+                <align>center</align>
+                <textcolor>orange</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+        </control>
+    </include>
+</includes>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+    <defaultcontrol always="true">13</defaultcontrol>
+    <include>OpenClose</include>
+    <controls>
+        <include>BlackBackground</include>
+        <control type="image">
+            <top>0</top>
+            <left>500</left>
+            <width>1</width>
+            <height>1000</height>
+            <texture>lines/LineV.png</texture>
+        </control>
+        <control type="image">
+            <top>80</top>
+            <height>1</height>
+            <width>1920</width>
+            <texture>lines/Line.png</texture>
+        </control>
+        <control type="image" description="Navbar">
+            <top>1000</top>
+            <width>1920</width>
+            <height>1</height>
+            <texture colordiffuse="main">lines/Line.png</texture>
+        </control>
+        <control type="label" id="2" description="Heading">
+            <centerleft>250</centerleft>
+            <width>500</width>
+            <font>size42B</font>
+            <align>center</align>
+            <label>-</label>
+        </control>
+        <control type="label" id="3">
+            <left>520</left>
+            <width>1390</width>
+            <font>size42B</font>
+            <align>center</align>
+        </control>
+        <control type="list" id="10">
+            <left>500</left>
+            <top>81</top>
+            <width>1380</width>
+            <height>972</height>
+            <onright>60</onright>
+            <onleft>13</onleft>
+            <ondown>9001</ondown>
+            <pagecontrol>-</pagecontrol>
+            <scrolltime>200</scrolltime>
+            <itemlayout height="81">
+                <control type="label">
+                    <left>10</left>
+                    <width>1400</width>
+                    <height>81</height>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout height="81">
+                <control type="image">
+                    <width>1400</width>
+                    <height>81</height>
+                    <texture colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texture>
+                    <visible>Control.HasFocus(10)</visible>
+                </control>
+                <control type="label">
+                    <left>10</left>
+                    <width>1400</width>
+                    <height>81</height>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="grouplist" id="9000">
+            <top>81</top>
+            <width>500</width>
+            <height>1000</height>
+            <onup>noop</onup>
+            <ondown>9001</ondown>
+            <onright>10</onright>
+            <onleft>9000</onleft>
+            <itemgap>0</itemgap>
+            <control type="button" id="13">
+                <description>Add Button</description>
+                <width>500</width>
+                <height>81</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>size33</font>
+                <texturefocus flipx="true" colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
+                <label>15019</label>
+            </control>
+            <control type="button" id="14">
+                <description>Remove Button</description>
+                <width>500</width>
+                <height>81</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>size33</font>
+                <texturefocus flipx="true" colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
+                <label>1210</label>
+            </control>
+            <control type="button" id="11">
+                <description>Change Set Button</description>
+                <width>500</width>
+                <height>81</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>size33</font>
+                <texturefocus flipx="true" colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
+            </control>
+        </control>
+        <control type="grouplist" id="9001">
+            <centerleft>960</centerleft>
+            <top>1000</top>
+            <width>1920</width>
+            <height>80</height>
+            <itemgap>0</itemgap>
+            <align>center</align>
+            <onup>9000</onup>
+            <orientation>horizontal</orientation>
+            <control type="button" id="18">
+                <description>Ok Button</description>
+                <width>330</width>
+                <height>80</height>
+                <align>center</align>
+                <label>186</label>
+            </control>
+            <control type="button" id="19">
+                <description>Cancel Button</description>
+                <left>300</left>
+                <width>330</width>
+                <height>80</height>
+                <align>center</align>
+                <label>222</label>
+            </control>
+        </control>
+        <include>clockandkodi</include>
+    </controls>
+</window>

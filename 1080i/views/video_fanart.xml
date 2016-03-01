@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="fanart">
+        <control type="group" description="Fanart">
+            <visible>Control.IsVisible(500)</visible>
+            <control type="image">
+                <top>451</top>
+                <width>1920</width>
+                <height>629</height>
+                <texture colordiffuse="inverted">images/gradientleft_transparent.png</texture>
+            </control>
+            <control type="group" description="Media Info">
+                <visible>!StringCompare(ListItem.label,..)</visible>
+                <top>40</top>
+                <!--<left>98</left>-->
+                <control type="label" description="Item Title">
+                    <centerleft>960</centerleft>
+                    <font>size42B</font>
+                    <align>center</align>
+                    <width>1724</width>
+                    <textcolor>orange</textcolor>
+                    <info>ListItem.Label</info>
+                </control>
+                <control type="image" description="lineplot">
+                    <centerleft>960</centerleft>
+                    <top>73</top>
+                    <width>1724</width>
+                    <height>1</height>
+                    <texture colordiffuse="main">lines/LineSH.png</texture>
+                </control>
+                <control type="textbox" description="Plot">
+                    <top>74</top>
+                    <left>110</left>
+                    <width>1200</width>
+                    <height>336</height>
+                    <font>size28</font>
+                    <align>justify</align>
+                    <autoscroll delay="7000" time="4300" repeat="10000"></autoscroll>
+                    <label>$VAR[Plots]</label>
+                </control>
+                <control type="image" description="fanart">
+                    <right>110</right>
+                    <top>80</top>
+                    <width>430</width>
+                    <height>330</height>
+                    <texture>$VAR[fanart]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <bordertexture colordiffuse="main">images/white.png</bordertexture>
+                    <bordersize>4</bordersize>
+                </control>
+                <control type="group">
+                    <visible>!ListItem.IsCollection</visible>
+                    <control type="grouplist" description="Flags">
+                        <top>540</top>
+                        <left>760</left>
+                        <width>auto</width>
+                        <height>150</height>
+                        <itemgap>30</itemgap>
+                        <orientation>horizontal</orientation>
+                        <align>left</align>
+                        <control type="image">
+                            <height>50</height>
+                            <width>130</width>
+                            <bordersize>3</bordersize>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                            <height>50</height>
+                            <width>130</width>
+                            <bordersize>3</bordersize>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                            <height>50</height>
+                            <width>130</width>
+                            <bordersize>3</bordersize>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                            <height>50</height>
+                            <width>130</width>
+                            <bordersize>3</bordersize>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.AudioChannels,badges/,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <height>50</height>
+                            <width>130</width>
+                            <bordersize>3</bordersize>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.FileExtension,badges/video/,.png]</texture>
+                        </control>
+                        <control type="image" description="Stars rating">
+                            <height>35</height>
+                            <width>250</width>
+                            <aspectratio aligny="bottom">keep</aspectratio>
+                            <texture colordiffuse="main">$INFO[ListItem.Rating,badges/,.png]</texture>
+                        </control>
+                    </control>
+                    <control type="image" description="StudioLogo">
+                        <top>455</top>
+                        <centerleft>614</centerleft>
+                        <height>130</height>
+                        <width>250</width>
+                        <fadetime>120</fadetime>
+                        <texture colordiffuse="main">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label" description="toplabel">
+                        <left>768</left>
+                        <top>440</top>
+                        <font>size27</font>
+                        <height>40</height>
+                        <width>1275</width>
+                        <label>$VAR[TopLabel]</label>
+                    </control>
+                    <control type="label" description="Genre">
+                        <left>768</left>
+                        <top>480</top>
+                        <font>size27</font>
+                        <width>1275</width>
+                        <height>50</height>
+                        <label>[COLOR=gray]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+                    </control>
+                </control>
+            </control>
+            <control type="fixedlist" id="500">
+                <visible>Container.content(movies) | container.content(seasons) | container.content(musicvideos) | container.content(tvshows)</visible>
+                <onup condition="!Skin.HasSetting(ViewsMenuOff)">9000</onup>
+                <onup condition="Skin.HasSetting(ViewsMenuOff)">noop</onup>
+                <ondown condition="!Skin.HasSetting(Scrollbars_Passive)">60</ondown>
+                <ondown condition="Skin.HasSetting(Scrollbars_Passive)">noop</ondown>
+                <onleft>500</onleft>
+                <onright>500</onright>
+                <viewtype label="$LOCALIZE[20445]">Fanart</viewtype>
+                <left>-210</left>
+                <top>570</top>
+                <width>2200</width>
+                <height>700</height>
+                <orientation>horizontal</orientation>
+                <scrolltime>300</scrolltime>
+                <focusposition>1</focusposition>
+                <preloaditems>2</preloaditems>
+                <pagecontrol>60</pagecontrol>
+                <itemlayout width="300" height="500">
+                    <control type="image" description="Thumb">
+                        <left>85</left>
+                        <top>80</top>
+                        <height>350</height>
+                        <width>230</width>
+                        <texture background="true" fallback="DefaultVideoCover.png">$VAR[locandine]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="image" description="box">
+                        <left>85</left>
+                        <top>80</top>
+                        <height>350</height>
+                        <width>230</width>
+                        <texture border="4">$VAR[dvdbox]</texture>
+                    </control>
+                    <control type="image" description="WatchStatus">
+                        <left>77</left>
+                        <top>377</top>
+                        <height>60</height>
+                        <width>60</width>
+                        <texture>$VAR[WatchStatus]</texture>
+                    </control>
+                    <control type="group">
+                        <visible>container.content(TVshows) | container.content(seasons)</visible>
+                        <control type="image">
+                            <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                            <centerleft>85</centerleft>
+                            <centertop>80</centertop>
+                            <height>65</height>
+                            <width>65</width>
+                            <aspectratio>keep</aspectratio>
+                            <texture>badges/badgecount.png</texture>
+                        </control>
+                        <control type="label" description="Label2">
+                            <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                            <centerleft>85</centerleft>
+                            <centertop>80</centertop>
+                            <height>65</height>
+                            <width>65</width>
+                            <font>size24</font>
+                            <align>center</align>
+                            <scroll>false</scroll>
+                            <textcolor>FFFFFFFF</textcolor>
+                            <shadowcolor>-</shadowcolor>
+                            <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>ListItem.IsResumable + !StringCompare(ListItem.Label,..)</visible>
+                        <control type="image">
+                            <top>419</top>
+                            <left>86</left>
+                            <height>10</height>
+                            <width>228</width>
+                            <texture>images/black.png</texture>
+                        </control>
+                        <control type="progress" description="progress">
+                            <top>420</top>
+                            <left>87</left>
+                            <height>8</height>
+                            <texturebg>images/black.png</texturebg>
+                            <midtexture border="1">images/white.png</midtexture>
+                            <width>226</width>
+                            <info>ListItem.PercentPlayed</info>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="300" height="500">
+                    <control type="group">
+                        <animation effect="zoom" end="142" center="200,430" time="300" tween="Quadratic" easing="in">Focus</animation>
+                        <animation effect="zoom" start="142" end="100" center="200,430" time="80" tween="Circle" easing="out">Unfocus</animation>
+                        <control type="image" description="main">
+                            <left>77</left>
+                            <top>72</top>
+                            <height>365</height>
+                            <width>246</width>
+                            <texture background="true" colordiffuse="$VAR[diffuseselect]">images/white.png</texture>
+                            <colordiffuse>AAFFFFFF</colordiffuse>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image" description="THUMBNAIL">
+                            <left>85</left>
+                            <top>80</top>
+                            <height>350</height>
+                            <width>230</width>
+                            <texture background="true" fallback="DefaultVideoCover.png">$VAR[locandine]</texture>
+                            <aspectratio>scale</aspectratio>
+                        </control>
+                        <control type="image" description="box">
+                            <left>85</left>
+                            <top>80</top>
+                            <height>350</height>
+                            <width>230</width>
+                            <texture border="4">$VAR[dvdbox]</texture>
+                        </control>
+                        <control type="image" description="WatchStatus">
+                            <left>77</left>
+                            <top>377</top>
+                            <height>60</height>
+                            <width>60</width>
+                            <texture>$VAR[WatchStatus]</texture>
+                        </control>
+                        <control type="group">
+                            <visible>container.content(TVshows) | container.content(seasons)</visible>
+                            <control type="image">
+                                <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                                <centerleft>85</centerleft>
+                                <centertop>80</centertop>
+                                <height>65</height>
+                                <width>65</width>
+                                <aspectratio>keep</aspectratio>
+                                <texture>badges/badgecount.png</texture>
+                            </control>
+                            <control type="label" description="Label2">
+                                <visible>IntegerGreaterThan(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                                <centerleft>85</centerleft>
+                                <centertop>80</centertop>
+                                <height>65</height>
+                                <width>65</width>
+                                <font>size24</font>
+                                <align>center</align>
+                                <scroll>false</scroll>
+                                <textcolor>FFFFFFFF</textcolor>
+                                <shadowcolor>-</shadowcolor>
+                                <label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>ListItem.IsResumable + !StringCompare(ListItem.Label,..)</visible>
+                            <control type="image">
+                                <top>419</top>
+                                <left>86</left>
+                                <height>10</height>
+                                <width>228</width>
+                                <texture>images/black.png</texture>
+                            </control>
+                            <control type="progress" description="progress">
+                                <top>420</top>
+                                <left>87</left>
+                                <height>8</height>
+                                <texturebg>images/black.png</texturebg>
+                                <midtexture>images/white.png</midtexture>
+                                <width>226</width>
+                                <info>ListItem.PercentPlayed</info>
+                            </control>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="scrollbar" id="60">
+                <animation effect="fade" delay="200" time="300">VisibleChange</animation>
+                <left>198</left>
+                <top>1038</top>
+                <width>1525</width>
+                <height>9</height>
+                <onup>500</onup>
+                <ondown>500</ondown>
+                <orientation>horizontal</orientation>
+                <texturesliderbackground border="4">Scrollbar/HScrollbarBG.png</texturesliderbackground>
+                <texturesliderbar border="4">Scrollbar/HScrollerNF.png</texturesliderbar>
+                <texturesliderbarfocus border="4">Scrollbar/HScrollerFO.png</texturesliderbarfocus>
+                <showonepage>false</showonepage>
+            </control>
+        </control>
+    </include>
+</includes>

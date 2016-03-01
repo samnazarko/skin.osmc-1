@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="135">
+    <!--todo ALL DIALOG REMAKE-->
+    <defaultcontrol always="true">300</defaultcontrol>
+    <backgroundcolor>background</backgroundcolor>
+    <include>OpenClose</include>
+    <controls>
+        <include>BlackBackground</include>
+        <include>MusicInfo</include>
+        <control type="textbox" description="Plot">
+            <left>1000</left>
+            <top>60</top>
+            <width>870</width>
+            <height>900</height>
+            <font>size27</font>
+            <align>justify</align>
+            <autoscroll delay="6500" time="4000" repeat="10000"></autoscroll>
+            <label>$INFO[ListItem.Property(Album_Description)][CR]$INFO[ListItem.Property(Artist_Description)]</label>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>1000</top>
+            <height>80</height>
+            <width>1920</width>
+            <aspectratio>stretch</aspectratio>
+            <texture colordiffuse="inverted">images/transparent.png</texture>
+        </control>
+        <control type="image" description="Navbar">
+            <left>0</left>
+            <top>1000</top>
+            <width>21920</width>
+            <height>1</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>lines/Line.png</texture>
+        </control>
+
+        <control type="group" description="Options">
+            <control type="grouplist" id="300">
+                <left>15</left>
+                <top>1000</top>
+                <width>1890</width>
+                <height>80</height>
+                <itemgap>0</itemgap>
+                <aligny>bottom</aligny>
+                <align>center</align>
+                <onup>50</onup>
+                <orientation>horizontal</orientation>
+                <control type="button" id="14" description="Decrease Rating">
+                    <height>80</height>
+                    <width>280</width>
+                    <label>-  $LOCALIZE[563]</label>
+                    <onclick>DecreaseRating</onclick>
+                    <font>size28</font>
+                </control>
+                <control type="button" id="15" description="Increase Rating">
+                    <height>80</height>
+                    <width>280</width>
+                    <label>+ $LOCALIZE[563]</label>
+                    <onclick>IncreaseRating</onclick>
+                    <font>size28</font>
+                </control>
+                <control type="button" id="12" description="Album Info">
+                    <height>80</height>
+                    <width>280</width>
+                    <label>10523</label>
+                    <font>size28</font>
+                </control>
+                <control type="button" id="13" description="Get Thumb">
+                    <height>80</height>
+                    <width>280</width>
+                    <label>13405</label>
+                    <font>size28</font>
+                </control>
+                <control type="button" id="10" description="Save rating">
+                    <height>80</height>
+                    <width>280</width>
+                    <label>186</label>
+                    <font>size28</font>
+                </control>
+            </control>
+        </control>
+        <control type="image" description="line">
+            <left>959</left>
+            <width>1</width>
+            <height>1000</height>
+            <texture>lines/LineV.png</texture>
+        </control>
+    </controls>
+</window>
