@@ -91,12 +91,28 @@
             </control>
             <control type="group">
                 <control type="image">
-                    <centerleft>600</centerleft>
-                    <centertop>540</centertop>
+                    <left>400</left>
+                    <top>220</top>
                     <height>600</height>
                     <width>400</width>
                     <aspectratio align="top">keep</aspectratio>
                     <texture>$INFO[Container(51).ListItem.Art(thumb)]</texture>
+                </control>
+                <control type="textbox">
+                    <left>830</left>
+                    <top>220</top>
+                    <height>100</height>
+                    <width>400</width>
+                    <textcolor>main</textcolor>
+                    <label>$INFO[Container(51).ListItem.Title][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
+                </control>
+                <control type="textbox">
+                    <left>830</left>
+                    <top>310</top>
+                    <height>400</height>
+                    <width>400</width>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[Container(51).ListItem.Plot]</label>
                 </control>
             </control>
             <control type="group" id="222">

@@ -29,7 +29,7 @@
         <scrollsuffix> •  • </scrollsuffix>
     </default>
     <default type="textbox">
-        <font>size28</font>
+        <font>font16</font>
         <textcolor>main</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>orange</selectedcolor>

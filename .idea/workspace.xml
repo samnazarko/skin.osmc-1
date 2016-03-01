@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329cd3f8-0383-4b22-bef3-d99ad2b9dc46" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1080i/Defaults.xml" afterPath="$PROJECT_DIR$/1080i/Defaults.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1080i/Home.xml" afterPath="$PROJECT_DIR$/1080i/Home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="skin.osmc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="Home.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1080i/Home.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5702247" vertical-offset="937" max-vertical-offset="2567">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.80898875" vertical-offset="1294" max-vertical-offset="2839">
+              <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -39,8 +41,8 @@
       <file leaf-file-name="Defaults.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1080i/Defaults.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3230">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="3230">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file leaf-file-name="Font.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1080i/Font.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="6018">
-              <caret line="71" column="30" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="6018">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -415,26 +417,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1080i/Defaults.xml">
+    <entry file="file://$PROJECT_DIR$/1080i/Font.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3230">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="6018">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1080i/Font.xml">
+    <entry file="file://$PROJECT_DIR$/1080i/Defaults.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="6018">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="3230">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1080i/Home.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5702247" vertical-offset="937" max-vertical-offset="2567">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.80898875" vertical-offset="1294" max-vertical-offset="2839">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
           <folding />
         </state>
       </provider>
