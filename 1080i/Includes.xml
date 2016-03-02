@@ -5,6 +5,7 @@
     <include file="Movies.xml" />
     <include file="Tvshows.xml" />
     <include file="Power.xml" />
+    <include file="Settingshome.xml" />
     <include name="VisibleFade">
         <animation effect="fade" start="0" end="100" time="200">visiblechange</animation>
     </include>

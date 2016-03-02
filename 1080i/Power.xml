@@ -26,7 +26,6 @@
                     <onclick>quit</onclick>
                 </control>
                 <control type="button" id="1">
-                    <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
                     <label>13009</label>
@@ -34,7 +33,6 @@
                 </control>
                 <control type="button" id="2">
                     <enable>System.CanHibernate</enable>
-                    <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
                     <label>13010</label>
@@ -42,7 +40,6 @@
                 </control>
                 <control type="button" id="3">
                     <enable>System.CanSuspend</enable>
-                    <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
                     <label>13011</label>
@@ -50,7 +47,6 @@
                 </control>
                 <control type="button" id="4">
                     <enable>System.CanReboot</enable>
-                    <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
                     <label>13013</label>
@@ -58,7 +54,6 @@
                 </control>
                 <control type="button" id="5">
                     <enable>System.CanPowerDown</enable>
-                    <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
                     <label>13005</label>

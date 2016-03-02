@@ -23,7 +23,7 @@
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
                     <align>right</align>
-                    <label>Movies</label>
+                    <label>20342</label>
                 </control>
                 <control type="button" id="9002">
                     <top>210</top>
@@ -32,7 +32,7 @@
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
                     <align>right</align>
-                    <label>TV Shows</label>
+                    <label>20343</label>
                 </control>
                 <control type="button" id="9015">
                     <top>210</top>
@@ -41,7 +41,7 @@
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
                     <align>right</align>
-                    <label>Settings</label>
+                    <label>5</label>
                 </control>
                 <control type="button" id="9016">
                     <top>210</top>
@@ -50,7 +50,7 @@
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
                     <align>right</align>
-                    <label>Power</label>
+                    <label>33060</label>
                 </control>
             </control>
         </control>
@@ -58,61 +58,8 @@
             <left>420</left>
             <include>moviehome</include>
             <include>tvhome</include>
+            <include>settingshome</include>
             <include>powerhome</include>
-            <control type="group">
-            <description>SETTINGS</description>
-            <visible>Control.HasFocus(9015) | Control.HasFocus(65) | Control.HasFocus(651)</visible>
-            <animation effect="slide" time="600" delay="600" start="1950,0" end="0,0">Visible</animation>
-            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
-            <control type="image">
-                <visible>!ControlGroup(9000).HasFocus</visible>
-                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
-                <width>1600</width>
-                <aspectratio align="right">scale</aspectratio>
-                <texture>mainbackground.png</texture>
-            </control>
-            <control type="grouplist">
-                <top>200</top>
-                <left>50</left>
-                <width>900</width>
-                <height>680</height>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>what</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>should</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>I</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>put</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>Here?</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>Since Settings aren't</label>
-                </control>
-                <control type="label">
-                    <textcolor>black</textcolor>
-                    <font>font45</font>
-                    <label>easily acessible from home</label>
-                </control>
-            </control>
-        </control>
         </control>
         <control type="label">
             <top>100</top>

@@ -2,7 +2,6 @@
 <includes>
     <include name="moviehome">
         <control type="group">
-            <description>MOVIES</description>
             <visible>Control.HasFocus(9001) | Control.HasFocus(50)</visible>
             <animation condition="Control.HasFocus(50)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
@@ -14,19 +13,19 @@
                 <texture>mainbackground.png</texture>
             </control>
             <control type="panel" id="50">
-                <top>200</top>
+                <top>140</top>
                 <left>50</left>
-                <width>400</width>
-                <height>680</height>
+                <width>600</width>
+                <height>800</height>
                 <onleft>9000</onleft>
                 <onright>-</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="85" width="400">
+                <itemlayout height="100" width="400">
                     <control type="textbox">
-                        <width>400</width>
-                        <height>85</height>
+                        <width>550</width>
+                        <height>120</height>
                         <textcolor>black</textcolor>
                         <font>font45</font>
                         <align>left</align>
@@ -34,10 +33,10 @@
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="85" width="400">
+                <focusedlayout height="100" width="400">
                     <control type="textbox">
-                        <width>400</width>
-                        <height>85</height>
+                        <width>550</width>
+                        <height>120</height>
                         <font>font45</font>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -48,7 +47,7 @@
             </control>
             <control type="group">
                 <control type="image">
-                    <left>500</left>
+                    <left>650</left>
                     <top>220</top>
                     <height>600</height>
                     <width>400</width>
@@ -56,15 +55,15 @@
                     <texture>$INFO[Container(50).ListItem.Art(poster)]</texture>
                 </control>
                 <control type="textbox">
-                    <left>940</left>
+                    <left>1090</left>
                     <top>220</top>
                     <height>90</height>
                     <width>400</width>
                     <textcolor>main</textcolor>
-                    <label>$INFO[Container(50).ListItem.Title][CR]$INFO[Container(50).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(50).ListItem.Title][/B][CR]$INFO[Container(50).ListItem.Year,(,)]</label>
                 </control>
                 <control type="textbox">
-                    <left>940</left>
+                    <left>1090</left>
                     <top>310</top>
                     <height>560</height>
                     <width>400</width>
@@ -72,7 +71,7 @@
                     <label>$INFO[Container(50).ListItem.Plot]</label>
                 </control>
                 <control type="grouplist">
-                    <left>500</left>
+                    <left>650</left>
                     <top>820</top>
                     <width>400</width>
                     <itemgap>25</itemgap>
