@@ -46,32 +46,39 @@
                 <content sortby="title" sortorder="ascending">videodb://movies/titles/</content>
             </control>
             <control type="group">
+                <left>600</left>
                 <control type="image">
-                    <left>650</left>
                     <top>220</top>
-                    <height>600</height>
+                    <height>610</height>
                     <width>400</width>
                     <aspectratio align="top">keep</aspectratio>
                     <texture>$INFO[Container(50).ListItem.Art(poster)]</texture>
                 </control>
                 <control type="textbox">
-                    <left>1090</left>
+                    <left>440</left>
                     <top>220</top>
                     <height>90</height>
                     <width>400</width>
                     <textcolor>main</textcolor>
-                    <label>[B]$INFO[Container(50).ListItem.Title][/B][CR]$INFO[Container(50).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(50).ListItem.Title][/B] $INFO[Container(50).ListItem.Year,(,)]</label>
+                </control>
+                <control type="image">
+                    <left>440</left>
+                    <top>290</top>
+                    <height>30</height>
+                    <width>120</width>
+                    <aspectratio align="left">keep</aspectratio>
+                    <texture>$INFO[Container(50).ListItem.StarRating,stars/]</texture>
                 </control>
                 <control type="textbox">
-                    <left>1090</left>
-                    <top>310</top>
-                    <height>560</height>
+                    <left>440</left>
+                    <top>320</top>
+                    <height>580</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
                     <label>$INFO[Container(50).ListItem.Plot]</label>
                 </control>
                 <control type="grouplist">
-                    <left>650</left>
                     <top>820</top>
                     <width>400</width>
                     <itemgap>25</itemgap>

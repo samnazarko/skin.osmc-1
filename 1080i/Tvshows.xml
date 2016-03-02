@@ -50,7 +50,7 @@
                 <control type="image">
                     <left>450</left>
                     <top>220</top>
-                    <height>600</height>
+                    <height>610</height>
                     <width>400</width>
                     <aspectratio align="top">keep</aspectratio>
                     <texture>$INFO[Container(51).ListItem.Art(poster)]</texture>
@@ -147,7 +147,7 @@
                     <control type="image">
                         <left>450</left>
                         <top>220</top>
-                        <height>600</height>
+                        <height>610</height>
                         <width>400</width>
                         <aspectratio align="top">stretch</aspectratio>
                         <texture>$INFO[Container(511).ListItem.Art(season.poster)]</texture>
