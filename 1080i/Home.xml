@@ -55,10 +55,11 @@
             </control>
         </control>
         <control type="group" id="700">
+            <left>420</left>
             <description>MOVIES</description>
             <visible>Control.HasFocus(9001) | Control.HasFocus(50)</visible>
             <animation condition="Control.HasFocus(50)" effect="slide" time="200" end="-100,0">Conditional</animation>
-            <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
+            <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -154,9 +155,10 @@
             </control>
         </control>
         <control type="group" id="700">
+            <left>420</left>
             <description>TVSHOWS</description>
             <visible>Control.HasFocus(9002) | Control.HasFocus(51) | Control.HasFocus(511)</visible>
-            <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
+            <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
             <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
@@ -219,7 +221,7 @@
                 <control type="textbox">
                     <left>890</left>
                     <top>310</top>
-                    <height>400</height>
+                    <height>540</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
                     <label>$INFO[Container(51).ListItem.Plot]</label>
@@ -307,7 +309,7 @@
                     <control type="textbox">
                         <left>890</left>
                         <top>290</top>
-                        <height>420</height>
+                        <height>540</height>
                         <width>400</width>
                         <textcolor>black</textcolor>
                         <label>$INFO[Container(511).ListItem.Plot]</label>
@@ -316,11 +318,16 @@
             </control>
         </control>
         <control type="group" id="700">
+            <left>420</left>
             <description>SETTINGS</description>
             <visible>Control.HasFocus(9015) | Control.HasFocus(65) | Control.HasFocus(651)</visible>
-            <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
+            <animation effect="slide" time="600" delay="600" start="1950,0" end="0,0">Visible</animation>
             <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
+                <visible>!ControlGroup(9000).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1600</width>
+                <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
             <control type="grouplist">
