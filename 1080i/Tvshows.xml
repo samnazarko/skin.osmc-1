@@ -2,7 +2,6 @@
 <includes>
     <include name="tvhome">
         <control type="group">
-            <description>TVSHOWS</description>
             <visible>Control.HasFocus(9002) | Control.HasFocus(51) | Control.HasFocus(511)</visible>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
             <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
