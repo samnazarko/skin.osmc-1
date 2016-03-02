@@ -45,6 +45,24 @@
                 </focusedlayout>
                 <content sortby="title" sortorder="ascending">videodb://movies/titles/</content>
             </control>
+            <control type="image">
+                <visible>Container(50).HasNext</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>1000</top>
+                <height>50</height>
+                <width>50</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(50).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>30</top>
+                <height>50</height>
+                <width>50</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
             <control type="group">
                 <left>600</left>
                 <control type="image">

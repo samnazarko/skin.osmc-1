@@ -46,6 +46,24 @@
                 </focusedlayout>
                 <content sortby="title" sortorder="ascending">videodb://tvshows/titles/</content>
             </control>
+            <control type="image">
+                <visible>Container(51).HasNext</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>1000</top>
+                <height>50</height>
+                <width>50</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(51).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>30</top>
+                <height>50</height>
+                <width>50</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
             <control type="group">
                 <control type="image">
                     <left>450</left>
@@ -143,6 +161,24 @@
                     </focusedlayout>
                     <content sortby="date" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
                 </control>
+                <control type="image">
+                <visible>Container(511).HasNext</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>1000</top>
+                <height>50</height>
+                <width>50</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(511).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>30</top>
+                <height>50</height>
+                <width>50</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
                 <control type="group">
                     <control type="image">
                         <left>450</left>
