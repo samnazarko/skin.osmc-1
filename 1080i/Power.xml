@@ -15,15 +15,54 @@
             <control type="grouplist" id="66">
                 <top>200</top>
                 <left>50</left>
-                <width>400</width>
+                <width>800</width>
                 <height>680</height>
                 <onleft>9000</onleft>
+                <control type="label">
+                    <textcolor>main</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>13008</label>
+                    <onclick>quit</onclick>
+                </control>
                 <control type="button" id="1">
                     <textcolor>black</textcolor>
                     <align>left</align>
                     <font>font45</font>
-                    <label>Quit</label>
+                    <label>13009</label>
                     <onclick>quit</onclick>
+                </control>
+                <control type="button" id="2">
+                    <enable>System.CanHibernate</enable>
+                    <textcolor>black</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>13010</label>
+                    <onclick>Hibernate</onclick>
+                </control>
+                <control type="button" id="3">
+                    <enable>System.CanSuspend</enable>
+                    <textcolor>black</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>13011</label>
+                    <onclick>Suspend</onclick>
+                </control>
+                <control type="button" id="4">
+                    <enable>System.CanReboot</enable>
+                    <textcolor>black</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>13013</label>
+                    <onclick>Reboot</onclick>
+                </control>
+                <control type="button" id="5">
+                    <enable>System.CanPowerDown</enable>
+                    <textcolor>black</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>13005</label>
+                    <onclick>Shutdown</onclick>
                 </control>
             </control>
         </control>
