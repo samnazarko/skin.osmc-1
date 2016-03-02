@@ -13,10 +13,11 @@
                 <texture>mainbackground.png</texture>
             </control>
             <control type="grouplist">
-                <top>200</top>
+                <top>140</top>
                 <left>50</left>
                 <width>900</width>
-                <height>680</height>
+                <height>800</height>
+                <onleft>9000</onleft>
                 <control type="label">
                     <textcolor>black</textcolor>
                     <font>font45</font>

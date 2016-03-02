@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <default type="label">
-        <height>75</height>
+        <height>100</height>
         <align>left</align>
         <aligny>center</aligny>
         <font>font16</font>
@@ -15,7 +15,7 @@
         <scrollsuffix> • </scrollsuffix>
     </default>
     <default type="fadelabel">
-        <height>75</height>
+        <height>100</height>
         <align>left</align>
         <aligny>center</aligny>
         <font>size33</font>
@@ -44,10 +44,10 @@
     </default>
     <default type="button">
         <width>390</width>
-        <height>75</height>
-        <align>center</align>
+        <height>100</height>
+        <align>left</align>
         <aligny>center</aligny>
-        <font>size33</font>
+        <font>font16</font>
         <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>

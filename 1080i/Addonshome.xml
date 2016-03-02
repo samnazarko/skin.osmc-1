@@ -2,9 +2,9 @@
 <includes>
     <include name="addonshome">
         <control type="group">
-            <visible>Control.HasFocus(9003) | Control.HasFocus(53) | Control.HasFocus(531)</visible>
+            <visible>Control.HasFocus(9003) | ControlGroup(53).HasFocus | Control.HasFocus(531)</visible>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
-            <animation condition="Control.HasFocus(53) | Control.HasFocus(531)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="ControlGroup(53).HasFocus | Control.HasFocus(531)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -12,91 +12,31 @@
                 <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
-            <control type="panel" id="53">
+            <control type="grouplist" id="53">
                 <top>140</top>
                 <left>50</left>
-                <width>600</width>
+                <width>400</width>
                 <height>800</height>
                 <onleft>9000</onleft>
-                <onright>-</onright>
-                <onup>noop</onup>
-                <ondown>noop</ondown>
-                <!--<onclick>SetFocus(222)</onclick>-->
-                <scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="100" width="400">
-                    <control type="textbox">
-                        <width>400</width>
-                        <height>120</height>
-                        <textcolor>black</textcolor>
-                        <font>font45</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="100" width="400">
-                    <control type="textbox">
-                        <width>400</width>
-                        <height>120</height>
-                        <font>font45</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-                <content sortby="title" sortorder="ascending">addons://sources/executable/</content>
-            </control>
-            <control type="image">
-                <visible>Container(53).HasNext</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>1000</top>
-                <height>50</height>
-                <width>50</width>
-                <texture>arrow.png</texture>
-            </control>
-            <control type="image">
-                <visible>Container(53).HasPrevious</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>30</top>
-                <height>50</height>
-                <width>50</width>
-                <texture flipy="true">arrow.png</texture>
-            </control>
-            <control type="group">
-                <left>50</left>
-                <control type="image">
-                    <left>450</left>
-                    <top>220</top>
-                    <height>610</height>
-                    <width>400</width>
-                    <aspectratio align="top">keep</aspectratio>
-                    <texture>$INFO[Container(53).ListItem.Icon]</texture>
+                <onright>531</onright>
+                <control type="button" id="500">
+                    <font>font45</font>
+                    <label>157</label>
+                    <onfocus>Skin.SetString(addonshome,addons://sources/video/)</onfocus>
+                    <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
-                <control type="textbox">
-                    <left>890</left>
-                    <top>220</top>
-                    <height>80</height>
-                    <width>400</width>
-                    <textcolor>main</textcolor>
-                    <label>[B]$INFO[Container(53).ListItem.Label][/B][CR]$INFO[Container(53).ListItem.Author,(,)]</label>
+                <control type="button" id="501">
+                    <font>font45</font>
+                    <label>292</label>
+                    <onfocus>Skin.SetString(addonshome,addons://sources/audio/)</onfocus>
+                    <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
-                <control type="image">
-                    <left>890</left>
-                    <top>300</top>
-                    <height>30</height>
-                    <width>120</width>
-                    <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(53).ListItem.StarRating,stars/]</texture>
-                </control>
-                <control type="textbox">
-                    <left>890</left>
-                    <top>330</top>
-                    <height>540</height>
-                    <width>400</width>
-                    <textcolor>black</textcolor>
-                    <label>$INFO[Container(53).ListItem.Property(Addon.Description)]</label>
+                <control type="button" id="502">
+                    <font>font45</font>
+                    <label>350</label>
+                    <onfocus>Skin.SetString(addonshome,addons://sources/executable/)</onfocus>
+                    <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+                    <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                 </control>
             </control>
             <control type="image">
@@ -106,112 +46,96 @@
                 <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
-                <description>TVSHOWS</description>
-                <visible allowhiddenfocus="true">Control.HasFocus(531) </visible>
-                <animation effect="slide" time="600" delay="200" start="1920,0" end="220,0">Visible</animation>
+                <left>450</left>
+                <animation condition="Control.HasFocus(531)" effect="slide" time="200" start="0,0" end="-200,0">Conditional</animation>
                 <control type="image">
+                    <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                    <left>-50</left>
+                    <width>1350</width>
+                    <visible>Control.HasFocus(531)</visible>
                     <texture>mainbackground.png</texture>
-                </control>
-                <control type="textbox">
-                    <left>50</left>
-                    <top>200</top>
-                    <height>100</height>
-                    <width>400</width>
-                    <font>font30</font>
-                    <textcolor>main</textcolor>
-                    <label>[B]$INFO[Container(53).ListItem.Title][/B] $INFO[Container(53).ListItem.Year,(,)]</label>
-                </control>
-                <control type="image">
-                    <left>50</left>
-                    <top>240</top>
-                    <height>30</height>
-                    <width>300</width>
-                    <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(53).ListItem.StarRating,stars/]</texture>
+                    <aspectratio align="right">scale</aspectratio>
                 </control>
                 <control type="panel" id="531">
-                    <top>280</top>
-                    <left>50</left>
-                    <width>400</width>
-                    <height>620</height>
-                    <onleft>51</onleft>
-                    <onright>-</onright>
                     <onup>noop</onup>
-                    <ondown>noop</ondown>
+                    <onleft>53</onleft>
+                    <top>140</top>
+                    <width>450</width>
+                    <height>800</height>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
-                    <itemlayout height="68" width="400">
+                    <itemlayout height="100" width="500">
                         <control type="textbox">
-                            <width>400</width>
-                            <height>68</height>
+                            <width>550</width>
+                            <height>120</height>
                             <textcolor>black</textcolor>
-                            <font>font30</font>
+                            <font>font45</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <info>ListItem.Title</info>
+                            <info>ListItem.Label</info>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="68" width="400">
+                    <focusedlayout height="100" width="500">
                         <control type="textbox">
-                            <width>400</width>
-                            <height>68</height>
-                            <font>font30</font>
+                            <width>550</width>
+                            <height>120</height>
+                            <font>font45</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <info>ListItem.Title</info>
+                            <info>ListItem.Label</info>
                         </control>
                     </focusedlayout>
-                    <content sortby="date" sortorder="ascending">$INFO[Container(53).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
+                    <content target="video">$INFO[Skin.String(addonshome)]</content>
                 </control>
                 <control type="image">
-                <visible>Container(531).HasNext</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>1000</top>
-                <height>50</height>
-                <width>50</width>
-                <texture>arrow.png</texture>
-            </control>
-            <control type="image">
-                <visible>Container(531).HasPrevious</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>30</top>
-                <height>50</height>
-                <width>50</width>
-                <texture flipy="true">arrow.png</texture>
-            </control>
+                    <visible>Container(531).HasNext</visible>
+                    <include>visiblefade</include>
+                    <left>200</left>
+                    <top>1000</top>
+                    <height>50</height>
+                    <width>50</width>
+                    <texture>arrow.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(531).HasPrevious</visible>
+                    <include>visiblefade</include>
+                    <left>200</left>
+                    <top>30</top>
+                    <height>50</height>
+                    <width>50</width>
+                    <texture flipy="true">arrow.png</texture>
+                </control>
                 <control type="group">
                     <control type="image">
                         <left>450</left>
-                        <top>220</top>
-                        <height>610</height>
+                        <top>180</top>
+                        <height>400</height>
                         <width>400</width>
-                        <aspectratio align="top">stretch</aspectratio>
-                        <texture>$INFO[Container(531).ListItem.Art(season.poster)]</texture>
+                        <aspectratio align="top">keep</aspectratio>
+                        <texture>$INFO[Container(531).ListItem.Icon]</texture>
                     </control>
                     <control type="textbox">
                         <left>890</left>
                         <top>220</top>
-                        <height>50</height>
+                        <height>80</height>
                         <width>400</width>
                         <textcolor>main</textcolor>
-                        <label>[B]$INFO[Container(531).ListItem.Title][/B]</label>
+                        <label>[B]$INFO[Container(531).ListItem.Property(Addon.Creator)][/B][CR]$INFO[Container(531).ListItem.Property(Addon.Version)]</label>
                     </control>
                     <control type="image">
                         <left>890</left>
-                        <top>270</top>
+                        <top>300</top>
                         <height>30</height>
                         <width>120</width>
                         <aspectratio align="left">keep</aspectratio>
                         <texture>$INFO[Container(531).ListItem.StarRating,stars/]</texture>
                     </control>
                     <control type="textbox">
-                        <left>890</left>
-                        <top>300</top>
-                        <height>540</height>
-                        <width>400</width>
+                        <left>450</left>
+                        <top>600</top>
+                        <height>310</height>
+                        <width>700</width>
                         <textcolor>black</textcolor>
-                        <label>$INFO[Container(531).ListItem.Plot]</label>
+                        <label>$INFO[Container(531).ListItem.Property(Addon.Description)]</label>
                     </control>
                 </control>
             </control>
