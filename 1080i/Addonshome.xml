@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="tvhome">
+    <include name="addonshome">
         <control type="group">
-            <visible>Control.HasFocus(9002) | Control.HasFocus(51) | Control.HasFocus(511)</visible>
+            <visible>Control.HasFocus(9003) | Control.HasFocus(53) | Control.HasFocus(531)</visible>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
-            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="Control.HasFocus(53) | Control.HasFocus(531)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -12,7 +12,7 @@
                 <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
-            <control type="panel" id="51">
+            <control type="panel" id="53">
                 <top>140</top>
                 <left>50</left>
                 <width>600</width>
@@ -21,7 +21,7 @@
                 <onright>-</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
-                <onclick>SetFocus(222)</onclick>
+                <!--<onclick>SetFocus(222)</onclick>-->
                 <scrolltime tween="sine" easing="out">200</scrolltime>
                 <itemlayout height="100" width="400">
                     <control type="textbox">
@@ -44,10 +44,10 @@
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
-                <content sortby="title" sortorder="ascending">videodb://tvshows/titles/</content>
+                <content sortby="title" sortorder="ascending">addons://sources/executable/</content>
             </control>
             <control type="image">
-                <visible>Container(51).HasNext</visible>
+                <visible>Container(53).HasNext</visible>
                 <include>visiblefade</include>
                 <left>200</left>
                 <top>1000</top>
@@ -56,7 +56,7 @@
                 <texture>arrow.png</texture>
             </control>
             <control type="image">
-                <visible>Container(51).HasPrevious</visible>
+                <visible>Container(53).HasPrevious</visible>
                 <include>visiblefade</include>
                 <left>200</left>
                 <top>30</top>
@@ -72,7 +72,7 @@
                     <height>610</height>
                     <width>400</width>
                     <aspectratio align="top">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.Art(poster)]</texture>
+                    <texture>$INFO[Container(53).ListItem.Icon]</texture>
                 </control>
                 <control type="textbox">
                     <left>890</left>
@@ -80,7 +80,7 @@
                     <height>80</height>
                     <width>400</width>
                     <textcolor>main</textcolor>
-                    <label>[B]$INFO[Container(51).ListItem.Title][/B][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(53).ListItem.Label][/B][CR]$INFO[Container(53).ListItem.Author,(,)]</label>
                 </control>
                 <control type="image">
                     <left>890</left>
@@ -88,7 +88,7 @@
                     <height>30</height>
                     <width>120</width>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.StarRating,stars/]</texture>
+                    <texture>$INFO[Container(53).ListItem.StarRating,stars/]</texture>
                 </control>
                 <control type="textbox">
                     <left>890</left>
@@ -96,18 +96,18 @@
                     <height>540</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
-                    <label>$INFO[Container(51).ListItem.Plot]</label>
+                    <label>$INFO[Container(53).ListItem.Property(Addon.Description)]</label>
                 </control>
             </control>
             <control type="image">
-                <visible>Control.HasFocus(511)</visible>
+                <visible>Control.HasFocus(531)</visible>
                 <width>1600</width>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
                 <description>TVSHOWS</description>
-                <visible allowhiddenfocus="true">Control.HasFocus(511) </visible>
+                <visible allowhiddenfocus="true">Control.HasFocus(531) </visible>
                 <animation effect="slide" time="600" delay="200" start="1920,0" end="220,0">Visible</animation>
                 <control type="image">
                     <texture>mainbackground.png</texture>
@@ -119,7 +119,7 @@
                     <width>400</width>
                     <font>font30</font>
                     <textcolor>main</textcolor>
-                    <label>[B]$INFO[Container(51).ListItem.Title][/B] $INFO[Container(51).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(53).ListItem.Title][/B] $INFO[Container(53).ListItem.Year,(,)]</label>
                 </control>
                 <control type="image">
                     <left>50</left>
@@ -127,9 +127,9 @@
                     <height>30</height>
                     <width>300</width>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.StarRating,stars/]</texture>
+                    <texture>$INFO[Container(53).ListItem.StarRating,stars/]</texture>
                 </control>
-                <control type="panel" id="511">
+                <control type="panel" id="531">
                     <top>280</top>
                     <left>50</left>
                     <width>400</width>
@@ -160,10 +160,10 @@
                             <info>ListItem.Title</info>
                         </control>
                     </focusedlayout>
-                    <content sortby="date" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
+                    <content sortby="date" sortorder="ascending">$INFO[Container(53).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
                 </control>
                 <control type="image">
-                <visible>Container(511).HasNext</visible>
+                <visible>Container(531).HasNext</visible>
                 <include>visiblefade</include>
                 <left>200</left>
                 <top>1000</top>
@@ -172,7 +172,7 @@
                 <texture>arrow.png</texture>
             </control>
             <control type="image">
-                <visible>Container(511).HasPrevious</visible>
+                <visible>Container(531).HasPrevious</visible>
                 <include>visiblefade</include>
                 <left>200</left>
                 <top>30</top>
@@ -187,7 +187,7 @@
                         <height>610</height>
                         <width>400</width>
                         <aspectratio align="top">stretch</aspectratio>
-                        <texture>$INFO[Container(511).ListItem.Art(season.poster)]</texture>
+                        <texture>$INFO[Container(531).ListItem.Art(season.poster)]</texture>
                     </control>
                     <control type="textbox">
                         <left>890</left>
@@ -195,7 +195,7 @@
                         <height>50</height>
                         <width>400</width>
                         <textcolor>main</textcolor>
-                        <label>[B]$INFO[Container(511).ListItem.Title][/B]</label>
+                        <label>[B]$INFO[Container(531).ListItem.Title][/B]</label>
                     </control>
                     <control type="image">
                         <left>890</left>
@@ -203,7 +203,7 @@
                         <height>30</height>
                         <width>120</width>
                         <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(511).ListItem.StarRating,stars/]</texture>
+                        <texture>$INFO[Container(531).ListItem.StarRating,stars/]</texture>
                     </control>
                     <control type="textbox">
                         <left>890</left>
@@ -211,7 +211,7 @@
                         <height>540</height>
                         <width>400</width>
                         <textcolor>black</textcolor>
-                        <label>$INFO[Container(511).ListItem.Plot]</label>
+                        <label>$INFO[Container(531).ListItem.Plot]</label>
                     </control>
                 </control>
             </control>

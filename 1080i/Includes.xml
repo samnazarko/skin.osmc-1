@@ -6,6 +6,7 @@
     <include file="Tvshows.xml" />
     <include file="Power.xml" />
     <include file="Settingshome.xml" />
+    <include file="Addonshome.xml" />
 
     <include name="visiblefade">
         <animation effect="fade" start="0" end="100" time="200">visiblechange</animation>

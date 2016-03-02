@@ -7,6 +7,24 @@
         <control type="group">
             <animation effect="fade" start="100" end="25" time="200" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
             <include>osmc_back</include>
+            <control type="image">
+                <visible>Container(9000).HasNext</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>1000</top>
+                <height>50</height>
+                <width>50</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(9000).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>200</left>
+                <top>30</top>
+                <height>50</height>
+                <width>50</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
             <control type="grouplist" id="9000">
                 <width>450</width>
                 <height>1080</height>
@@ -17,6 +35,7 @@
                 <itemgap>0</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="button" id="9001">
+                    <!--MOVIES-->
                     <top>210</top>
                     <height>870</height>
                     <width>400</width>
@@ -26,6 +45,7 @@
                     <label>20342</label>
                 </control>
                 <control type="button" id="9002">
+                    <!--TVSHOWS-->
                     <top>210</top>
                     <height>870</height>
                     <width>400</width>
@@ -33,6 +53,16 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>20343</label>
+                </control>
+                <control type="button" id="9003">
+                    <!--ADDONS-->
+                    <top>210</top>
+                    <height>870</height>
+                    <width>400</width>
+                    <font>font_MainMenu</font>
+                    <aligny>top</aligny>
+                    <align>right</align>
+                    <label>24001</label>
                 </control>
                 <control type="button" id="9015">
                     <top>210</top>
@@ -53,29 +83,12 @@
                     <label>33060</label>
                 </control>
             </control>
-            <control type="image">
-                <visible>Container(9000).HasNext</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>1000</top>
-                <height>50</height>
-                <width>50</width>
-                <texture>arrow.png</texture>
-            </control>
-            <control type="image">
-                <visible>Container(9000).HasPrevious</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>30</top>
-                <height>50</height>
-                <width>50</width>
-                <texture flipy="true">arrow.png</texture>
-            </control>
         </control>
         <control type="group" id="700">
             <left>420</left>
             <include>moviehome</include>
             <include>tvhome</include>
+            <include>addonshome</include>
             <include>settingshome</include>
             <include>powerhome</include>
         </control>
