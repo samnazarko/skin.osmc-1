@@ -60,6 +60,10 @@
             <animation condition="Control.HasFocus(50)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
             <control type="image">
+                <visible>!ControlGroup(9000).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1600</width>
+                <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
             <control type="panel" id="50">
@@ -71,14 +75,13 @@
                 <onright>-</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
-                <!--<onclick>PlayMedia</onclick>-->
                 <scrolltime tween="sine" easing="out">200</scrolltime>
                 <itemlayout height="85" width="400">
                     <control type="textbox">
                         <width>400</width>
                         <height>85</height>
                         <textcolor>black</textcolor>
-                        <font>font30</font>
+                        <font>font45</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
@@ -88,7 +91,7 @@
                     <control type="textbox">
                         <width>400</width>
                         <height>85</height>
-                        <font>font30</font>
+                        <font>font45</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
@@ -156,6 +159,10 @@
             <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
             <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
+                <visible>!ControlGroup(9000).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1600</width>
+                <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
             <control type="panel" id="51">
@@ -319,22 +326,42 @@
             <control type="grouplist">
                 <top>200</top>
                 <left>50</left>
-                <width>400</width>
+                <width>900</width>
                 <height>680</height>
                 <control type="label">
                     <textcolor>black</textcolor>
-                    <font>font30_title</font>
-                    <label>askjfaskhf</label>
+                    <font>font45</font>
+                    <label>what</label>
                 </control>
                 <control type="label">
                     <textcolor>black</textcolor>
-                    <font>font30_title</font>
-                    <label>askjfaskhf</label>
+                    <font>font45</font>
+                    <label>should</label>
                 </control>
                 <control type="label">
                     <textcolor>black</textcolor>
-                    <font>font30_title</font>
-                    <label>askjfaskhf</label>
+                    <font>font45</font>
+                    <label>I</label>
+                </control>
+                <control type="label">
+                    <textcolor>black</textcolor>
+                    <font>font45</font>
+                    <label>put</label>
+                </control>
+                <control type="label">
+                    <textcolor>black</textcolor>
+                    <font>font45</font>
+                    <label>Here?</label>
+                </control>
+                <control type="label">
+                    <textcolor>black</textcolor>
+                    <font>font45</font>
+                    <label>Since Settings aren't</label>
+                </control>
+                <control type="label">
+                    <textcolor>black</textcolor>
+                    <font>font45</font>
+                    <label>easily acessible from home</label>
                 </control>
             </control>
         </control>
