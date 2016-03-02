@@ -33,6 +33,11 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>font40</name>
+			<filename>SourceSansPro-Regular.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
 			<name>font45</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>45</size>

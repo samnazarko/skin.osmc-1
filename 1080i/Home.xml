@@ -112,7 +112,7 @@
                 <control type="textbox">
                     <left>940</left>
                     <top>220</top>
-                    <height>100</height>
+                    <height>90</height>
                     <width>400</width>
                     <textcolor>main</textcolor>
                     <label>$INFO[Container(50).ListItem.Title][CR]$INFO[Container(50).ListItem.Year,(,)]</label>
@@ -213,14 +213,22 @@
                 <control type="textbox">
                     <left>890</left>
                     <top>220</top>
-                    <height>100</height>
+                    <height>80</height>
                     <width>400</width>
                     <textcolor>main</textcolor>
-                    <label>$INFO[Container(51).ListItem.Title][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(51).ListItem.Title][/B][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
+                </control>
+                <control type="image">
+                    <left>890</left>
+                    <top>300</top>
+                    <height>30</height>
+                    <width>120</width>
+                    <aspectratio align="left">keep</aspectratio>
+                    <texture>$INFO[Container(51).ListItem.StarRating,stars/]</texture>
                 </control>
                 <control type="textbox">
                     <left>890</left>
-                    <top>310</top>
+                    <top>330</top>
                     <height>540</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
@@ -229,6 +237,7 @@
             </control>
             <control type="image">
                 <visible>Control.HasFocus(511)</visible>
+                <width>1600</width>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <texture>darken.png</texture>
             </control>
@@ -246,7 +255,7 @@
                     <width>400</width>
                     <font>font30</font>
                     <textcolor>main</textcolor>
-                    <label>$INFO[Container(51).ListItem.Title] $INFO[Container(51).ListItem.Year,(,)]</label>
+                    <label>[B]$INFO[Container(51).ListItem.Title][/B] $INFO[Container(51).ListItem.Year,(,)]</label>
                 </control>
                 <control type="image">
                     <left>50</left>
@@ -301,14 +310,22 @@
                     <control type="textbox">
                         <left>890</left>
                         <top>220</top>
-                        <height>100</height>
+                        <height>50</height>
                         <width>400</width>
                         <textcolor>main</textcolor>
-                        <label>$INFO[Container(511).ListItem.Title]</label>
+                        <label>[B]$INFO[Container(511).ListItem.Title][/B]</label>
+                    </control>
+                    <control type="image">
+                        <left>890</left>
+                        <top>270</top>
+                        <height>30</height>
+                        <width>120</width>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>$INFO[Container(511).ListItem.StarRating,stars/]</texture>
                     </control>
                     <control type="textbox">
                         <left>890</left>
-                        <top>290</top>
+                        <top>300</top>
                         <height>540</height>
                         <width>400</width>
                         <textcolor>black</textcolor>
@@ -378,7 +395,7 @@
             <height>20</height>
             <width>auto</width>
             <align>right</align>
-            <font>font30</font>
+            <font>font40</font>
             <info>System.Time</info>
         </control>
         <control type="image">
