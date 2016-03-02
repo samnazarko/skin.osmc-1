@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="false">9000</defaultcontrol>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
-        <include>osmc_back</include>
-        <control type="grouplist" id="9000">
-            <width>400</width>
-            <height>1080</height>
-            <scrolltime>600</scrolltime>
-            <onright>700</onright>
-            <usecontrolcoords>true</usecontrolcoords>
-            <control type="button" id="9001">
-                <top>200</top>
-                <height>880</height>
+        <control type="group">
+            <animation effect="fade" start="100" end="25" time="200" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+            <include>osmc_back</include>
+            <control type="grouplist" id="9000">
                 <width>400</width>
-                <font>font_MainMenu</font>
-                <aligny>top</aligny>
-                <align>right</align>
-                <label>Movies</label>
-            </control>
-            <control type="button" id="9002">
-                <top>200</top>
-                <height>880</height>
-                <width>400</width>
-                <font>font_MainMenu</font>
-                <aligny>top</aligny>
-                <align>right</align>
-                <label>TVShows</label>
-            </control>
-            <control type="button" id="9003">
-                <top>200</top>
-                <height>880</height>
-                <width>400</width>
-                <font>font_MainMenu</font>
-                <aligny>top</aligny>
-                <align>right</align>
-                <label>Testing</label>
+                <height>1080</height>
+                <scrolltime>600</scrolltime>
+                <onright>700</onright>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="button" id="9001">
+                    <top>200</top>
+                    <height>880</height>
+                    <width>400</width>
+                    <font>font_MainMenu</font>
+                    <aligny>top</aligny>
+                    <align>right</align>
+                    <label>Movies</label>
+                </control>
+                <control type="button" id="9002">
+                    <top>200</top>
+                    <height>880</height>
+                    <width>400</width>
+                    <font>font_MainMenu</font>
+                    <aligny>top</aligny>
+                    <align>right</align>
+                    <label>TVShows</label>
+                </control>
+                <control type="button" id="9003">
+                    <top>200</top>
+                    <height>880</height>
+                    <width>400</width>
+                    <font>font_MainMenu</font>
+                    <aligny>top</aligny>
+                    <align>right</align>
+                    <label>Testing</label>
+                </control>
             </control>
         </control>
         <control type="group" id="700">
@@ -51,7 +54,7 @@
             <description>TVSHOWS</description>
             <visible>Control.HasFocus(9002) | Control.HasFocus(51) | Control.HasFocus(511)</visible>
             <animation effect="slide" time="600" delay="600" start="1920,0" end="420,0">Visible</animation>
-            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" delay="60" end="-100,0">Conditional</animation>
+            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <texture>mainbackground.png</texture>
             </control>
@@ -69,7 +72,7 @@
                 <itemlayout height="85" width="400">
                     <control type="textbox">
                         <width>400</width>
-                        <height>110</height>
+                        <height>85</height>
                         <textcolor>black</textcolor>
                         <font>font30_title</font>
                         <align>left</align>
@@ -80,7 +83,7 @@
                 <focusedlayout height="85" width="400">
                     <control type="textbox">
                         <width>400</width>
-                        <height>110</height>
+                        <height>85</height>
                         <font>font30_title</font>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -91,15 +94,15 @@
             </control>
             <control type="group">
                 <control type="image">
-                    <left>400</left>
+                    <left>450</left>
                     <top>220</top>
                     <height>600</height>
                     <width>400</width>
                     <aspectratio align="top">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.Art(thumb)]</texture>
+                    <texture>$INFO[Container(51).ListItem.Art(poster)]</texture>
                 </control>
                 <control type="textbox">
-                    <left>830</left>
+                    <left>890</left>
                     <top>220</top>
                     <height>100</height>
                     <width>400</width>
@@ -107,13 +110,18 @@
                     <label>$INFO[Container(51).ListItem.Title][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
                 </control>
                 <control type="textbox">
-                    <left>830</left>
+                    <left>890</left>
                     <top>310</top>
                     <height>400</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
                     <label>$INFO[Container(51).ListItem.Plot]</label>
                 </control>
+            </control>
+            <control type="image">
+                <visible>Control.HasFocus(511)</visible>
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
                 <description>TVSHOWS</description>
@@ -122,38 +130,73 @@
                 <control type="image">
                     <texture>mainbackground.png</texture>
                 </control>
+                <control type="textbox">
+                    <left>50</left>
+                    <top>220</top>
+                    <height>100</height>
+                    <width>400</width>
+                    <font>font24_title</font>
+                    <textcolor>main</textcolor>
+                    <label>$INFO[Container(51).ListItem.Title][CR]$INFO[Container(51).ListItem.Year,(,)]</label>
+                </control>
                 <control type="panel" id="511">
-                    <top>200</top>
+                    <top>280</top>
                     <left>50</left>
                     <width>400</width>
-                    <height>680</height>
+                    <height>620</height>
                     <onleft>51</onleft>
                     <onright>-</onright>
                     <onup>noop</onup>
                     <ondown>noop</ondown>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
-                    <itemlayout height="110" width="400">
+                    <itemlayout height="68" width="400">
                         <control type="textbox">
                             <width>400</width>
-                            <height>110</height>
+                            <height>68</height>
                             <textcolor>black</textcolor>
-                            <font>font30_title</font>
+                            <font>font13_title</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <info>ListItem.Label</info>
+                            <info>ListItem.Title</info>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="110" width="120">
+                    <focusedlayout height="68" width="400">
                         <control type="textbox">
                             <width>400</width>
-                            <height>110</height>
-                            <font>font30_title</font>
+                            <height>68</height>
+                            <font>font13_title</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <info>ListItem.Label</info>
+                            <info>ListItem.Title</info>
                         </control>
                     </focusedlayout>
-                    <content sortby="title" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/]</content>
+                    <content sortby="date" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <left>450</left>
+                        <top>220</top>
+                        <height>600</height>
+                        <width>400</width>
+                        <aspectratio align="top">stretch</aspectratio>
+                        <texture>$INFO[Container(511).ListItem.Art(season.poster)]</texture>
+                    </control>
+                    <control type="textbox">
+                        <left>890</left>
+                        <top>220</top>
+                        <height>100</height>
+                        <width>400</width>
+                        <textcolor>main</textcolor>
+                        <label>$INFO[Container(511).ListItem.Title]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>890</left>
+                        <top>290</top>
+                        <height>420</height>
+                        <width>400</width>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[Container(511).ListItem.Plot]</label>
+                    </control>
                 </control>
             </control>
         </control>
