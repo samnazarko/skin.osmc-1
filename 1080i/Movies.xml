@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="moviehome">
+        <control type="group">
+            <description>MOVIES</description>
+            <visible>Control.HasFocus(9001) | Control.HasFocus(50)</visible>
+            <animation condition="Control.HasFocus(50)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
+            <control type="image">
+                <visible>!ControlGroup(9000).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1600</width>
+                <aspectratio align="right">scale</aspectratio>
+                <texture>mainbackground.png</texture>
+            </control>
+            <control type="panel" id="50">
+                <top>200</top>
+                <left>50</left>
+                <width>400</width>
+                <height>680</height>
+                <onleft>9000</onleft>
+                <onright>-</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <scrolltime tween="sine" easing="out">200</scrolltime>
+                <itemlayout height="85" width="400">
+                    <control type="textbox">
+                        <width>400</width>
+                        <height>85</height>
+                        <textcolor>black</textcolor>
+                        <font>font45</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="85" width="400">
+                    <control type="textbox">
+                        <width>400</width>
+                        <height>85</height>
+                        <font>font45</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content sortby="title" sortorder="ascending">videodb://movies/titles/</content>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>500</left>
+                    <top>220</top>
+                    <height>600</height>
+                    <width>400</width>
+                    <aspectratio align="top">keep</aspectratio>
+                    <texture>$INFO[Container(50).ListItem.Art(poster)]</texture>
+                </control>
+                <control type="textbox">
+                    <left>940</left>
+                    <top>220</top>
+                    <height>90</height>
+                    <width>400</width>
+                    <textcolor>main</textcolor>
+                    <label>$INFO[Container(50).ListItem.Title][CR]$INFO[Container(50).ListItem.Year,(,)]</label>
+                </control>
+                <control type="textbox">
+                    <left>940</left>
+                    <top>310</top>
+                    <height>560</height>
+                    <width>400</width>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[Container(50).ListItem.Plot]</label>
+                </control>
+                <control type="grouplist">
+                    <left>500</left>
+                    <top>820</top>
+                    <width>400</width>
+                    <itemgap>25</itemgap>
+                    <orientation>horizontal</orientation>
+                    <control type="label">
+                        <width>auto</width>
+                        <label>$INFO[Container(50).ListItem.VideoResolution]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <label>$INFO[Container(50).ListItem.VideoAspect]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <label>$INFO[Container(50).ListItem.AudioCodec]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <label>$INFO[Container(50).ListItem.AudioChannels]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <label>$INFO[Container(50).ListItem.AudioLanguage]</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include file="homepanel.xml" />
     <include file="Includes_Variables.xml" />
     <include file="Defaults.xml" />
-    <include file="CommonViews.xml" />
-    <include file="musicpage.xml" />
-    <!--VIDEOVIEWS-->
-    <include file="views/video_fatlist.xml" />
-    <include file="views/video_widelist.xml" />
-    <include file="views/video_plainlist.xml" />
-    <include file="views/video_banners.xml" />
-    <include file="views/video_fanart.xml" />
-    <include file="views/video_icons.xml" />
-    <include file="views/video_icons_eps.xml" />
-    <include file="views/video_sio2.xml" />
-    <include file="views/video_sio2x.xml" />
-    <!--OTHERVIEWS-->
-    <include file="views/music_fanart.xml" />
-    <include file="views/music_sio2.xml" />
-    <include file="views/music_list.xml" />
-    <include file="views/music_icons.xml" />
-    <include file="views/Programviews.xml" />
-    <include file="Shelf_Elements.xml" />
+    <include file="Movies.xml" />
+    <include file="Tvshows.xml" />
+    <include file="Power.xml" />
     <include name="VisibleFade">
         <animation effect="fade" start="0" end="100" time="200">visiblechange</animation>
     </include>

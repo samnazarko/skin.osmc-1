@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="powerhome">
+        <control type="group">
+            <visible>Control.HasFocus(9016) | ControlGroup(66).HasFocus</visible>
+            <animation condition="ControlGroup(66).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
+            <control type="image">
+                <visible>!ControlGroup(9000).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1600</width>
+                <aspectratio align="right">scale</aspectratio>
+                <texture>mainbackground.png</texture>
+            </control>
+            <control type="grouplist" id="66">
+                <top>200</top>
+                <left>50</left>
+                <width>400</width>
+                <height>680</height>
+                <onleft>9000</onleft>
+                <control type="button" id="1">
+                    <textcolor>black</textcolor>
+                    <align>left</align>
+                    <font>font45</font>
+                    <label>Quit</label>
+                    <onclick>quit</onclick>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>
