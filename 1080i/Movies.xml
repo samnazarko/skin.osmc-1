@@ -194,12 +194,12 @@
                         <onup>noop</onup>
                         <onleft>501</onleft>
                         <top>140</top>
-                        <width>480</width>
+                        <width>400</width>
                         <height>800</height>
                         <scrolltime tween="sine" easing="out">200</scrolltime>
-                        <itemlayout height="70" width="480">
+                        <itemlayout height="70" width="400">
                             <control type="textbox">
-                                <width>400</width>
+                                <width>300</width>
                                 <height>120</height>
                                 <textcolor>black</textcolor>
                                 <font>font30</font>
@@ -208,9 +208,9 @@
                                 <info>ListItem.Label</info>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="70" width="480">
+                        <focusedlayout height="70" width="400">
                             <control type="textbox">
-                                <width>400</width>
+                                <width>300</width>
                                 <height>120</height>
                                 <font>font30</font>
                                 <align>left</align>
@@ -221,12 +221,87 @@
                         <content target="video">$INFO[Container(501).Listitem.DBID,videodb://movies/genres/]</content>
                     </control>
                     <control type="image">
-                        <left>800</left>
+                        <visible>Container(502).HasNext</visible>
+                        <include>visiblefade</include>
+                        <left>450</left>
+                        <top>1000</top>
+                        <height>40</height>
+                        <width>40</width>
+                        <texture>arrow.png</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Container(502).HasPrevious</visible>
+                        <include>visiblefade</include>
+                        <left>450</left>
+                        <top>30</top>
+                        <height>40</height>
+                        <width>40</width>
+                        <texture flipy="true">arrow.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>720</left>
                         <top>220</top>
                         <height>610</height>
                         <width>400</width>
                         <aspectratio align="top">keep</aspectratio>
                         <texture>$INFO[Container(502).ListItem.Art(poster)]</texture>
+                    </control>
+                    <control type="grouplist">
+                        <left>720</left>
+                        <top>820</top>
+                        <width>400</width>
+                        <itemgap>25</itemgap>
+                        <orientation>horizontal</orientation>
+                        <control type="label">
+                            <width>auto</width>
+                            <label>$INFO[Container(502).ListItem.VideoResolution]</label>
+                        </control>
+                        <control type="label">
+                            <width>auto</width>
+                            <label>$INFO[Container(502).ListItem.VideoAspect]</label>
+                        </control>
+                        <control type="label">
+                            <width>auto</width>
+                            <label>$INFO[Container(502).ListItem.AudioCodec]</label>
+                        </control>
+                        <control type="label">
+                            <width>auto</width>
+                            <label>$INFO[Container(502).ListItem.AudioChannels]</label>
+                        </control>
+                        <control type="label">
+                            <width>auto</width>
+                            <label>$INFO[Container(502).ListItem.AudioLanguage]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>Control.HasFocus(502)</visible>
+                        <include>visiblefade</include>
+                        <left>720</left>
+                        <control type="textbox">
+                            <left>440</left>
+                            <top>220</top>
+                            <height>90</height>
+                            <width>350</width>
+                            <textcolor>main</textcolor>
+                            <label>[B]$INFO[Container(502).ListItem.Title][/B] $INFO[Container(502).ListItem.Year,(,)]</label>
+                        </control>
+                        <control type="image">
+                            <left>440</left>
+                            <top>290</top>
+                            <height>30</height>
+                            <width>120</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[Container(502).ListItem.StarRating,stars/]</texture>
+                        </control>
+                        <control type="textbox">
+                            <left>440</left>
+                            <top>320</top>
+                            <height>580</height>
+                            <width>350</width>
+                            <textcolor>black</textcolor>
+                            <align>justify</align>
+                            <label>$INFO[Container(502).ListItem.Plot]</label>
+                        </control>
                     </control>
                 </control>
             </control>
