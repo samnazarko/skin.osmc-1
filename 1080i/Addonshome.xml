@@ -19,19 +19,21 @@
                 <height>800</height>
                 <onleft>9000</onleft>
                 <onright>531</onright>
-                <control type="button" id="500">
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <control type="button" id="400">
                     <font>font45</font>
                     <label>157</label>
                     <onfocus>Skin.SetString(addonshome,addons://sources/video/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
-                <control type="button" id="501">
+                <control type="button" id="401">
                     <font>font45</font>
                     <label>292</label>
                     <onfocus>Skin.SetString(addonshome,addons://sources/audio/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
-                <control type="button" id="502">
+                <control type="button" id="402">
                     <font>font45</font>
                     <label>350</label>
                     <onfocus>Skin.SetString(addonshome,addons://sources/executable/)</onfocus>

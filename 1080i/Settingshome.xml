@@ -2,7 +2,7 @@
 <includes>
     <include name="settingshome">
         <control type="group">
-            <visible>Control.HasFocus(9015) | Control.HasFocus(65) | Control.HasFocus(651)</visible>
+            <visible>Control.HasFocus(9015) | ControlGroup(65).HasFocus | Control.HasFocus(651)</visible>
             <animation effect="slide" time="600" delay="600" start="1950,0" end="0,0">Visible</animation>
             <animation condition="Control.HasFocus(65) | Control.HasFocus(651)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
@@ -13,100 +13,113 @@
                 <texture>mainbackground.png</texture>
             </control>
             <control type="group">
-            <control type="panel" id="65">
-              <top>140</top>
-                <left>50</left>
-                <width>600</width>
-                <height>800</height>
-                <onleft>9000</onleft>
-                <onright>-</onright>
-                <onup>noop</onup>
-                <ondown>noop</ondown>
-                <scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="100" width="400">
-                    <control type="textbox">
+                <control type="grouplist" id="65">
+                    <top>140</top>
+                    <left>50</left>
+                    <width>400</width>
+                    <height>800</height>
+                    <onleft>9000</onleft>
+                    <onright>3</onright>
+                    <onup>noop</onup>
+                    <ondown>noop</ondown>
+                    <itemgap>0</itemgap>
+                    <scrolltime tween="sine" easing="out">200</scrolltime>
+                    <!--<control type="button" id="1000">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>480</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(AppearanceSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindowandfocus(AppearanceSettings,1003)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1001">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>3</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(VideosSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindowandfocus(AppearanceSettings,65,1001)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1002">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>2</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(MusicSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindow(MusicSettings)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1003">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>31059</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(PVRSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindow(PVRSettings)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1004">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>1</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(PicturesSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindow(PicturesSettings)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1005">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>8</label>-->
+                    <!--&lt;!&ndash;<onfocus>activatewindow(WeatherSettings)</onfocus>&ndash;&gt;-->
+                    <!--<onclick>activatewindow(WeatherSettings)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1006">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>14036</label>-->
+                    <!--<onclick>activatewindow(servicesettings)</onclick>-->
+                    <!--</control>-->
+                    <!--<control type="button" id="1007">-->
+                    <!--<width>300</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>13000</label>-->
+                    <!--<onclick>activatewindow(SystemSettings)</onclick>-->
+                    <!--</control>-->
+                    <control type="button" id="1008">
                         <width>400</width>
-                        <height>120</height>
-                        <textcolor>black</textcolor>
+                        <height>80</height>
                         <font>font45</font>
-                        <align>left</align>
                         <aligny>center</aligny>
-                        <info>ListItem.Label</info>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="100" width="400">
-                    <control type="textbox">
-                        <width>400</width>
-                        <height>120</height>
-                        <font>font45</font>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <info>ListItem.Label</info>
-                    </control>
-                </focusedlayout>
-                <content>
-                    <item id="1" description="Appearance">
-                        <label>480</label>
-                        <onclick>activatewindow(AppearanceSettings)</onclick>
-                    </item>
-                    <item id="3" description="Videos">
-                        <label>3</label>
-                        <onclick>activatewindow(VideosSettings)</onclick>
-                    </item>
-                    <item id="4" description="Music">
-                        <label>2</label>
-                        <onclick>activatewindow(MusicSettings)</onclick>
-                    </item>
-                    <item id="14" description="LiveTV">
-                        <label>31059</label>
-                        <onclick>activatewindow(PVRSettings)</onclick>
-                    </item>
-                    <item id="5" description="Pictures">
-                        <label>1</label>
-                        <onclick>activatewindow(PicturesSettings)</onclick>
-                    </item>
-                    <item id="8" description="Weather">
-                        <label>8</label>
-                        <onclick>activatewindow(WeatherSettings)</onclick>
-                    </item>
-                    <item id="9" description="Services">
-                        <label>14036</label>
-                        <onclick>Activatewindow(servicesettings)</onclick>
-                    </item>
-                    <item id="10" description="System">
-                        <label>13000</label>
-                        <onclick>activatewindow(SystemSettings)</onclick>
-                    </item>
-                    <item id="2" description="Skin Settings">
-                        <label>20077</label>
-                        <onclick>activatewindow(SkinSettings)</onclick>
-                    </item>
-                    <item id="13" description="Addons">
                         <label>24001</label>
                         <onclick>activatewindow(AddonBrowser,root)</onclick>
-                    </item>
-                    <item id="15" description="openELEC">
-                        <visible>System.HasAddon(service.openelec.settings)</visible>
-                        <label>$ADDON[service.openelec.settings 600]</label>
-                        <onclick>RunAddon(service.openelec.settings)</onclick>
-                    </item>
-                    <item id="6" description="Sys Info">
-                        <label>$LOCALIZE[138]</label>
+                    </control>
+                    <control type="button" id="1009">
+                        <width>400</width>
+                        <height>80</height>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <label>138</label>
                         <onclick>activatewindow(systeminfo)</onclick>
-                    </item>
-                    <item id="7" description="Maintenance">
-                        <visible>System.HasAddon(service.clean.up)</visible>
-                        <visible>!System.HasAddon(service.openelec.settings)</visible>
-                        <label>$ADDON[service.clean.up 32009]</label>
-                        <onclick>ActivateWindow(1717)</onclick>
-                    </item>
-                    <item id="16">
-                        <label>$LOCALIZE[31082]</label>
-                        <onclick>ActivateWindow(1111)</onclick>
-                    </item>
-                </content>
+                    </control>
+                    <control type="button" id="1010">
+                        <width>400</width>
+                        <height>80</height>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <label>5</label>
+                        <onclick>activatewindow(settings)</onclick>
+                    </control>
+                </control>
             </control>
-        </control>
         </control>
     </include>
 </includes>

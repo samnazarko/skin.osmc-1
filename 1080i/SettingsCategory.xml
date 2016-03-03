@@ -7,8 +7,9 @@
         <control type="grouplist" id="65">
             <top>140</top>
             <left>50</left>
-            <width>600</width>
+            <width>300</width>
             <height>800</height>
+            <!--<onleft>activatewindow(home)</onleft>-->
             <onleft>noop</onleft>
             <onright>3</onright>
             <onup>noop</onup>
@@ -16,102 +17,84 @@
             <itemgap>0</itemgap>
             <scrolltime tween="sine" easing="out">200</scrolltime>
             <control type="button" id="1000">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>480</label>
-                <onfocus>activatewindow(AppearanceSettings)</onfocus>
+                <onfocus>ReplaceWindow(AppearanceSettings)</onfocus>
                 <onclick>activatewindow(AppearanceSettings)</onclick>
             </control>
             <control type="button" id="1001">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>3</label>
-                <onfocus>activatewindow(VideosSettings)</onfocus>
+                <onfocus>ReplaceWindow(VideosSettings)</onfocus>
                 <onclick>activatewindow(VideosSettings)</onclick>
             </control>
             <control type="button" id="1002">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>2</label>
-                <onfocus>activatewindow(MusicSettings)</onfocus>
+                <onfocus>ReplaceWindow(MusicSettings)</onfocus>
                 <onclick>activatewindow(MusicSettings)</onclick>
             </control>
             <control type="button" id="1003">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>31059</label>
-                <onfocus>activatewindow(PVRSettings)</onfocus>
+                <onfocus>ReplaceWindow(PVRSettings)</onfocus>
                 <onclick>activatewindow(PVRSettings)</onclick>
             </control>
             <control type="button" id="1004">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>1</label>
-                <onfocus>activatewindow(PicturesSettings)</onfocus>
+                <onfocus>ReplaceWindow(PicturesSettings)</onfocus>
                 <onclick>activatewindow(PicturesSettings)</onclick>
             </control>
             <control type="button" id="1005">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>8</label>
-                <onfocus>activatewindow(WeatherSettings)</onfocus>
+                <onfocus>ReplaceWindow(WeatherSettings)</onfocus>
                 <onclick>activatewindow(WeatherSettings)</onclick>
             </control>
             <control type="button" id="1006">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>14036</label>
-                <onfocus>activatewindow(servicesettings)</onfocus>
+                <onfocus>ReplaceWindow(servicesettings)</onfocus>
                 <onclick>activatewindow(servicesettings)</onclick>
             </control>
             <control type="button" id="1007">
-                <width>400</width>
+                <width>300</width>
                 <height>80</height>
                 <font>font45</font>
-                <align>left</align>
+                <align>right</align>
                 <aligny>center</aligny>
                 <label>13000</label>
-                <onfocus>activatewindow(SystemSettings)</onfocus>
+                <onfocus>ReplaceWindow(SystemSettings)</onfocus>
                 <onclick>activatewindow(SystemSettings)</onclick>
-            </control>
-            <control type="button" id="1008">
-                <width>400</width>
-                <height>80</height>
-                <font>font45</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>24001</label>
-                <onclick>activatewindow(AddonBrowser,root)</onclick>
-            </control>
-            <control type="button" id="1009">
-                <width>400</width>
-                <height>80</height>
-                <font>font45</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>138</label>
-                <onclick>activatewindow(systeminfo)</onclick>
             </control>
         </control>
         <control type="image">
@@ -162,8 +145,8 @@
             <texture>darken.png</texture>
         </control>
         <control type="image">
-            <left>550</left>
-            <animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <left>600</left>
+            <animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-150,0">Conditional</animation>
             <visible>ControlGroup(5).HasFocus</visible>
             <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
             <width>1370</width>
