@@ -123,12 +123,12 @@
             <width>1920</width>
             <texture>lines/Line.png</texture>
         </control>
-        <control type="label" id="2" description="Heading">
-            <left>520</left>
-            <width>1390</width>
-            <align>center</align>
-            <label>-</label>
-        </control>
+        <!--<control type="label" id="2" description="Heading">-->
+            <!--<left>520</left>-->
+            <!--<width>1390</width>-->
+            <!--<align>center</align>-->
+            <!--<label>-</label>-->
+        <!--</control>-->
         <control type="grouplist" id="3" description="Menu">
             <animation condition="!ControlGroup(65).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
             <top>140</top>

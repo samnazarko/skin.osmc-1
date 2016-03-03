@@ -19,6 +19,8 @@
                 <height>800</height>
                 <onleft>9000</onleft>
                 <onright>501</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
                 <control type="button" id="111">
                     <font>font45</font>
                     <label>all</label>
@@ -239,6 +241,7 @@
                         <texture flipy="true">arrow.png</texture>
                     </control>
                     <control type="image">
+                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>720</left>
                         <top>220</top>
                         <height>610</height>

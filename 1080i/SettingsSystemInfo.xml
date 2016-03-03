@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="7">
     <defaultcontrol always="true">9001</defaultcontrol>
-
     <backgroundcolor>background</backgroundcolor>
     <include>OpenClose</include>
     <controls>
-        <include>BlackBackground</include>
-        <control type="image" description="Line Split">
-            <left>0</left>
-            <top>150</top>
-            <width>1920</width>
-            <height>1</height>
-            <aspectratio>stretch</aspectratio>
-            <texture>lines/Line.png</texture>
-        </control>
-        <control type="image" description="Line Split">
-            <left>0</left>
-            <top>80</top>
-            <width>1920</width>
-            <height>1</height>
-            <aspectratio>stretch</aspectratio>
-            <texture>lines/Line.png</texture>
-        </control>
+        <include>osmc_back</include>
         <control type="label" description="Heading">
-            <include>Heading</include>
+            <font>font45</font>
+            <align>center</align>
             <label>130</label>
         </control>
         <control type="group">
             <control type="grouplist" id="9001" description="TopHat">
-                <top>78</top>
-                <width>auto</width>
-                <align>center</align>
-                <height>80</height>
-                <itemgap>9</itemgap>
-                <onleft>noop</onleft>
-                <onright>noop</onright>
-                <onup>9001</onup>
-                <ondown>9001</ondown>
-                <orientation>horizontal</orientation>
+                <top>140</top>
+                <left>50</left>
+                <width>400</width>
+                <height>800</height>
+                <onleft>9000</onleft>
+                <onright>3</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <itemgap>0</itemgap>
                 <control type="button" id="95" description="Summary">
                     <width>300</width>
                     <label>20037</label>
@@ -91,7 +74,7 @@
                     <description>Memory BAR</description>
                     <height>15</height>
                     <width>1420</width>
-                   <texturebg border="6,0,6,0">progress/ProgressBG.png</texturebg>
+                    <texturebg border="6,0,6,0">progress/ProgressBG.png</texturebg>
                     <midtexture border="0,1,0,1">progress/ProgressM.png</midtexture>
                     <righttexture border="1,1,6,1">progress/ProgressR.png</righttexture>
                     <lefttexture border="6,1,1,1">progress/ProgressL.png</lefttexture>

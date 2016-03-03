@@ -107,7 +107,7 @@
                         <height>80</height>
                         <font>font45</font>
                         <aligny>center</aligny>
-                        <label>138</label>
+                        <label>29915</label>
                         <onclick>activatewindow(systeminfo)</onclick>
                     </control>
                     <control type="button" id="1010">

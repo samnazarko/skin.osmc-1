@@ -40,6 +40,12 @@
                     <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                 </control>
+                <control type="button" id="1008">
+                    <font>font45</font>
+                    <label>10040</label>
+                    <onfocus>Skin.SetString(addonshome,-)</onfocus>
+                    <onclick>activatewindow(AddonBrowser,root)</onclick>
+                </control>
             </control>
             <control type="image">
                 <visible>Control.HasFocus(531)</visible>
