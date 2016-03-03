@@ -96,6 +96,7 @@
                     <height>540</height>
                     <width>400</width>
                     <textcolor>black</textcolor>
+                    <align>justify</align>
                     <label>$INFO[Container(51).ListItem.Plot]</label>
                 </control>
             </control>
@@ -163,23 +164,23 @@
                     <content sortby="date" sortorder="ascending">$INFO[Container(51).ListItem.DBID,videodb://tvshows/titles/,/-1]</content>
                 </control>
                 <control type="image">
-                <visible>Container(511).HasNext</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>1000</top>
-                <height>50</height>
-                <width>50</width>
-                <texture>arrow.png</texture>
-            </control>
-            <control type="image">
-                <visible>Container(511).HasPrevious</visible>
-                <include>visiblefade</include>
-                <left>200</left>
-                <top>30</top>
-                <height>50</height>
-                <width>50</width>
-                <texture flipy="true">arrow.png</texture>
-            </control>
+                    <visible>Container(511).HasNext</visible>
+                    <include>visiblefade</include>
+                    <left>200</left>
+                    <top>1000</top>
+                    <height>50</height>
+                    <width>50</width>
+                    <texture>arrow.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(511).HasPrevious</visible>
+                    <include>visiblefade</include>
+                    <left>200</left>
+                    <top>30</top>
+                    <height>50</height>
+                    <width>50</width>
+                    <texture flipy="true">arrow.png</texture>
+                </control>
                 <control type="group">
                     <control type="image">
                         <left>450</left>
@@ -211,6 +212,7 @@
                         <height>540</height>
                         <width>400</width>
                         <textcolor>black</textcolor>
+                        <align>justify</align>
                         <label>$INFO[Container(511).ListItem.Plot]</label>
                     </control>
                 </control>

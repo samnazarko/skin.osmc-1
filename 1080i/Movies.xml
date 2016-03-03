@@ -2,9 +2,9 @@
 <includes>
     <include name="moviehome">
         <control type="group">
-            <visible>Control.HasFocus(9001) | ControlGroup(50).HasFocus | Control.HasFocus(501)</visible>
+            <visible>Control.HasFocus(9001) | ControlGroup(50).HasFocus | Control.HasFocus(501) | Control.HasFocus(502)</visible>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
-            <animation condition="ControlGroup(50).HasFocus | Control.HasFocus(501)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="ControlGroup(50).HasFocus | Control.HasFocus(501) | Control.HasFocus(502)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -21,43 +21,44 @@
                 <onright>501</onright>
                 <control type="button" id="111">
                     <font>font45</font>
-                    <label>recent</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
+                    <label>all</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
-                    <label>all</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
+                    <label>recent</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
-                    <label>???</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
+                    <label>genres</label>
+                    <onfocus>Skin.SetString(movieshome,videodb://movies/genres/)</onfocus>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                 </control>
             </control>
             <control type="image">
-                <visible>Control.HasFocus(501)</visible>
+                <visible>Control.HasFocus(501) | Control.HasFocus(502)</visible>
                 <width>1600</width>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
                 <left>350</left>
-                <animation condition="Control.HasFocus(501)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
+                <animation condition="Control.HasFocus(501) | Control.HasFocus(502)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
                 <control type="image">
                     <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
                     <left>-50</left>
                     <width>1450</width>
-                    <visible>Control.HasFocus(501)</visible>
+                    <visible>Control.HasFocus(501) | Control.HasFocus(502)</visible>
                     <texture>mainbackground.png</texture>
                     <aspectratio align="right">scale</aspectratio>
                 </control>
                 <control type="panel" id="501">
                     <onup>noop</onup>
                     <onleft>50</onleft>
+                    <onright>502</onright>
                     <top>140</top>
                     <width>400</width>
                     <height>800</height>
@@ -152,6 +153,7 @@
                         <label>[B]$INFO[Container(501).ListItem.Title][/B] $INFO[Container(501).ListItem.Year,(,)]</label>
                     </control>
                     <control type="image">
+                        <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>440</left>
                         <top>290</top>
                         <height>30</height>
@@ -167,6 +169,64 @@
                         <textcolor>black</textcolor>
                         <align>justify</align>
                         <label>$INFO[Container(501).ListItem.Plot]</label>
+                    </control>
+                </control>
+                <control type="image">
+                    <visible>Control.HasFocus(502)</visible>
+                    <left>-200</left>
+                    <width>1600</width>
+                    <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+                    <texture>darken.png</texture>
+                </control>
+                <control type="group">
+                    <animation condition="Control.HasFocus(502)" effect="slide" time="200" start="0,0" end="-250,0">Conditional</animation>
+                    <control type="image">
+                        <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                        <left>350</left>
+                        <width>1300</width>
+                        <visible>Control.HasFocus(502)</visible>
+                        <texture>mainbackground.png</texture>
+                        <aspectratio align="right">scale</aspectratio>
+                    </control>
+                    <control type="panel" id="502">
+                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <left>400</left>
+                        <onup>noop</onup>
+                        <onleft>501</onleft>
+                        <top>140</top>
+                        <width>480</width>
+                        <height>800</height>
+                        <scrolltime tween="sine" easing="out">200</scrolltime>
+                        <itemlayout height="70" width="480">
+                            <control type="textbox">
+                                <width>400</width>
+                                <height>120</height>
+                                <textcolor>black</textcolor>
+                                <font>font30</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <info>ListItem.Label</info>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="70" width="480">
+                            <control type="textbox">
+                                <width>400</width>
+                                <height>120</height>
+                                <font>font30</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <info>ListItem.Label</info>
+                            </control>
+                        </focusedlayout>
+                        <content target="video">$INFO[Container(501).Listitem.DBID,videodb://movies/genres/]</content>
+                    </control>
+                    <control type="image">
+                        <left>800</left>
+                        <top>220</top>
+                        <height>610</height>
+                        <width>400</width>
+                        <aspectratio align="top">keep</aspectratio>
+                        <texture>$INFO[Container(502).ListItem.Art(poster)]</texture>
                     </control>
                 </control>
             </control>
