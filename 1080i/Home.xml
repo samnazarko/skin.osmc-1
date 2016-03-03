@@ -54,6 +54,16 @@
                     <align>right</align>
                     <label>20343</label>
                 </control>
+                <control type="button" id="9004">
+                    <!--MUSIC-->
+                    <top>210</top>
+                    <height>870</height>
+                    <width>400</width>
+                    <font>font_MainMenu</font>
+                    <aligny>top</aligny>
+                    <align>right</align>
+                    <label>2</label>
+                </control>
                 <control type="button" id="9003">
                     <!--ADDONS-->
                     <top>210</top>
@@ -65,6 +75,7 @@
                     <label>24001</label>
                 </control>
                 <control type="button" id="9015">
+                    <!--SETTINGS-->
                     <top>210</top>
                     <height>870</height>
                     <width>400</width>
@@ -72,6 +83,7 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>5</label>
+                    <onclick>ActivateWindow(Settings)</onclick>
                 </control>
                 <control type="button" id="9016">
                     <top>210</top>
