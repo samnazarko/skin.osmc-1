@@ -4,7 +4,7 @@
         <control type="group">
             <visible>Control.HasFocus(9015) | Control.HasFocus(65) | Control.HasFocus(651)</visible>
             <animation effect="slide" time="600" delay="600" start="1950,0" end="0,0">Visible</animation>
-            <animation condition="Control.HasFocus(51) | Control.HasFocus(511)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="Control.HasFocus(65) | Control.HasFocus(651)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -13,7 +13,7 @@
                 <texture>mainbackground.png</texture>
             </control>
             <control type="group">
-            <control type="list" id="65">
+            <control type="panel" id="65">
               <top>140</top>
                 <left>50</left>
                 <width>600</width>
@@ -22,7 +22,6 @@
                 <onright>-</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
-                <onclick>SetFocus(222)</onclick>
                 <scrolltime tween="sine" easing="out">200</scrolltime>
                 <itemlayout height="100" width="400">
                     <control type="textbox">
@@ -104,22 +103,6 @@
                     <item id="16">
                         <label>$LOCALIZE[31082]</label>
                         <onclick>ActivateWindow(1111)</onclick>
-                    </item>
-                    <item id="17">
-                        <label>Turn on Kiosk Mode</label>
-                        <visible>!Skin.HasSetting(kiosk)</visible>
-                        <onclick>Skin.ToggleSetting(kiosk)</onclick>
-                        <onclick>Skin.Reset(ViewsMenuOff)</onclick>
-                        <onclick>Skin.ToggleSetting(ViewsMenuOff)</onclick>
-                        <onclick>Skin.Reset(hidesett)</onclick>
-                        <onclick>Skin.ToggleSetting(hidesett)</onclick>
-                    </item>
-                    <item id="17">
-                        <label>Turn off Kiosk Mode</label>
-                        <visible>Skin.HasSetting(kiosk)</visible>
-                        <onclick>Skin.Reset(kiosk)</onclick>
-                        <onclick>Skin.Reset(ViewsMenuOff)</onclick>
-                        <onclick>Skin.Reset(hidesett)</onclick>
                     </item>
                 </content>
             </control>

@@ -18,7 +18,7 @@
         <height>100</height>
         <align>left</align>
         <aligny>center</aligny>
-        <font>size33</font>
+        <font>font30</font>
         <textcolor>main</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>orange</selectedcolor>
@@ -47,7 +47,7 @@
         <height>100</height>
         <align>left</align>
         <aligny>center</aligny>
-        <font>font16</font>
+        <font>font30</font>
         <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
@@ -60,8 +60,8 @@
         <height>75</height>
         <align>center</align>
         <aligny>center</aligny>
-        <font>size33</font>
-        <textcolor>maindim</textcolor>
+        <font>font30</font>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
@@ -74,8 +74,8 @@
         <height>75</height>
         <align>center</align>
         <aligny>center</aligny>
-        <font>size33</font>
-        <textcolor>maindim</textcolor>
+        <font>font30</font>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <altselectedcolor>orange</altselectedcolor>
@@ -89,8 +89,8 @@
         <height>75</height>
         <align>left</align>
         <aligny>center</aligny>
-        <font>size33</font>
-        <textcolor>maindim</textcolor>
+        <font>font30</font>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
@@ -111,8 +111,8 @@
         <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect2.png</texturefocus>
         <spinwidth>18</spinwidth>
         <spinheight>18</spinheight>
-        <font>size33</font>
-        <textcolor>maindim</textcolor>
+        <font>font30</font>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
@@ -125,7 +125,7 @@
     <default type="spincontrolex">
         <width>450</width>
         <height>75</height>
-        <font>size33</font>
+        <font>font30</font>
         <textureup>images/ArrowUpNF.png</textureup>
         <textureupfocus>images/ArrowUpFO.png</textureupfocus>
         <texturedown>images/ArrowDownNF.png</texturedown>
@@ -133,7 +133,7 @@
         <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect2.png</texturefocus>
         <spinwidth>18</spinwidth>
         <spinheight>18</spinheight>
-        <textcolor>maindim</textcolor>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
@@ -159,9 +159,9 @@
         <textureslidernibfocus>images/slider_nib.png</textureslidernibfocus>
         <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect2.png</texturefocus>
         <texturenofocus>-</texturenofocus>
-        <font>size33</font>
+        <font>font30</font>
         <aligny>center</aligny>
-        <textcolor>maindim</textcolor>
+        <textcolor>black</textcolor>
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
