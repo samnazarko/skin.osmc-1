@@ -116,18 +116,17 @@
                     <control type="textbox">
                         <left>890</left>
                         <top>220</top>
-                        <height>80</height>
-                        <width>400</width>
+                        <height>160</height>
+                        <width>350</width>
                         <textcolor>main</textcolor>
-                        <label>[B]$INFO[Container(531).ListItem.Property(Addon.Creator)][/B][CR]$INFO[Container(531).ListItem.Property(Addon.Version)]</label>
+                        <label>[B]$INFO[Container(531).ListItem.Label] $INFO[Container(531).ListItem.Property(Addon.Version)][CR][/B]$INFO[Container(531).ListItem.Property(Addon.Creator),by ]</label>
                     </control>
-                    <control type="image">
+                    <control type="textbox">
                         <left>890</left>
-                        <top>300</top>
-                        <height>30</height>
-                        <width>120</width>
-                        <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(531).ListItem.StarRating,stars/]</texture>
+                        <top>400</top>
+                        <height>200</height>
+                        <width>350</width>
+                        <label>[COLOR red]$INFO[Container(531).ListItem.Property(Addon.Disclaimer)][/COLOR]</label>
                     </control>
                     <control type="textbox">
                         <left>450</left>
