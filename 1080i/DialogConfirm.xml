@@ -9,7 +9,7 @@
             <top>210</top>
             <width>1360</width>
             <height>740</height>
-            <texture border="150">images/Dialog.png</texture>
+            <texture flipx="true" flipy="true">mainbackground.png</texture>
         </control>
         <control type="group">
             <left>480</left>
@@ -17,7 +17,7 @@
             <control type="label" id="1" description="Heading">
                 <width>960</width>
                 <label>-</label>
-                <font>size28</font>
+                <font>font30</font>
                 <align>center</align>
             </control>
             <control type="textbox" id="9" description="content">
@@ -26,6 +26,7 @@
                 <label>-</label>
                 <width>960</width>
                 <height>135</height>
+                <font>font40</font>
                 <align>center</align>
                 <autoscroll>false</autoscroll>
             </control>
