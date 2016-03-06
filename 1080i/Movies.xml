@@ -24,7 +24,7 @@
                 <control type="button" id="111">
                     <font>font45</font>
                     <label>all</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://movies/titles/)</onfocus>
+                    <onfocus>Skin.SetString(movieshome,special://skin/plists/inprogressmovies.xsp)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="112">
@@ -37,6 +37,18 @@
                     <font>font45</font>
                     <label>genres</label>
                     <onfocus>Skin.SetString(movieshome,videodb://movies/genres/)</onfocus>
+                    <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                </control>
+                <control type="button" id="114">
+                    <font>font45</font>
+                    <label>genres</label>
+                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesunwatched.xsp)</onfocus>
+                    <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                </control>
+                <control type="button" id="114">
+                    <font>font45</font>
+                    <label>genres</label>
+                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                 </control>
             </control>
@@ -61,6 +73,7 @@
                     <onup>noop</onup>
                     <onleft>50</onleft>
                     <onright>502</onright>
+                    <oninfo>-</oninfo>
                     <top>140</top>
                     <width>400</width>
                     <height>800</height>
