@@ -63,6 +63,7 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>2</label>
+                    <onclick>ActivateWindow(Music)</onclick>
                 </control>
                 <control type="button" id="9003">
                     <!--ADDONS-->
@@ -100,6 +101,7 @@
             <left>420</left>
             <include>moviehome</include>
             <include>tvhome</include>
+            <include>musichome</include>
             <include>addonshome</include>
             <include>settingshome</include>
             <include>powerhome</include>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="moviehome">
+    <include name="musichome">
         <control type="group">
-            <visible>Control.HasFocus(9001) | ControlGroup(50).HasFocus | Control.HasFocus(501) | Control.HasFocus(502)</visible>
+            <visible>Control.HasFocus(9004) | ControlGroup(54).HasFocus | Control.HasFocus(541) | Control.HasFocus(542)</visible>
             <animation effect="slide" time="600" delay="600" start="1520,0" end="0,0">Visible</animation>
-            <animation condition="ControlGroup(50).HasFocus | Control.HasFocus(501) | Control.HasFocus(502)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="ControlGroup(54).HasFocus | Control.HasFocus(541) | Control.HasFocus(542)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -12,67 +12,61 @@
                 <aspectratio align="right">scale</aspectratio>
                 <texture>mainbackground.png</texture>
             </control>
-            <control type="grouplist" id="50">
+            <control type="grouplist" id="54">
                 <top>140</top>
                 <left>50</left>
                 <width>300</width>
                 <height>800</height>
-                <onleft>9000</onleft>
-                <onright>501</onright>
+                <onleft>9004</onleft>
+                <onright>541</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <control type="button" id="111">
                     <font>font45</font>
                     <label>inprogress</label>
-                    <onfocus>Skin.SetString(movieshome,special://skin/plists/inprogressmovies.xsp)</onfocus>
+                    <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
                     <label>recent</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
+                    <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
                     <label>random</label>
-                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
+                    <onfocus>Skin.SetString(muscihome,musicdb://recentlyaddedalbums/)</onfocus>
                     <onclick>-</onclick>
                 </control>
                 <control type="button" id="114">
                     <font>font45</font>
                     <label>unwatched</label>
-                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesunwatched.xsp)</onfocus>
-                    <onclick>-</onclick>
-                </control>
-                <control type="button" id="115">
-                    <font>font45</font>
-                    <label>genres</label>
-                    <onfocus>Skin.SetString(movieshome,videodb://movies/genres/)</onfocus>
+                    <onfocus>Skin.SetString(musichome,musicdb://recentlyplayedalbums/)</onfocus>
                     <onclick>-</onclick>
                 </control>
             </control>
             <control type="image">
-                <visible>Control.HasFocus(501) | Control.HasFocus(502)</visible>
+                <visible>Control.HasFocus(541) | Control.HasFocus(542)</visible>
                 <width>1600</width>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
                 <left>350</left>
-                <animation condition="Control.HasFocus(501) | Control.HasFocus(502)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
+                <animation condition="Control.HasFocus(541) | Control.HasFocus(542)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
                 <control type="image">
                     <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
                     <left>-50</left>
                     <width>1450</width>
-                    <visible>Control.HasFocus(501) | Control.HasFocus(502)</visible>
+                    <visible>Control.HasFocus(541) | Control.HasFocus(542)</visible>
                     <texture>mainbackground.png</texture>
                     <aspectratio align="right">scale</aspectratio>
                 </control>
-                <control type="panel" id="501">
+                <control type="panel" id="541">
                     <onup>noop</onup>
-                    <onleft>50</onleft>
-                    <onright>502</onright>
+                    <onleft>54</onleft>
+                    <onright>542</onright>
                     <oninfo>-</oninfo>
                     <top>140</top>
                     <width>400</width>
@@ -99,10 +93,10 @@
                             <info>ListItem.Label</info>
                         </control>
                     </focusedlayout>
-                    <content target="video">$INFO[Skin.String(movieshome)]</content>
+                    <content target="video">$INFO[Skin.String(musichome)]</content>
                 </control>
                 <control type="image">
-                    <visible>Container(501).HasNext</visible>
+                    <visible>Container(541).HasNext</visible>
                     <include>visiblefade</include>
                     <left>200</left>
                     <top>1000</top>
@@ -111,7 +105,7 @@
                     <texture>arrow.png</texture>
                 </control>
                 <control type="image">
-                    <visible>Container(501).HasPrevious</visible>
+                    <visible>Container(541).HasPrevious</visible>
                     <include>visiblefade</include>
                     <left>200</left>
                     <top>30</top>
@@ -126,19 +120,7 @@
                         <height>610</height>
                         <width>400</width>
                         <aspectratio align="top">keep</aspectratio>
-                        <texture>$INFO[Container(501).ListItem.Art(poster)]</texture>
-                    </control>
-                    <control type="progress">
-                        <visible>!Stringcompare(Container(501).ListItem.PercentPlayed,0)</visible>
-                        <top>830</top>
-                        <width>400</width>
-                        <height>10</height>
-                        <visible>true</visible>
-                        <texturebg>black.png</texturebg>
-                        <!--<lefttexture>white.png</lefttexture>-->
-                        <midtexture border="5">white.png</midtexture>
-                        <!--<righttexture>white.png</righttexture>-->
-                        <info>Container(501).ListItem.PercentPlayed</info>
+                        <texture>$INFO[Container(541).ListItem.Art(poster)]</texture>
                     </control>
                     <control type="grouplist">
                         <top>820</top>
@@ -147,28 +129,28 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(501).ListItem.VideoResolution]</label>
+                            <label>$INFO[Container(541).ListItem.VideoResolution]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(501).ListItem.VideoAspect]</label>
+                            <label>$INFO[Container(541).ListItem.VideoAspect]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(501).ListItem.AudioCodec]</label>
+                            <label>$INFO[Container(541).ListItem.AudioCodec]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(501).ListItem.AudioChannels]</label>
+                            <label>$INFO[Container(541).ListItem.AudioChannels]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(501).ListItem.AudioLanguage]</label>
+                            <label>$INFO[Container(541).ListItem.AudioLanguage]</label>
                         </control>
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Control.HasFocus(501)</visible>
+                    <visible>Control.HasFocus(541)</visible>
                     <include>visiblefade</include>
                     <left>420</left>
                     <control type="textbox">
@@ -177,7 +159,7 @@
                         <height>90</height>
                         <width>350</width>
                         <textcolor>main</textcolor>
-                        <label>[B]$INFO[Container(501).ListItem.Title][/B] $INFO[Container(501).ListItem.Year,(,)]</label>
+                        <label>[B]$INFO[Container(541).ListItem.Title][/B] $INFO[Container(541).ListItem.Year,(,)]</label>
                     </control>
                     <control type="image">
                         <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
@@ -186,7 +168,7 @@
                         <height>30</height>
                         <width>120</width>
                         <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(501).ListItem.StarRating,stars/]</texture>
+                        <texture>$INFO[Container(541).ListItem.StarRating,stars/]</texture>
                     </control>
                     <control type="textbox">
                         <left>440</left>
@@ -195,18 +177,18 @@
                         <width>350</width>
                         <textcolor>black</textcolor>
                         <align>justify</align>
-                        <label>$INFO[Container(501).ListItem.Plot]</label>
+                        <label>$INFO[Container(541).ListItem.Plot]</label>
                     </control>
                 </control>
                 <control type="image">
-                    <visible>Control.HasFocus(502)</visible>
+                    <visible>Control.HasFocus(542)</visible>
                     <left>-200</left>
                     <width>1600</width>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <texture>darken.png</texture>
                 </control>
                 <control type="group">
-                    <animation condition="Control.HasFocus(502)" effect="slide" time="200" start="0,0" end="-250,0">Conditional</animation>
+                    <animation condition="Control.HasFocus(542)" effect="slide" time="200" start="0,0" end="-250,0">Conditional</animation>
                     <control type="image">
                         <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
                         <left>350</left>
@@ -215,8 +197,8 @@
                         <texture>mainbackground.png</texture>
                         <aspectratio align="right">scale</aspectratio>
                     </control>
-                    <control type="panel" id="502">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                    <control type="panel" id="542">
+                        <visible>StringCompare(Skin.String(movieshome),musicdb://artists)</visible>
                         <left>400</left>
                         <onup>noop</onup>
                         <onleft>501</onleft>
@@ -248,7 +230,7 @@
                         <content target="video">$INFO[Container(501).Listitem.DBID,videodb://movies/genres/]</content>
                     </control>
                     <control type="image">
-                        <visible>Container(502).HasNext</visible>
+                        <visible>Container(542).HasNext</visible>
                         <include>visiblefade</include>
                         <left>450</left>
                         <top>1000</top>
@@ -257,7 +239,7 @@
                         <texture>arrow.png</texture>
                     </control>
                     <control type="image">
-                        <visible>Container(502).HasPrevious</visible>
+                        <visible>Container(542).HasPrevious</visible>
                         <include>visiblefade</include>
                         <left>450</left>
                         <top>30</top>
@@ -272,7 +254,7 @@
                         <height>610</height>
                         <width>400</width>
                         <aspectratio align="top">keep</aspectratio>
-                        <texture>$INFO[Container(502).ListItem.Art(poster)]</texture>
+                        <texture>$INFO[Container(542).ListItem.Art(poster)]</texture>
                     </control>
                     <control type="grouplist">
                         <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
@@ -283,27 +265,27 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(502).ListItem.VideoResolution]</label>
+                            <label>$INFO[Container(542).ListItem.VideoResolution]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(502).ListItem.VideoAspect]</label>
+                            <label>$INFO[Container(542).ListItem.VideoAspect]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(502).ListItem.AudioCodec]</label>
+                            <label>$INFO[Container(542).ListItem.AudioCodec]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(502).ListItem.AudioChannels]</label>
+                            <label>$INFO[Container(542).ListItem.AudioChannels]</label>
                         </control>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(502).ListItem.AudioLanguage]</label>
+                            <label>$INFO[Container(542).ListItem.AudioLanguage]</label>
                         </control>
                     </control>
                     <control type="group">
-                        <visible>Control.HasFocus(502)</visible>
+                        <visible>Control.HasFocus(542)</visible>
                         <include>visiblefade</include>
                         <left>720</left>
                         <control type="textbox">
@@ -320,7 +302,7 @@
                             <height>30</height>
                             <width>120</width>
                             <aspectratio align="left">keep</aspectratio>
-                            <texture>$INFO[Container(502).ListItem.StarRating,stars/]</texture>
+                            <texture>$INFO[Container(542).ListItem.StarRating,stars/]</texture>
                         </control>
                         <control type="textbox">
                             <left>440</left>
@@ -329,7 +311,7 @@
                             <width>350</width>
                             <textcolor>black</textcolor>
                             <align>justify</align>
-                            <label>$INFO[Container(502).ListItem.Plot]</label>
+                            <label>$INFO[Container(542).ListItem.Plot]</label>
                         </control>
                     </control>
                 </control>

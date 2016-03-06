@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2001">
     <defaultcontrol always="true">300</defaultcontrol>
-
     <backgroundcolor>background</backgroundcolor>
     <include>OpenClose</include>
     <controls>
-        <include>BlackBackground</include>
+        <include>osmc_back</include>
         <include>MusicInfo</include>
         <control type="textbox" description="Plot" id="4">
             <left>1000</left>
