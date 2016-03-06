@@ -39,11 +39,30 @@
                 <righttexture border="1,1,5,1">progress/ProgressR.png</righttexture>
                 <lefttexture border="5,1,1,1">progress/ProgressL.png</lefttexture>
             </control>
-            <control type="button" id="10" description="Cancel">
-                <left>330</left>
-                <top>330</top>
-                <width>300</width>
-                <label>222</label>
+            <control type="grouplist">
+                <top>370</top>
+                <orientation>horizontal</orientation>
+                <control type="button" id="10">
+                    <left>0</left>
+                    <align>center</align>
+                    <width>480</width>
+                    <font>font40</font>
+                    <label>107</label>
+                </control>
+                <control type="button" id="11">
+                    <left>480</left>
+                    <align>center</align>
+                    <width>480</width>
+                    <font>font40</font>
+                    <label>106</label>
+                </control>
+                <control type="button" id="12">
+                    <left>480</left>
+                    <align>center</align>
+                    <width>480</width>
+                    <font>font40</font>
+                    <label>106</label>
+                </control>
             </control>
         </control>
     </controls>
