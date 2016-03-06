@@ -4,7 +4,7 @@
         <control type="group">
             <visible>Control.HasFocus(9015) | ControlGroup(65).HasFocus | Control.HasFocus(651)</visible>
             <animation effect="slide" time="600" delay="600" start="1950,0" end="0,0">Visible</animation>
-            <animation condition="Control.HasFocus(65) | Control.HasFocus(651)" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="ControlGroup(65).HasFocus | Control.HasFocus(651)" effect="slide" time="200" end="-100,0">Conditional</animation>
             <control type="image">
                 <visible>!ControlGroup(9000).HasFocus</visible>
                 <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -16,7 +16,7 @@
                 <control type="grouplist" id="65">
                     <top>140</top>
                     <left>50</left>
-                    <width>400</width>
+                    <width>1000</width>
                     <height>800</height>
                     <onleft>9000</onleft>
                     <onright>3</onright>
@@ -94,14 +94,14 @@
                     <!--<label>13000</label>-->
                     <!--<onclick>activatewindow(SystemSettings)</onclick>-->
                     <!--</control>-->
-                    <control type="button" id="1008">
-                        <width>400</width>
-                        <height>80</height>
-                        <font>font45</font>
-                        <aligny>center</aligny>
-                        <label>24001</label>
-                        <onclick>activatewindow(AddonBrowser,root)</onclick>
-                    </control>
+                    <!--<control type="button" id="1008">-->
+                    <!--<width>400</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>24001</label>-->
+                    <!--<onclick>activatewindow(AddonBrowser,root)</onclick>-->
+                    <!--</control>-->
                     <control type="button" id="1009">
                         <width>400</width>
                         <height>80</height>
@@ -110,13 +110,67 @@
                         <label>29915</label>
                         <onclick>activatewindow(systeminfo)</onclick>
                     </control>
-                    <control type="button" id="1010">
-                        <width>400</width>
+                    <!--<control type="button" id="1010">-->
+                    <!--<width>400</width>-->
+                    <!--<height>80</height>-->
+                    <!--<font>font45</font>-->
+                    <!--<aligny>center</aligny>-->
+                    <!--<label>5</label>-->
+                    <!--<onclick>activatewindow(settings)</onclick>-->
+                    <!--</control>-->
+                    <control type="label">
+                        <font>font30</font>
                         <height>80</height>
-                        <font>font45</font>
-                        <aligny>center</aligny>
-                        <label>5</label>
-                        <onclick>activatewindow(settings)</onclick>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[System.CpuUsage,$LOCALIZE[13271] ]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[Network.LinkState]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[System.InternetState,$LOCALIZE[443]: ]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[Network.IPAddress,$LOCALIZE[150]: ]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[System.FreeMemory,$LOCALIZE[158]: ] / $INFO[System.Memory(total),$LOCALIZE[22012]: ]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label></label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$LOCALIZE[13287] $INFO[System.ScreenWidth]x$INFO[System.ScreenHeight] - $INFO[System.ScreenMode]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[System.KernelVersion,$LOCALIZE[13283] ]</label>
+                    </control>
+                    <control type="label">
+                        <font>font30</font>
+                        <height>80</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[System.BuildVersion]$INFO[System.FriendlyName, - ]</label>
                     </control>
                 </control>
             </control>
