@@ -23,27 +23,27 @@
                 <ondown>noop</ondown>
                 <control type="button" id="111">
                     <font>font45</font>
-                    <label>inprogress</label>
+                    <label>artists</label>
                     <onfocus>Skin.SetString(musichome,musicdb://artists/)</onfocus>
-                    <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+                    <onclick>ActivateWindow(Videos,Artists,return)</onclick>
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
-                    <label>recent</label>
+                    <label>albums</label>
                     <onfocus>Skin.SetString(musichome,musicdb://albums/)</onfocus>
-                    <onclick>ActivateWindow(Music,Addons,return)</onclick>
+                    <onclick>ActivateWindow(Music,Albums,return)</onclick>
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
-                    <label>random</label>
-                    <onfocus>Skin.SetString(muscihome,musicdb://recentlyaddedalbums/)</onfocus>
-                    <onclick>-</onclick>
+                    <label>recently added</label>
+                    <onfocus>Skin.SetString(musichome,musicdb://recentlyaddedalbums/)</onfocus>
+                    <onclick>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</onclick>
                 </control>
                 <control type="button" id="114">
                     <font>font45</font>
-                    <label>unwatched</label>
+                    <label>recently played</label>
                     <onfocus>Skin.SetString(musichome,musicdb://recentlyplayedalbums/)</onfocus>
-                    <onclick>-</onclick>
+                    <onclick>ActivateWindow(Music,musicdb://recentlyplayedalbums/,return)</onclick>
                 </control>
             </control>
             <control type="image">
@@ -67,6 +67,7 @@
                     <onup>noop</onup>
                     <onleft>54</onleft>
                     <onright>542</onright>
+                    <onclick>noop</onclick>
                     <oninfo>-</oninfo>
                     <top>140</top>
                     <width>400</width>
@@ -77,7 +78,7 @@
                             <width>400</width>
                             <height>120</height>
                             <textcolor>black</textcolor>
-                            <font>font45</font>
+                            <font>font40</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
@@ -87,13 +88,13 @@
                         <control type="textbox">
                             <width>400</width>
                             <height>120</height>
-                            <font>font45</font>
+                            <font>font40</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
                         </control>
                     </focusedlayout>
-                    <content target="video">$INFO[Skin.String(musichome)]</content>
+                    <content target="music" sortby="title" sortorder="ascending">$INFO[Skin.String(musichome)]</content>
                 </control>
                 <control type="image">
                     <visible>Container(541).HasNext</visible>
@@ -114,52 +115,34 @@
                     <texture flipy="true">arrow.png</texture>
                 </control>
                 <control type="group">
+                    <visible>Control.HasFocus(541)</visible>
+                    <include>visiblefade</include>
                     <left>420</left>
                     <control type="image">
-                        <top>220</top>
-                        <height>610</height>
+                        <left>-40</left>
+                        <top>200</top>
+                        <height>400</height>
                         <width>400</width>
                         <aspectratio align="top">keep</aspectratio>
-                        <texture>$INFO[Container(541).ListItem.Art(poster)]</texture>
+                        <texture>$INFO[Container(541).ListItem.Art(thumb)]</texture>
                     </control>
                     <control type="grouplist">
-                        <top>820</top>
+                        <top>540</top>
                         <width>400</width>
                         <itemgap>25</itemgap>
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width>auto</width>
-                            <label>$INFO[Container(541).ListItem.VideoResolution]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(541).ListItem.VideoAspect]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(541).ListItem.AudioCodec]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(541).ListItem.AudioChannels]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(541).ListItem.AudioLanguage]</label>
+                            <label>$INFO[Container(541).ListItem.Year]</label>
                         </control>
                     </control>
-                </control>
-                <control type="group">
-                    <visible>Control.HasFocus(541)</visible>
-                    <include>visiblefade</include>
-                    <left>420</left>
                     <control type="textbox">
                         <left>440</left>
-                        <top>220</top>
-                        <height>90</height>
+                        <top>200</top>
+                        <height>110</height>
                         <width>350</width>
                         <textcolor>main</textcolor>
-                        <label>[B]$INFO[Container(541).ListItem.Title][/B] $INFO[Container(541).ListItem.Year,(,)]</label>
+                        <label>[B]$INFO[Container(541).ListItem.Label][/B] $INFO[Container(541).ListItem.Year,(,)]</label>
                     </control>
                     <control type="image">
                         <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
@@ -177,7 +160,7 @@
                         <width>350</width>
                         <textcolor>black</textcolor>
                         <align>justify</align>
-                        <label>$INFO[Container(541).ListItem.Plot]</label>
+                        <label>$INFO[Container(541).ListItem.Property(Album_Description)]$INFO[Container(541).ListItem.Property(Artist_Description)]</label>
                     </control>
                 </control>
                 <control type="image">
@@ -188,46 +171,50 @@
                     <texture>darken.png</texture>
                 </control>
                 <control type="group">
-                    <animation condition="Control.HasFocus(542)" effect="slide" time="200" start="0,0" end="-250,0">Conditional</animation>
+                    <animation condition="Control.HasFocus(542)" effect="slide" time="600" start="1000,0" end="-250,0">Conditional</animation>
                     <control type="image">
                         <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
                         <left>350</left>
                         <width>1300</width>
-                        <visible>Control.HasFocus(502)</visible>
+                        <visible>Control.HasFocus(542)</visible>
                         <texture>mainbackground.png</texture>
                         <aspectratio align="right">scale</aspectratio>
                     </control>
                     <control type="panel" id="542">
-                        <visible>StringCompare(Skin.String(movieshome),musicdb://artists)</visible>
+                        <visible allowhiddenfocus="true">Control.HasFocus(542)</visible>
                         <left>400</left>
                         <onup>noop</onup>
-                        <onleft>501</onleft>
+                        <onleft>541</onleft>
                         <top>140</top>
                         <width>400</width>
                         <height>800</height>
+                        <onclick condition="SubString(Listitem.FolderPath,musicdb://artists)">PlayMedia($INFO[Listitem.FolderPath],isdir)</onclick>
+                        <onclick condition="SubString(Listitem.FolderPath,musicdb://albums) | SubString(Listitem.FolderPath,musicdb://recentlyaddedalbums) | SubString(Listitem.FolderPath,musicdb://recentlyplayedalbums)">PlayMedia($INFO[Listitem.FolderPath])</onclick>
                         <scrolltime tween="sine" easing="out">200</scrolltime>
-                        <itemlayout height="70" width="400">
+                        <itemlayout height="80" width="400">
                             <control type="textbox">
-                                <width>300</width>
+                                <width>350</width>
                                 <height>120</height>
                                 <textcolor>black</textcolor>
                                 <font>font30</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <info>ListItem.Label</info>
+                                <label>$INFO[ListItem.Label, • ]</label>
+                                <!--<info>ListItem.Label</info>-->
                             </control>
                         </itemlayout>
-                        <focusedlayout height="70" width="400">
+                        <focusedlayout height="80" width="400">
                             <control type="textbox">
-                                <width>300</width>
+                                <width>350</width>
                                 <height>120</height>
                                 <font>font30</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <info>ListItem.Label</info>
+                                <label>$INFO[ListItem.Label, • ]</label>
+                                <!--<info>ListItem.Label</info>-->
                             </control>
                         </focusedlayout>
-                        <content target="video">$INFO[Container(501).Listitem.DBID,videodb://movies/genres/]</content>
+                        <content target="music">$INFO[Container(541).Listitem.FolderPath]</content>
                     </control>
                     <control type="image">
                         <visible>Container(542).HasNext</visible>
@@ -247,47 +234,18 @@
                         <width>40</width>
                         <texture flipy="true">arrow.png</texture>
                     </control>
-                    <control type="image">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
-                        <left>720</left>
-                        <top>220</top>
-                        <height>610</height>
-                        <width>400</width>
-                        <aspectratio align="top">keep</aspectratio>
-                        <texture>$INFO[Container(542).ListItem.Art(poster)]</texture>
-                    </control>
-                    <control type="grouplist">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
-                        <left>720</left>
-                        <top>820</top>
-                        <width>400</width>
-                        <itemgap>25</itemgap>
-                        <orientation>horizontal</orientation>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(542).ListItem.VideoResolution]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(542).ListItem.VideoAspect]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(542).ListItem.AudioCodec]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(542).ListItem.AudioChannels]</label>
-                        </control>
-                        <control type="label">
-                            <width>auto</width>
-                            <label>$INFO[Container(542).ListItem.AudioLanguage]</label>
-                        </control>
-                    </control>
                     <control type="group">
                         <visible>Control.HasFocus(542)</visible>
                         <include>visiblefade</include>
                         <left>720</left>
+                        <control type="image">
+                            <left>60</left>
+                            <top>190</top>
+                            <height>380</height>
+                            <width>380</width>
+                            <aspectratio align="top">keep</aspectratio>
+                            <texture>$INFO[Container(542).ListItem.Art(thumb)]</texture>
+                        </control>
                         <control type="textbox">
                             <left>440</left>
                             <top>220</top>
@@ -302,16 +260,16 @@
                             <height>30</height>
                             <width>120</width>
                             <aspectratio align="left">keep</aspectratio>
-                            <texture>$INFO[Container(542).ListItem.StarRating,stars/]</texture>
+                            <texture>$INFO[Container(542).ListItem.Rating,stars/]</texture>
                         </control>
                         <control type="textbox">
-                            <left>440</left>
-                            <top>320</top>
-                            <height>580</height>
-                            <width>350</width>
+                            <left>60</left>
+                            <top>610</top>
+                            <height>340</height>
+                            <width>700</width>
                             <textcolor>black</textcolor>
                             <align>justify</align>
-                            <label>$INFO[Container(542).ListItem.Plot]</label>
+                            <label>$INFO[Container(542).ListItem.Property(Album_Description)]</label>
                         </control>
                     </control>
                 </control>

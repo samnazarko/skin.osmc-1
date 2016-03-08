@@ -2,12 +2,12 @@
 <includes>
     <include file="Includes_Variables.xml" />
     <include file="Defaults.xml" />
-    <include file="Movies.xml" />
-    <include file="Tvshows.xml" />
-    <include file="Power.xml" />
-    <include file="Settingshome.xml" />
-    <include file="Musichome.xml" />
-    <include file="Addonshome.xml" />
+    <include file="includes/Movies.xml" />
+    <include file="includes/Tvshows.xml" />
+    <include file="includes/Power.xml" />
+    <include file="includes/Settingshome.xml" />
+    <include file="includes/Musichome.xml" />
+    <include file="includes/Addonshome.xml" />
 
     <include name="visiblefade">
         <animation effect="fade" start="0" end="100" time="200">visiblechange</animation>

@@ -63,7 +63,7 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>2</label>
-                    <onclick>ActivateWindow(Music)</onclick>
+                    <onclick>ActivateWindow(Music,Artists,return)</onclick>
                 </control>
                 <control type="button" id="9003">
                     <!--ADDONS-->

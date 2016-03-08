@@ -8,15 +8,13 @@
     <controls>
         <include>osmc_back</include>
         <!--views-->
-        <control type="group" description="BigList">
+        <control type="group" description="List">
             <top>131</top>
-            <control type="list" id="50">
+            <control type="panel" id="50">
                 <width>920</width>
                 <height>888</height>
-                <onleft condition="!Skin.HasSetting(ViewsMenuOff)">9000</onleft>
-                <onleft condition="Skin.HasSetting(ViewsMenuOff)">noop</onleft>
-                <onright condition="!Skin.HasSetting(Scrollbars_Passive)">60</onright>
-                <onright condition="Skin.HasSetting(Scrollbars_Passive)">noop</onright>
+                <onleft>9000</onleft>
+                <onright>501</onright>
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <viewtype label="50">Big list</viewtype>
@@ -27,7 +25,7 @@
                         <height>120</height>
                         <textcolor>black</textcolor>
                         <font>font45</font>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
                     </control>
@@ -37,16 +35,78 @@
                         <width>400</width>
                         <height>120</height>
                         <font>font45</font>
-                        <align>left</align>
+                        <align>right</align>
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
             </control>
+            <control type="panel" id="501">
+                <left>500</left>
+                <width>920</width>
+                <height>888</height>
+                <onleft>50</onleft>
+                <onright>502</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <viewtype label="50">Big list</viewtype>
+                <scrolltime>250</scrolltime>
+                <itemlayout height="100" width="500">
+                    <control type="label">
+                        <width>400</width>
+                        <height>120</height>
+                        <textcolor>black</textcolor>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="100" width="500">
+                    <control type="label">
+                        <width>400</width>
+                        <height>120</height>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>$INFO[Container(50).ListItem.FolderPath]</content>
+            </control>
+            <control type="panel" id="502">
+                <left>1000</left>
+                <width>920</width>
+                <height>888</height>
+                <onleft>501</onleft>
+                <onright>60</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <viewtype label="50">Big list</viewtype>
+                <scrolltime>250</scrolltime>
+                <itemlayout height="100" width="500">
+                    <control type="label">
+                        <width>400</width>
+                        <height>120</height>
+                        <textcolor>black</textcolor>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="100" width="500">
+                    <control type="label">
+                        <width>400</width>
+                        <height>120</height>
+                        <font>font45</font>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>$INFO[Container(501).ListItem.FolderPath]</content>
+            </control>
         </control>
         <!--/views-->
         <control type="group" description="Side menu 9000 group">
-            <!--<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>-->
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <control type="image" description="List back">
                 <top>-10</top>
                 <left>-80</left>
@@ -58,6 +118,7 @@
             <control type="grouplist" id="9000">
                 <left>0</left>
                 <align>left</align>
+                <onright>50</onright>
                 <include>DialogGLs</include>
                 <control type="button" id="0">
                     <enable>false</enable>
