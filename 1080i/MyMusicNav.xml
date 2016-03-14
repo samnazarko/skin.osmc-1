@@ -113,13 +113,13 @@
                 <width>580</width>
                 <height>1100</height>
                 <aspectratio>stretch</aspectratio>
-                <texture border="50">sidepanel/Back.png</texture>
+                <texture border="50">mainbackground.png</texture>
             </control>
             <control type="grouplist" id="9000">
-                <left>0</left>
+                <left>50</left>
                 <align>left</align>
                 <onright>50</onright>
-                <include>DialogGLs</include>
+                <width>500</width>
                 <control type="button" id="0">
                     <enable>false</enable>
                     <texturenofocus colordiffuse="silver">images/buttonselect1.png</texturenofocus>
@@ -131,28 +131,22 @@
                     <include>DialogButt</include>
                 </control>
                 <control type="togglebutton" id="4" description="SortOrder">
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</alttexturefocus>
                     <include>DialogButt</include>
                     <label>$INFO[Container.SortOrder]</label>
                     <usealttexture>Container.SortDirection(Ascending)</usealttexture>
                 </control>
                 <control type="button" id="8" description="search">
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <include>DialogButt</include>
+                     <include>DialogButt</include>
                     <label>137</label>
                     <onclick>left</onclick>
                 </control>
                 <control type="togglebutton" id="16" description="PartyMode">
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</alttexturefocus>
                     <include>DialogButt</include>
                     <label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
                     <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
                 </control>
                 <control type="togglebutton" id="697" description="Album/Artist">
                     <visible>Container.Content(Albums) | Container.Content(Artists)</visible>
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
                     <include>DialogButt</include>
                     <label>$LOCALIZE[1024] $LOCALIZE[132]</label>
                     <onclick>ReplaceWindow(502,Albums)</onclick>
@@ -162,14 +156,11 @@
                 </control>
                 <control type="button" id="5" description="Files">
                     <visible>Window.IsActive(MyMusicNav.xml)</visible>
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
                     <include>DialogButt</include>
                     <label>$LOCALIZE[1024] $LOCALIZE[744]</label>
                     <onclick>ReplaceWindow(MusicFiles,root)</onclick>
                 </control>
                 <control type="togglebutton" id="699" description="Playing">
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</alttexturefocus>
                     <enable>Player.HasMedia</enable>
                     <include>DialogButt</include>
                     <label>$LOCALIZE[16003]</label>
@@ -182,8 +173,6 @@
                 <control type="togglebutton" id="20">
                     <description>Update library</description>
                     <visible>Window.IsActive(MyMusicNav.xml)</visible>
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</alttexturefocus>
                     <include>DialogButt</include>
                     <label>653</label>
                     <onclick>UpdateLibrary(database,music)</onclick>

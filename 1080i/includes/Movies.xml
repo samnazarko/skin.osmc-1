@@ -25,19 +25,19 @@
                     <font>font45</font>
                     <label>inprogress</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/plists/inprogressmovies.xsp)</onfocus>
-                    <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+                    <onclick>Playmedia(special://skin/plists/inprogressmovies.xsp)</onclick>
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
                     <label>recent</label>
                     <onfocus>Skin.SetString(movieshome,videodb://recentlyaddedmovies/)</onfocus>
-                    <onclick>ActivateWindow(Music,Addons,return)</onclick>
+                    <onclick>Playmedia(videodb://recentlyaddedmovies/)</onclick>
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
                     <label>random</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
-                    <onclick>-</onclick>
+                    <onclick>Playmedia(special://skin/plists/moviesrandom.xsp)</onclick>
                 </control>
                 <control type="button" id="114">
                     <font>font45</font>

@@ -33,7 +33,6 @@
         </animation>
     </include>
 
-
     <include name="Fanart_Fade">
         <fadetime>320</fadetime>
         <animation effect="fade" time="320">Visible</animation>
@@ -57,4 +56,9 @@
         <animation effect="slide" start="1220,0" end="0,0" reversible="true" time="500">WindowOpen</animation>
     </include>
 
+    <include name="DialogButt">
+        <width>400</width>
+        <font>font30</font>
+        <align>right</align>
+    </include>
 </includes>
