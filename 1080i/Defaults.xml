@@ -6,8 +6,8 @@
         <aligny>center</aligny>
         <font>font16</font>
         <textcolor>main</textcolor>
-        <focusedcolor>main</focusedcolor>
-        <selectedcolor>orange</selectedcolor>
+        <selectedcolor>blue</selectedcolor>
+         <focusedcolor>main</focusedcolor>
         <disabledcolor>dimgray</disabledcolor>
         <shadowcolor>-</shadowcolor>
         <scroll>true</scroll>
@@ -99,7 +99,6 @@
         <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
         <textureradiofocus aspectratio="keep">images/RadioON.png</textureradiofocus>
         <textureradionofocus aspectratio="keep">images/RadioOFF.png</textureradionofocus>
-        <textoffsetx>30</textoffsetx>
         <!--<radioleft>262</radioleft>-->
         <pulseonselect>false</pulseonselect>
     </default>
@@ -116,7 +115,6 @@
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
-        <textoffsetx>30</textoffsetx>
         <align>left</align>
         <aligny>center</aligny>
         <reverse>yes</reverse>
@@ -137,7 +135,6 @@
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
-        <textoffsetx>30</textoffsetx>
         <align>left</align>
         <aligny>center</aligny>
         <reverse>yes</reverse>
@@ -157,7 +154,7 @@
         <texturesliderbar>images/slider_bg.png</texturesliderbar>
         <textureslidernib>images/slider_nib_nf.png</textureslidernib>
         <textureslidernibfocus>images/slider_nib.png</textureslidernibfocus>
-        <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect2.png</texturefocus>
+        <texturefocus>-</texturefocus>
         <texturenofocus>-</texturenofocus>
         <font>font30</font>
         <aligny>center</aligny>
@@ -165,7 +162,6 @@
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
-        <textoffsetx>20</textoffsetx>
     </default>
     <default type="scrollbar">
         <width>9</width>

@@ -124,10 +124,10 @@
             <texture>lines/Line.png</texture>
         </control>
         <!--<control type="label" id="2" description="Heading">-->
-            <!--<left>520</left>-->
-            <!--<width>1390</width>-->
-            <!--<align>center</align>-->
-            <!--<label>-</label>-->
+        <!--<left>520</left>-->
+        <!--<width>1390</width>-->
+        <!--<align>center</align>-->
+        <!--<label>-</label>-->
         <!--</control>-->
         <control type="grouplist" id="3" description="Menu">
             <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
@@ -138,36 +138,56 @@
             <onleft>65</onleft>
             <onright>5</onright>
         </control>
-         <control type="image">
+        <control type="image">
             <visible>ControlGroup(5).HasFocus</visible>
             <width>1400</width>
             <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
             <texture>darken.png</texture>
         </control>
-        <control type="image">
-            <left>600</left>
+        <control type="group">
             <animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-150,0">Conditional</animation>
-            <visible>ControlGroup(5).HasFocus</visible>
-            <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
-            <width>1370</width>
-            <aspectratio align="right">scale</aspectratio>
-            <texture>mainbackground.png</texture>
-        </control>
-        <control type="grouplist" id="5" description="Stage">
-            <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
-            <animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-150,0">Conditional</animation>
-            <left>750</left>
-            <top>81</top>
-            <width>1380</width>
-            <height>972</height>
-            <onright>60</onright>
-            <onup>5</onup>
-            <ondown>5</ondown>
-            <onright>noop</onright>
-            <onleft>3</onleft>
-            <pagecontrol>60</pagecontrol>
-            <orientation>vertical</orientation>
-            <itemgap>0</itemgap>
+            <control type="image">
+                <left>600</left>
+                <visible>ControlGroup(5).HasFocus</visible>
+                <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
+                <width>1370</width>
+                <aspectratio align="right">scale</aspectratio>
+                <texture>mainbackground.png</texture>
+            </control>
+            <control type="grouplist" id="5" description="Stage">
+                <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
+                <!--<animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-150,0">Conditional</animation>-->
+                <left>750</left>
+                <top>110</top>
+                <width>1380</width>
+                <height>900</height>
+                <onright>60</onright>
+                <onup>5</onup>
+                <ondown>5</ondown>
+                <onright>noop</onright>
+                <onleft>3</onleft>
+                <pagecontrol>60</pagecontrol>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+            </control>
+            <control type="image">
+                <visible>Container(5).HasNext</visible>
+                <include>visiblefade</include>
+                <left>850</left>
+                <top>1020</top>
+                <height>40</height>
+                <width>40</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(5).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>850</left>
+                <top>30</top>
+                <height>40</height>
+                <width>40</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
         </control>
         <control type="button" id="7" description="Button">
             <width>300</width>
@@ -185,7 +205,6 @@
             <width>860</width>
             <height>80</height>
             <align>left</align>
-            <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
         </control>
         <control type="button" id="10" description="Category Button">
             <height>80</height>
@@ -196,7 +215,6 @@
             <height>80</height>
             <align>right</align>
             <aligny>center</aligny>
-            <texturefocus flipx="true" colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
         </control>
         <control type="grouplist">
             <left>0</left>
