@@ -1,157 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="window" id="2000">
     <defaultcontrol always="false">3</defaultcontrol>
-    <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <backgroundcolor>black</backgroundcolor>
+    <include>slidedialog</include>
+    <coordinates>
+        <system>1</system>
+        <origin x="700" y="0" />
+    </coordinates>
     <controls>
-        <include>BlackBackground</include>
+        <include>osmc_back</include>
         <control type="label" id="1" description="Header label">
-            <left>960</left>
-            <top>10</top>
+            <top>80</top>
+            <centerleft>960</centerleft>
             <width>960</width>
             <height>60</height>
             <align>center</align>
             <aligny>bottom</aligny>
             <textcolor>main</textcolor>
-            <font>size42</font>
+            <font>font40</font>
             <label>13406</label>
         </control>
         <control type="group" description="Group 3 Plain list">
-            <control type="image">
-                <visible>Control.IsVisible(3)</visible>
-                <left>230</left>
-                <centertop>540</centertop>
-                <width>500</width>
-                <height>700</height>
-                <aspectratio>keep</aspectratio>
-                <info>ListItem.Thumb</info>
-            </control>
             <control type="label">
                 <left>30</left>
                 <width>900</width>
                 <height>80</height>
-                <font>size42B</font>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="group">
-                <left>960</left>
-                <top>81</top>
-                <control type="list" id="3">
+                <top>131</top>
+                <control type="panel" id="3">
+                    <left>50</left>
                     <width>920</width>
                     <height>888</height>
-                    <onleft>5</onleft>
-                    <onright>60</onright>
-                    <onup>6</onup>
-                    <ondown>5</ondown>
-                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>501</onright>
+                    <onup>50</onup>
+                    <ondown>50</ondown>
+                    <viewtype label="50">Big list</viewtype>
                     <scrolltime>250</scrolltime>
-                    <focusposition>3</focusposition>
-                    <movement>4</movement>
-                    <preloaditems>4</preloaditems>
-                    <itemlayout width="890" height="111">
-                        <control type="group">
-                            <control type="label" description="Main Label">
-                                <left>45</left>
-                                <width>725</width>
-                                <include>BigListTitle</include>
-                                <label>$INFO[ListItem.label]</label>
-                            </control>
-                        </control>
-                        <control type="label" description="Label2">
-                            <visible>[!IsEmpty(ListItem.Artist) | Container.Content(Movies) | Container.Content(TvShows)] + !Container.Content(songs)</visible>
-                            <left>45</left>
-                            <include>BigListDetails</include>
-                            <label>$INFO[ListItem.label2]</label>
+                    <itemlayout height="100" width="500">
+                        <control type="label">
+                            <width>400</width>
+                            <height>120</height>
+                            <textcolor>black</textcolor>
+                            <font>font45</font>
+                            <aligny>center</aligny>
+                            <info>ListItem.Label</info>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="890" height="111">
-                        <include>LargeSelector</include>
-                        <control type="group">
-                             <control type="label" description="Main Label">
-                                <left>45</left>
-                                <width>725</width>
-                                <include>BigListTitleFO</include>
-                                <label>$INFO[ListItem.label]</label>
-                            </control>
-                        </control>
-                        <control type="label" description="Label2">
-                            <visible>[!IsEmpty(ListItem.Artist) | Container.Content(Movies) | Container.Content(TvShows)] + !Container.Content(songs)</visible>
-                            <left>45</left>
-                            <width>630</width>
-                            <include>BigListDetails</include>
-                            <label>$INFO[ListItem.label2]</label>
+                    <focusedlayout height="100" width="500">
+                        <control type="label">
+                            <width>400</width>
+                            <height>120</height>
+                            <font>font45</font>
+                            <aligny>center</aligny>
+                            <info>ListItem.Label</info>
                         </control>
                     </focusedlayout>
                 </control>
+            </control>
+            <control type="image">
+                <visible>Container(3).HasNext</visible>
+                <include>visiblefade</include>
+                <left>450</left>
+                <top>1050</top>
+                <height>40</height>
+                <width>40</width>
+                <texture>arrow.png</texture>
+            </control>
+            <control type="image">
+                <visible>Container(3).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>450</left>
+                <top>30</top>
+                <height>40</height>
+                <width>40</width>
+                <texture flipy="true">arrow.png</texture>
             </control>
         </control>
         <control type="group" description="Available Addons">
             <visible>Control.IsVisible(6)</visible>
+            <top>131</top>
             <control type="group">
-                <left>960</left>
-                <top>81</top>
-                <control type="list" id="6">
-                    <width>920</width>
+                <control type="panel" id="6">
+                    <left>50</left>
+                    <width>500</width>
                     <height>888</height>
-                    <onleft>5</onleft>
-                    <onright>60</onright>
-                    <onup>6</onup>
-                    <ondown>5</ondown>
-                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>501</onright>
+                    <onup>50</onup>
+                    <ondown>50</ondown>
+                    <viewtype label="50">Big list</viewtype>
                     <scrolltime>250</scrolltime>
-                    <focusposition>3</focusposition>
-                    <movement>4</movement>
-                    <preloaditems>4</preloaditems>
-                    <itemlayout width="890" height="111">
-                        <control type="group">
-                            <control type="label" description="Main Label">
-                                <left>45</left>
-                                <width>725</width>
-                                <include>BigListTitle</include>
-                                <label>$INFO[ListItem.label]</label>
-                            </control>
-                        </control>
-                        <control type="label" description="Label2">
-                            <!--<visible>[!IsEmpty(ListItem.Artist) | Container.Content(Movies) | Container.Content(TvShows)] + !Container.Content(songs)</visible>-->
-                            <left>45</left>
-                            <include>BigListDetails</include>
-                            <label>$INFO[ListItem.label2]</label>
+                    <itemlayout height="80" width="500">
+                        <control type="textbox">
+                            <width>450</width>
+                            <height>80</height>
+                            <textcolor>black</textcolor>
+                            <font>font30</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="890" height="111">
-                        <include>LargeSelector</include>
-                        <control type="group">
-                            <control type="label" description="Main Label">
-                                <left>45</left>
-                                <width>725</width>
-                                <include>BigListTitleFO</include>
-                                <label>$INFO[ListItem.label]</label>
-                            </control>
-                        </control>
-                        <control type="label" description="Label2">
-                            <!--<visible>[!IsEmpty(ListItem.Artist) | Container.Content(Movies) | Container.Content(TvShows)] + !Container.Content(songs)</visible>-->
-                            <left>45</left>
-                            <width>630</width>
-                            <include>BigListDetails</include>
-                            <label>$INFO[ListItem.label2]</label>
+                    <focusedlayout height="80" width="500">
+                        <control type="textbox">
+                            <width>450</width>
+                            <height>80</height>
+                            <font>font30</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
                         </control>
                     </focusedlayout>
                 </control>
             </control>
-        </control>
-            <control type="image" description="Item Thumb">
-                <centerleft>480</centerleft>
-                <centertop>480</centertop>
-                <width>700</width>
-                <height>700</height>
-                <fadetime>200</fadetime>
-                <texture>$INFO[Container(6).ListItem.Icon]</texture>
-                <aspectratio>keep</aspectratio>
+            <control type="image">
+                <visible>Container(6).HasNext</visible>
+                <include>visiblefade</include>
+                <left>450</left>
+                <top>1050</top>
+                <height>40</height>
+                <width>40</width>
+                <texture>arrow.png</texture>
             </control>
+            <control type="image">
+                <visible>Container(6).HasPrevious</visible>
+                <include>visiblefade</include>
+                <left>450</left>
+                <top>30</top>
+                <height>40</height>
+                <width>40</width>
+                <texture flipy="true">arrow.png</texture>
+            </control>
+        </control>
+        <control type="image" description="Item Thumb">
+            <left>550</left>
+            <top>200</top>
+            <height>400</height>
+            <width>400</width>
+            <fadetime>200</fadetime>
+            <texture>$INFO[Container(6).ListItem.Icon]</texture>
+            <aspectratio>keep</aspectratio>
+        </control>
         <control type="group" description="Button 5">
             <control type="button" id="5" description="decision button">
-                <left>960</left>
+                <left>50</left>
                 <top>969</top>
                 <height>111</height>
                 <width>960</width>

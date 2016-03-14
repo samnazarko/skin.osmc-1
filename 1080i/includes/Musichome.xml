@@ -194,7 +194,7 @@
                         <itemlayout height="80" width="400">
                             <control type="textbox">
                                 <width>350</width>
-                                <height>120</height>
+                                <height>80</height>
                                 <textcolor>black</textcolor>
                                 <font>font30</font>
                                 <align>left</align>
@@ -206,7 +206,7 @@
                         <focusedlayout height="80" width="400">
                             <control type="textbox">
                                 <width>350</width>
-                                <height>120</height>
+                                <height>80</height>
                                 <font>font30</font>
                                 <align>left</align>
                                 <aligny>center</aligny>

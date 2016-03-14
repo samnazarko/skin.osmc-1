@@ -12,7 +12,7 @@
             <!--<onleft>activatewindow(home)</onleft>-->
             <onleft>noop</onleft>
             <onright>3</onright>
-            <onup>noop</onup>
+            <onup>20</onup>
             <ondown>noop</ondown>
             <itemgap>0</itemgap>
             <scrolltime tween="sine" easing="out">200</scrolltime>
@@ -98,14 +98,14 @@
             </control>
         </control>
         <control type="image">
-            <visible>!ControlGroup(65).HasFocus</visible>
+            <visible>![ControlGroup(65).HasFocus | Control.HasFocus(20)]</visible>
             <width>1600</width>
             <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
             <texture>darken.png</texture>
         </control>
         <control type="image">
             <left>350</left>
-            <animation condition="!ControlGroup(65).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
             <visible>!Control.HasFocus(65)</visible>
             <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
             <width>1600</width>
@@ -130,7 +130,7 @@
             <!--<label>-</label>-->
         <!--</control>-->
         <control type="grouplist" id="3" description="Menu">
-            <animation condition="!ControlGroup(65).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
             <top>140</top>
             <left>400</left>
             <width>300</width>
@@ -154,16 +154,16 @@
             <texture>mainbackground.png</texture>
         </control>
         <control type="grouplist" id="5" description="Stage">
-            <animation condition="!ControlGroup(65).HasFocus" effect="slide" time="200" end="-100,0">Conditional</animation>
+            <animation condition="![ControlGroup(65).HasFocus | Control.HasFocus(20)]" effect="slide" time="200" end="-100,0">Conditional</animation>
             <animation condition="ControlGroup(5).HasFocus" effect="slide" time="200" end="-150,0">Conditional</animation>
             <left>750</left>
             <top>81</top>
             <width>1380</width>
             <height>972</height>
             <onright>60</onright>
-            <onup>20</onup>
+            <onup>5</onup>
             <ondown>5</ondown>
-            <onright>3</onright>
+            <onright>noop</onright>
             <onleft>3</onleft>
             <pagecontrol>60</pagecontrol>
             <orientation>vertical</orientation>
@@ -217,7 +217,7 @@
                 <width>390</width>
                 <height>80</height>
                 <onclick>SettingsLevelChange</onclick>
-                <ondown>3</ondown>
+                <ondown>65</ondown>
             </control>
         </control>
         <!--<control type="group">-->
