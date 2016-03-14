@@ -191,39 +191,6 @@
                     <altlabel>13353</altlabel>
                     <usealttexture>library.IsScanningMusic</usealttexture>
                 </control>
-                <control type="button" id="599">
-                    <enable>false</enable>
-                    <texturenofocus colordiffuse="silver">images/buttonselect1.png</texturenofocus>
-                    <include>DialogButt</include>
-                    <label>•• $LOCALIZE[582] ••</label>
-                </control>
-                <control type="radiobutton" id="600" description="sio2">
-                    <include>DialogButt</include>
-                    <enable>!Container.Content(files) + !Container.Content(songs) + !IsEmpty(Container.FolderPath)</enable>
-                    <onclick>Container.SetViewMode(52)</onclick>
-                    <selected>Control.IsVisible(52)</selected>
-                    <label>SiO2</label>
-                </control>
-                <control type="radiobutton" id="601" description="View Big List">
-                    <include>DialogButt</include>
-                    <onclick>Container.SetViewMode(50)</onclick>
-                    <selected>Control.IsVisible(50)</selected>
-                    <label>$LOCALIZE[537]</label>
-                </control>
-                <control type="radiobutton" id="603" description="Icons">
-                    <enable>!Container.Content(files) + !Container.Content(songs) + !IsEmpty(Container.FolderPath)</enable>
-                    <include>DialogButt</include>
-                    <onclick>Container.SetViewMode(53)</onclick>
-                    <selected>Control.IsVisible(53)</selected>
-                    <label>$LOCALIZE[536]</label>
-                </control>
-                <control type="radiobutton" id="605" description="Fanart">
-                    <enable>Container.content(musicvideos) | Container.content(Albums) | Container.content(Artists)</enable>
-                    <include>DialogButt</include>
-                    <onclick>Container.SetViewMode(500)</onclick>
-                    <selected>Control.IsVisible(500)</selected>
-                    <label>$LOCALIZE[20445]</label>
-                </control>
             </control>
         </control>
     </controls>

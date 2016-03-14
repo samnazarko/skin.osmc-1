@@ -5,5 +5,13 @@
     <include>OpenClose</include>
     <controls>
         <include>osmc_back</include>
+        <control type="label">
+            <width>800</width>
+            <align>center</align>
+            <font>font45</font>
+            <centerleft>960</centerleft>
+            <centertop>480</centertop>
+            <label>NOTHING TO SEE HERE!</label>
+        </control>
     </controls>
 </window>

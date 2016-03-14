@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="11">
     <defaultcontrol always="true">8</defaultcontrol>
-
     <backgroundcolor>background</backgroundcolor>
     <controls>
         <control type="videowindow" id="20" description="videowindow">
-            <include>Dimensions_Fullscreen</include>
+            <include>fscreen</include>
         </control>
         <control type="mover" id="8" description="top left">
             <left>0</left>
