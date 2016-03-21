@@ -107,19 +107,19 @@
         <!--/views-->
         <control type="group" description="Side menu 9000 group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <animation effect="slide" start="1540,0" end="0,0" time="600">VisibleChange</animation>
+            <left>380</left>
             <control type="image" description="List back">
-                <top>-10</top>
-                <left>-80</left>
-                <width>580</width>
-                <height>1100</height>
-                <aspectratio>stretch</aspectratio>
+                <width>1540</width>
+                <height>1080</height>
                 <texture border="50">mainbackground.png</texture>
             </control>
             <control type="grouplist" id="9000">
                 <left>50</left>
                 <align>left</align>
                 <onright>50</onright>
-                <width>500</width>
+                <onleft>50</onleft>
+                <width>1000</width>
                 <control type="button" id="0">
                     <enable>false</enable>
                     <texturenofocus colordiffuse="silver">images/buttonselect1.png</texturenofocus>
@@ -136,7 +136,7 @@
                     <usealttexture>Container.SortDirection(Ascending)</usealttexture>
                 </control>
                 <control type="button" id="8" description="search">
-                     <include>DialogButt</include>
+                    <include>DialogButt</include>
                     <label>137</label>
                     <onclick>left</onclick>
                 </control>
