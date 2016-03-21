@@ -182,11 +182,11 @@
                     <control type="image">
                         <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>440</left>
-                        <top>290</top>
-                        <height>30</height>
-                        <width>120</width>
+                        <top>296</top>
+                        <height>24</height>
+                        <width>300</width>
                         <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(501).ListItem.StarRating,stars/]</texture>
+                        <texture>$INFO[Container(501).ListItem.Rating,stars/,.png]</texture>
                     </control>
                     <control type="textbox">
                         <left>440</left>
@@ -316,11 +316,11 @@
                         </control>
                         <control type="image">
                             <left>440</left>
-                            <top>290</top>
-                            <height>30</height>
-                            <width>120</width>
-                            <aspectratio align="left">keep</aspectratio>
-                            <texture>$INFO[Container(502).ListItem.StarRating,stars/]</texture>
+                            <top>296</top>
+                            <height>24</height>
+                        <width>300</width>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>$INFO[Container(502).ListItem.Rating,stars/,.png]</texture>
                         </control>
                         <control type="textbox">
                             <left>440</left>

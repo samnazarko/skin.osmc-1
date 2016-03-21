@@ -53,7 +53,7 @@
                 <texture>darken.png</texture>
             </control>
             <control type="group" id="222">
-                <left>350</left>
+                <left>400</left>
                 <animation condition="Control.HasFocus(541) | Control.HasFocus(542)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
                 <control type="image">
                     <animation effect="fade" start="100" end="0" time="200" delay="300">Hidden</animation>
@@ -67,28 +67,28 @@
                     <onup>noop</onup>
                     <onleft>54</onleft>
                     <onright>542</onright>
-                    <onclick>noop</onclick>
+                    <onclick>SetFocus(542)</onclick>
                     <oninfo>-</oninfo>
                     <top>140</top>
-                    <width>400</width>
+                    <width>350</width>
                     <height>800</height>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
-                    <itemlayout height="100" width="500">
+                    <itemlayout height="100" width="350">
                         <control type="textbox">
-                            <width>400</width>
+                            <width>350</width>
                             <height>120</height>
                             <textcolor>black</textcolor>
-                            <font>font40</font>
+                            <font>font30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="100" width="500">
+                    <focusedlayout height="100" width="350">
                         <control type="textbox">
-                            <width>400</width>
+                            <width>350</width>
                             <height>120</height>
-                            <font>font40</font>
+                            <font>font30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <info>ListItem.Label</info>
@@ -148,10 +148,10 @@
                         <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>440</left>
                         <top>290</top>
-                        <height>30</height>
-                        <width>120</width>
+                        <height>24</height>
+                        <width>300</width>
                         <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(541).ListItem.StarRating,stars/]</texture>
+                        <texture>$INFO[Container(541).ListItem.Rating,stars/,.png]</texture>
                     </control>
                     <control type="textbox">
                         <left>440</left>
@@ -257,10 +257,10 @@
                         <control type="image">
                             <left>440</left>
                             <top>290</top>
-                            <height>30</height>
-                            <width>120</width>
-                            <aspectratio align="left">keep</aspectratio>
-                            <texture>$INFO[Container(542).ListItem.Rating,stars/]</texture>
+                            <height>24</height>
+                        <width>300</width>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>$INFO[Container(542).ListItem.Rating,stars/,.png]</texture>
                         </control>
                         <control type="textbox">
                             <left>60</left>

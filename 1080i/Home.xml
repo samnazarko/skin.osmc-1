@@ -31,7 +31,7 @@
                 <scrolltime>600</scrolltime>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
-                <onleft>1000</onleft>
+                <onleft>1110</onleft>
                 <onright>700</onright>
                 <itemgap>0</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
@@ -123,8 +123,8 @@
             <width>80</width>
             <texture>osmclogo.png</texture>
         </control>
-        <control type="group" description="Side menu 1000 group">
-            <visible allowhiddenfocus="true">ControlGroup(1000).HasFocus()</visible>
+        <control type="group" description="Side menu 1110 group">
+            <visible allowhiddenfocus="true">ControlGroup(1110).HasFocus()</visible>
             <animation effect="slide" start="1540,0" end="0,0" time="600">VisibleChange</animation>
             <left>380</left>
             <control type="image" description="List back">
@@ -132,37 +132,37 @@
                 <height>1080</height>
                 <texture border="50">mainbackground.png</texture>
             </control>
-            <control type="grouplist" id="1000">
+            <control type="grouplist" id="1110">
                 <left>50</left>
                 <align>left</align>
                 <onright>9000</onright>
                 <onleft>9000</onleft>
                 <width>1000</width>
-                <control type="button" id="0">
+                <control type="button" id="1111">
                     <enable>false</enable>
                     <include>DialogButt</include>
                     <label>•• $LOCALIZE[33063] ••</label>
                 </control>
-                <control type="button" id="1" description="search">
+                <control type="button" id="1112" description="search">
                     <visible>System.HasAddon(script.globalsearch)</visible>
                     <include>DialogButt</include>
                     <label>137</label>
                     <onclick>RunAddon(script.globalsearch)</onclick>
                     <onclick>right</onclick>
                 </control>
-                <control type="button" id="2" description="PartyMode">
+                <control type="button" id="1113" description="PartyMode">
                     <include>DialogButt</include>
                     <label>$LOCALIZE[589] Music</label>
                     <onclick>PlayerControl(Partymode(music))</onclick>
                     <onclick>right</onclick>
                 </control>
-                <control type="button" id="3" description="PartyMode">
+                <control type="button" id="1114" description="PartyMode">
                     <include>DialogButt</include>
                     <label>$LOCALIZE[589] MusicVideo</label>
                     <onclick>PlayerControl(Partymode(video))</onclick>
                     <onclick>right</onclick>
                 </control>
-                <control type="togglebutton" id="4">
+                <control type="togglebutton" id="1115">
                     <description>Update library</description>
                     <include>DialogButt</include>
                     <label>653</label>

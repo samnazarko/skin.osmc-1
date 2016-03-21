@@ -23,7 +23,6 @@
                     <align>left</align>
                     <font>font45</font>
                     <label>13008</label>
-                    <onclick>quit</onclick>
                 </control>
                 <control type="button" id="1">
                     <align>left</align>
@@ -32,28 +31,28 @@
                     <onclick>quit</onclick>
                 </control>
                 <control type="button" id="2">
-                    <enable>System.CanHibernate</enable>
+                    <visible>System.CanHibernate</visible>
                     <align>left</align>
                     <font>font45</font>
                     <label>13010</label>
                     <onclick>Hibernate</onclick>
                 </control>
                 <control type="button" id="3">
-                    <enable>System.CanSuspend</enable>
+                    <visible>System.CanSuspend</visible>
                     <align>left</align>
                     <font>font45</font>
                     <label>13011</label>
                     <onclick>Suspend</onclick>
                 </control>
                 <control type="button" id="4">
-                    <enable>System.CanReboot</enable>
+                    <visible>System.CanReboot</visible>
                     <align>left</align>
                     <font>font45</font>
                     <label>13013</label>
                     <onclick>Reboot</onclick>
                 </control>
                 <control type="button" id="5">
-                    <enable>System.CanPowerDown</enable>
+                    <visible>System.CanPowerDown</visible>
                     <align>left</align>
                     <font>font45</font>
                     <label>13005</label>

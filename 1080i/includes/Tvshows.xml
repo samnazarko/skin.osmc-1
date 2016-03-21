@@ -85,10 +85,10 @@
                 <control type="image">
                     <left>910</left>
                     <top>300</top>
-                    <height>30</height>
-                    <width>120</width>
+                    <height>24</height>
+                    <width>300</width>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.StarRating,stars/]</texture>
+                    <texture>$INFO[Container(51).ListItem.Rating,stars/,.png]</texture>
                 </control>
                 <control type="textbox">
                     <left>910</left>
@@ -125,10 +125,10 @@
                 <control type="image">
                     <left>50</left>
                     <top>240</top>
-                    <height>30</height>
+                    <height>24</height>
                     <width>300</width>
                     <aspectratio align="left">keep</aspectratio>
-                    <texture>$INFO[Container(51).ListItem.StarRating,stars/]</texture>
+                    <texture>$INFO[Container(51).ListItem.Rating,stars/,.png]</texture>
                 </control>
                 <control type="panel" id="511">
                     <top>280</top>
@@ -201,10 +201,10 @@
                     <control type="image">
                         <left>890</left>
                         <top>270</top>
-                        <height>30</height>
-                        <width>120</width>
+                        <height>24</height>
+                        <width>300</width>
                         <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(511).ListItem.StarRating,stars/]</texture>
+                        <texture>$INFO[Container(511).ListItem.Rating,stars/,.png]</texture>
                     </control>
                     <control type="textbox">
                         <left>890</left>
