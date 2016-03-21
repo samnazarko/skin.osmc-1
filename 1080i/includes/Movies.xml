@@ -58,7 +58,7 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <texture>darken.png</texture>
             </control>
-            <control type="group" id="222">
+            <control type="group" id="221">
                 <left>350</left>
                 <animation condition="Control.HasFocus(501) | Control.HasFocus(502)" effect="slide" time="200" start="0,0" end="-150,0">Conditional</animation>
                 <control type="image">
