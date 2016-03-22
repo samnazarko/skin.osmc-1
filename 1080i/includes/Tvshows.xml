@@ -29,7 +29,7 @@
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
-                    <label>recent</label>
+                    <label>all</label>
                     <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
                     <onclick>-</onclick>
                 </control>
