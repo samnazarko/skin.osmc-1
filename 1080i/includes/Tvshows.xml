@@ -23,19 +23,19 @@
                 <ondown>noop</ondown>
                 <control type="button" id="111">
                     <font>font45</font>
-                    <label>inprogress</label>
+                    <label>575</label>
                     <onfocus>Skin.SetString(tvhome,videodb://inprogresstvshows/)</onfocus>
                     <onclick>-</onclick>
                 </control>
                 <control type="button" id="112">
                     <font>font45</font>
-                    <label>all</label>
+                    <label>14022</label>
                     <onfocus>Skin.SetString(tvhome,videodb://tvshows/titles/)</onfocus>
                     <onclick>-</onclick>
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
-                    <label>random</label>
+                    <label>590</label>
                     <onfocus>Skin.SetString(tvhome,special://skin/plists/tvshowsrandom.xsp)</onfocus>
                     <onclick>-</onclick>
                 </control>

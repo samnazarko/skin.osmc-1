@@ -52,7 +52,7 @@
                 <font>font45</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <label>31059</label>
+                <label>19020</label>
                 <onfocus>ReplaceWindow(PVRSettings)</onfocus>
                 <onclick>activatewindow(PVRSettings)</onclick>
             </control>

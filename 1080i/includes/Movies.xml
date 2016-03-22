@@ -23,7 +23,7 @@
                 <ondown>noop</ondown>
                 <control type="button" id="111">
                     <font>font45</font>
-                    <label>inprogress</label>
+                    <label>575</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/plists/inprogressmovies.xsp)</onfocus>
                     <onclick>Playmedia(special://skin/plists/inprogressmovies.xsp)</onclick>
                 </control>
@@ -35,7 +35,13 @@
                 </control>
                 <control type="button" id="113">
                     <font>font45</font>
-                    <label>random</label>
+                    <label>590</label>
+                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
+                    <onclick>Playmedia(special://skin/plists/moviesrandom.xsp)</onclick>
+                </control>
+                <control type="button" id="113">
+                    <font>font45</font>
+                    <label>590</label>
                     <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
                     <onclick>Playmedia(special://skin/plists/moviesrandom.xsp)</onclick>
                 </control>
