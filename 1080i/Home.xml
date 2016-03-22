@@ -26,6 +26,7 @@
                 <texture flipy="true">arrow.png</texture>
             </control>
             <control type="grouplist" id="9000">
+                <top>150</top>
                 <width>450</width>
                 <height>1080</height>
                 <scrolltime>600</scrolltime>
@@ -37,8 +38,7 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="button" id="9001">
                     <!--MOVIES-->
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
@@ -47,8 +47,7 @@
                 </control>
                 <control type="button" id="9002">
                     <!--TVSHOWS-->
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
@@ -57,8 +56,7 @@
                 </control>
                 <control type="button" id="9004">
                     <!--MUSIC-->
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
@@ -68,8 +66,7 @@
                 </control>
                 <control type="button" id="9003">
                     <!--ADDONS-->
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
@@ -78,8 +75,7 @@
                 </control>
                 <control type="button" id="9015">
                     <!--SETTINGS-->
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
@@ -88,8 +84,7 @@
                     <onclick>ActivateWindow(Settings)</onclick>
                 </control>
                 <control type="button" id="9016">
-                    <top>210</top>
-                    <height>870</height>
+                    <height>150</height>
                     <width>400</width>
                     <font>font_MainMenu</font>
                     <aligny>top</aligny>
