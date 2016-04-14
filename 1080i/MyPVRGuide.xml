@@ -83,7 +83,7 @@
             <control type="group">
                 <description>TV Guide Timeline</description>
                 <visible>Control.IsVisible(10)</visible>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <control type="image">
                     <top>479</top>
                     <width>1920</width>
@@ -350,7 +350,7 @@
             <!--<control type="group">-->
             <!--<description>TV Guide Channel</description>-->
             <!--<visible>Control.IsVisible(13)</visible>-->
-            <!--<include>VisibleFade</include>-->
+            <!--<include>visiblefade</include>-->
             <!--<control type="group">-->
             <!--<left>80</left>-->
             <!--<top>520</top>-->
@@ -596,7 +596,7 @@
 
             <control type="group" description="NOW">
                 <visible>Control.IsVisible(11)</visible>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <include>left_Panel_livetv</include>
                 <control type="group">
                     <left>1020</left>
@@ -695,7 +695,7 @@
             </control>
             <control type="group" description="NEXT">
                 <visible>Control.IsVisible(12)</visible>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <include>left_Panel_livetv</include>
                 <control type="group">
                     <left>1020</left>

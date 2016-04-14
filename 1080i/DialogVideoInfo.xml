@@ -130,7 +130,7 @@
             </control>
             <control type="group" description="List Info">
                 <!--visible>![container.content(tvshows) | container.content(episodes) | SubString(Container.FolderPath,videodb://musicvideos/,left) | Control.HasFocus(10)]</visible-->
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <control type="list">
                     <right>60</right>
                     <top>700</top>

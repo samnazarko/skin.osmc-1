@@ -45,7 +45,7 @@
             <include>openclose</include>
             <control type="group">
                 <description>TV Channels group</description>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <control type="grouplist">
                     <top>600</top>
                     <left>120</left>

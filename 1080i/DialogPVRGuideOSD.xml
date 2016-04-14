@@ -11,7 +11,7 @@
         </control>
         <control type="group">
             <description>TV Guide Channel</description>
-            <include>VisibleFade</include>
+            <include>visiblefade</include>
             <control type="group">
                 <left>80</left>
                 <top>340</top>

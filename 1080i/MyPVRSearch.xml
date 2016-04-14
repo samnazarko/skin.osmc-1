@@ -48,7 +48,7 @@
             <control type="group">
                 <description>TV Search group</description>
                 <visible>Control.IsVisible(17)</visible>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <include>left_Panel_livetv</include>
                 <control type="group">
                     <left>1020</left>

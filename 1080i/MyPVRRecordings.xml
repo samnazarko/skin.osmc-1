@@ -44,7 +44,7 @@
         <control type="group" id="50">
             <include>openclose</include>
             <control type="group">
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <visible>Control.IsVisible(13)</visible>
                 <include>left_Panel_livetv</include>
                 <control type="group">

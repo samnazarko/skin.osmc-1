@@ -20,7 +20,7 @@
             <control type="group">
                 <description>Timers group</description>
                 <visible>Control.IsVisible(14)</visible>
-                <include>VisibleFade</include>
+                <include>visiblefade</include>
                 <control type="group">
                     <left>80</left>
                     <top>80</top>
