@@ -44,6 +44,7 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>20342</label>
+                    <onclick>ActivateWindow(Videos,MovieTitles)</onclick>
                 </control>
                 <control type="button" id="9002">
                     <!--TVSHOWS-->

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="132">
+    <defaultcontrol always="true">5</defaultcontrol>
+    <backgroundcolor>background</backgroundcolor>
+    <include>DialogOpenCloseVisible</include>
+    <controls>
+        <control type="image">
+            <centerleft>960</centerleft>
+            <centertop>540</centertop>
+            <width>1520</width>
+            <height>1000</height>
+            <texture>mainbackground.png</texture>
+        </control>
+        <control type="label" id="2">
+            <centerleft>960</centerleft>
+            <top>30</top>
+            <align>center</align>
+            <font>font40</font>
+            <width>500</width>
+        </control>
+        <control type="grouplist" id="5">
+            <description>control area</description>
+            <centerleft>960</centerleft>
+            <top>100</top>
+            <width>1160</width>
+            <height>750</height>
+            <onleft>noop</onleft>
+            <onright>noop</onright>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+        </control>
+        <control type="button" id="7">
+            <description>Default Button</description>
+        </control>
+        <control type="radiobutton" id="8">
+            <description>Default RadioButton</description>
+        </control>
+        <control type="spincontrolex" id="9">
+            <description>Default SpinControlex</description>
+        </control>
+        <control type="image" id="11">
+            <description>separator image</description>
+            <height>1</height>
+            <texture>white.png</texture>
+        </control>
+        <control type="edit" id="12">
+        </control>
+        <control type="sliderex" id="13">
+            <description>Default Slider</description>
+        </control>
+        <control type="label" id="14">
+            <align>center</align>
+            <height>40</height>
+            <description>Default Label</description>
+        </control>
+        <control type="grouplist" id="9000">
+            <centerleft>960</centerleft>
+            <top>900</top>
+            <orientation>horizontal</orientation>
+            <width>1200</width>
+            <height>250</height>
+            <itemgap>0</itemgap>
+            <align>center</align>
+            <onup>5</onup>
+            <control type="button" id="28">
+                <align>center</align>
+                <width>400</width>
+            </control>
+            <control type="button" id="29">
+                <align>center</align>
+                <width>400</width>
+            </control>
+            <control type="button" id="30">
+                <align>center</align>
+                <width>400</width>
+                <label>fsdw</label>
+            </control>
+        </control>
+    </controls>
+</window>

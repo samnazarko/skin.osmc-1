@@ -94,11 +94,11 @@
         <focusedcolor>main</focusedcolor>
         <selectedcolor>main</selectedcolor>
         <disabledcolor>dimgray</disabledcolor>
-        <radiowidth>46</radiowidth>
-        <radioheight>46</radioheight>
-        <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-        <textureradiofocus aspectratio="keep">images/RadioON.png</textureradiofocus>
-        <textureradionofocus aspectratio="keep">images/RadioOFF.png</textureradionofocus>
+        <radiowidth>75</radiowidth>
+        <radioheight>75</radioheight>
+        <texturefocus>-</texturefocus>
+        <textureradiofocus aspectratio="keep">select.png</textureradiofocus>
+        <textureradionofocus aspectratio="keep">-</textureradionofocus>
         <!--<radioleft>262</radioleft>-->
         <pulseonselect>false</pulseonselect>
     </default>
