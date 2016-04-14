@@ -129,7 +129,7 @@
                         <texture>$INFO[Container(501).ListItem.Art(poster)]</texture>
                     </control>
                     <control type="progress">
-                        <visible>!Stringcompare(Container(501).ListItem.PercentPlayed,0)</visible>
+                        <visible>!String.IsEqual(Container(501).ListItem.PercentPlayed,0)</visible>
                         <top>830</top>
                         <width>400</width>
                         <height>10</height>
@@ -180,7 +180,7 @@
                         <label>[B]$INFO[Container(501).ListItem.Title][/B] $INFO[Container(501).ListItem.Year,(,)]</label>
                     </control>
                     <control type="image">
-                        <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <visible>!String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>440</left>
                         <top>296</top>
                         <height>24</height>
@@ -216,7 +216,7 @@
                         <aspectratio align="right">scale</aspectratio>
                     </control>
                     <control type="panel" id="502">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <visible>String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>400</left>
                         <onup>noop</onup>
                         <onleft>501</onleft>
@@ -249,6 +249,7 @@
                     </control>
                     <control type="image">
                         <visible>Container(502).HasNext</visible>
+                        <visible>String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <include>visiblefade</include>
                         <left>450</left>
                         <top>1000</top>
@@ -258,6 +259,7 @@
                     </control>
                     <control type="image">
                         <visible>Container(502).HasPrevious</visible>
+                        <visible>String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <include>visiblefade</include>
                         <left>450</left>
                         <top>30</top>
@@ -266,7 +268,7 @@
                         <texture flipy="true">arrow.png</texture>
                     </control>
                     <control type="image">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <visible>String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>720</left>
                         <top>220</top>
                         <height>610</height>
@@ -275,7 +277,7 @@
                         <texture>$INFO[Container(502).ListItem.Art(poster)]</texture>
                     </control>
                     <control type="grouplist">
-                        <visible>StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <visible>String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>720</left>
                         <top>820</top>
                         <width>400</width>
@@ -318,9 +320,9 @@
                             <left>440</left>
                             <top>296</top>
                             <height>24</height>
-                        <width>300</width>
-                        <aspectratio align="left">keep</aspectratio>
-                        <texture>$INFO[Container(502).ListItem.Rating,stars/,.png]</texture>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[Container(502).ListItem.Rating,stars/,.png]</texture>
                         </control>
                         <control type="textbox">
                             <left>440</left>

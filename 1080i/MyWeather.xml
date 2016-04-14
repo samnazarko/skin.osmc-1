@@ -235,11 +235,11 @@
                 <!--todo label-->
                 <label> Select Map</label>
                 <align>center</align>
-                <onclick condition="StringCompare(Skin.String(maps),4)">Skin.SetString(maps,)</onclick>
-                <onclick condition="StringCompare(Skin.String(maps),3)">Skin.SetString(maps,4)</onclick>
-                <onclick condition="StringCompare(Skin.String(maps),2)">Skin.SetString(maps,3)</onclick>
-                <onclick condition="StringCompare(Skin.String(maps),1)">Skin.SetString(maps,2)</onclick>
-                <onclick condition="StringCompare(Skin.String(maps),)">Skin.SetString(maps,1)</onclick>
+                <onclick condition="String.IsEqual(Skin.String(maps),4)">Skin.SetString(maps,)</onclick>
+                <onclick condition="String.IsEqual(Skin.String(maps),3)">Skin.SetString(maps,4)</onclick>
+                <onclick condition="String.IsEqual(Skin.String(maps),2)">Skin.SetString(maps,3)</onclick>
+                <onclick condition="String.IsEqual(Skin.String(maps),1)">Skin.SetString(maps,2)</onclick>
+                <onclick condition="String.IsEqual(Skin.String(maps),)">Skin.SetString(maps,1)</onclick>
             </control>
             <control type="button" id="2" description="Refresh">
                 <width>500</width>
@@ -350,7 +350,7 @@
         </control>
         <!--MAPS-->
         <control type="group">
-            <visible>StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+            <visible>String.IsEqual(Weather.plugin,weather.openweathermap.extended)</visible>
             <control type="image">
                 <left>960</left>
                 <centertop>510</centertop>
@@ -394,7 +394,7 @@
             </control>
         </control>
         <control type="label">
-            <visible>!StringCompare(Weather.plugin,weather.openweathermap.extended)</visible>
+            <visible>!String.IsEqual(Weather.plugin,weather.openweathermap.extended)</visible>
             <centerleft>1390</centerleft>
             <centertop>540</centertop>
             <width>660</width>

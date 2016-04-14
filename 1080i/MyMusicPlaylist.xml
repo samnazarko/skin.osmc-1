@@ -53,7 +53,7 @@
                             </control>
                             <control type="image" description="playing">
                                 <visible>Player.HasAudio</visible>
-                                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
+                                <visible>String.IsEqual(ListItem.Title,MusicPlayer.Title)</visible>
                                 <left>65r</left>
                                 <height>60</height>
                                 <width>36</width>
@@ -99,7 +99,7 @@
                             </control>
                             <control type="image" description="playing">
                                 <visible>Player.HasAudio</visible>
-                                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
+                                <visible>String.IsEqual(ListItem.Title,MusicPlayer.Title)</visible>
                                 <left>65r</left>
                                 <height>60</height>
                                 <width>36</width>

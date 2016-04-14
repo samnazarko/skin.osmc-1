@@ -130,6 +130,10 @@
                     <label>$INFO[Container.SortOrder]</label>
                     <usealttexture>Container.SortDirection(Ascending)</usealttexture>
                 </control>
+                <control type="button" id="5">
+                    <include>DialogButt</include>
+                    <label>10004</label>
+                </control>
                 <control type="radiobutton" id="7" description="language filter">
                     <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
                     <include>DialogButt</include>
@@ -145,50 +149,6 @@
                     <include>DialogButt</include>
                     <label>24034</label>
                 </control>
-                <control type="button" id="100">
-                    <enable>false</enable>
-                    <texturenofocus colordiffuse="silver">images/buttonselect1.png</texturenofocus>
-                    <include>DialogButt</include>
-                    <label>•• $LOCALIZE[24069] ••</label>
-                </control>
-                <control type="group" id="105">
-                    <height>100</height>
-                    <control type="button" id="101" description="Updates_fakegroupbutton">
-                        <ondown>6</ondown>
-                        <onup>100</onup>
-                        <height>100</height>
-                        <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                        <include>DialogButt</include>
-                        <label></label>
-                        <onclick>SendClick(,5)</onclick>
-                    </control>
-                    <control type="textbox" description="Updates">
-                        <centerleft>235</centerleft>
-                        <height>100</height>
-                        <width>400</width>
-                        <font>size33</font>
-                        <align>center</align>
-                        <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                        <label>$INFO[Control.GetLabel(5)]</label>
-                    </control>
-                </control>
-                <control type="togglebutton" id="6" description="Notifications">
-                    <!--<height>120</height>-->
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <alttexturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</alttexturefocus>
-                    <aligny>top</aligny>
-                    <include>DialogButt</include>
-                    <label>$LOCALIZE[25000]: $LOCALIZE[106]</label>
-                    <altlabel>$LOCALIZE[25000]: $LOCALIZE[107]</altlabel>
-                </control>
-
-                <control type="button" id="699" description="Playing">
-                    <enable>Player.HasMedia</enable>
-                    <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-                    <include>DialogButt</include>
-                    <label>16003</label>
-                    <onclick>fullscreen</onclick>
-                </control>
             </control>
         </control>
         <control type="label">
@@ -203,11 +163,6 @@
             <align>right</align>
             <aligny>center</aligny>
             <label>$LOCALIZE[31000] ([COLOR=White]$INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR])</label>
-        </control>
-        <control type="button" id="5" description="HIDDEN BUTTON Updates">
-            <texturefocus colordiffuse="$VAR[diffuseselect]">images/buttonselect1.png</texturefocus>
-            <font>-</font>
-            <include>DialogButt</include>
         </control>
     </controls>
 </window>

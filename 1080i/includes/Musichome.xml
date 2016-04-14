@@ -145,7 +145,7 @@
                         <label>[B]$INFO[Container(541).ListItem.Label][/B] $INFO[Container(541).ListItem.Year,(,)]</label>
                     </control>
                     <control type="image">
-                        <visible>!StringCompare(Skin.String(movieshome),videodb://movies/genres/)</visible>
+                        <visible>!String.IsEqual(Skin.String(movieshome),videodb://movies/genres/)</visible>
                         <left>440</left>
                         <top>290</top>
                         <height>24</height>

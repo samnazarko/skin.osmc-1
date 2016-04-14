@@ -39,7 +39,7 @@
                         <control type="group">
                             <animation condition="true" effect="zoom" start="100" end="90" center="120,300" reversible="false">Conditional</animation>
                             <control type="image">
-                                <visible>!StringCompare(ListItem.Label,..)</visible>
+                                <visible>!ListItem.IsParentFolder</visible>
                                 <centerleft>120</centerleft>
                                 <top>5</top>
                                 <width>230</width>
@@ -48,7 +48,7 @@
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                             </control>
                             <control type="image">
-                                <visible>StringCompare(ListItem.Label,..)</visible>
+                                <visible>ListItem.IsParentFolder</visible>
                                 <left>5</left>
                                 <top>5</top>
                                 <width>230</width>
@@ -64,7 +64,7 @@
                             <animation effect="zoom" start="90" end="100" center="120,300" time="400" reversible="false">Focus</animation>
                             <animation effect="zoom" start="100" end="90" center="120,300" time="300" reversible="false">Unfocus</animation>
                             <control type="image">
-                                <visible>!StringCompare(ListItem.Label,..)</visible>
+                                <visible>!ListItem.IsParentFolder</visible>
                                 <centerleft>120</centerleft>
                                 <top>5</top>
                                 <width>230</width>
@@ -73,7 +73,7 @@
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                             </control>
                             <control type="image">
-                                <visible>StringCompare(ListItem.Label,..)</visible>
+                                <visible>ListItem.IsParentFolder</visible>
                                 <left>5</left>
                                 <top>5</top>
                                 <width>230</width>

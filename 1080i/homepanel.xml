@@ -43,8 +43,8 @@
             <thumb>icons/music.png</thumb>
             <label>$VAR[musiclabel]</label>
             <property name="color">orange</property>
-            <onclick condition="StringCompare(Skin.String(MusicLink),Playlist)">PlayerControl(Partymode(music))</onclick>
-            <onclick condition="!StringCompare(Skin.String(MusicLink),Playlist)">ActivateWindow(502,$INFO[Skin.String(MusicLink)],return)</onclick>
+            <onclick condition="String.IsEqual(Skin.String(MusicLink),Playlist)">PlayerControl(Partymode(music))</onclick>
+            <onclick condition="!String.IsEqual(Skin.String(MusicLink),Playlist)">ActivateWindow(502,$INFO[Skin.String(MusicLink)],return)</onclick>
             <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
         </item>
         <!--SHELF POPULATING CUSTOM FAVOURITES-->
@@ -393,11 +393,11 @@
             <thumb>$VAR[quiticon]</thumb>
             <label>$VAR[quitlabel]</label>
             <property name="color">darkblue</property>
-            <onclick condition="StringCompare(Skin.String(shutdown),quit)">XBMC.quit()</onclick>
-            <onclick condition="StringCompare(Skin.String(shutdown),powerdown)">XBMC.powerdown()</onclick>
-            <onclick condition="StringCompare(Skin.String(shutdown),hibernate)">XBMC.hibernate()</onclick>
-            <onclick condition="StringCompare(Skin.String(shutdown),suspend)">XBMC.suspend()</onclick>
-            <onclick condition="StringCompare(Skin.String(shutdown),reboot)">XBMC.reboot()</onclick>
+            <onclick condition="String.IsEqual(Skin.String(shutdown),quit)">XBMC.quit()</onclick>
+            <onclick condition="String.IsEqual(Skin.String(shutdown),powerdown)">XBMC.powerdown()</onclick>
+            <onclick condition="String.IsEqual(Skin.String(shutdown),hibernate)">XBMC.hibernate()</onclick>
+            <onclick condition="String.IsEqual(Skin.String(shutdown),suspend)">XBMC.suspend()</onclick>
+            <onclick condition="String.IsEqual(Skin.String(shutdown),reboot)">XBMC.reboot()</onclick>
             <onclick condition="!Skin.HasSetting(quitter)">ActivateWindow(shutdownmenu)</onclick>
         </item>
         <item id="349">

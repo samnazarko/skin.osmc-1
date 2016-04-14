@@ -91,7 +91,7 @@
             <control type="group" description="EPISODES BADGES">
                 <top>430</top>
                 <left>260</left>
-                <visible>!IsEmpty(ListItem.Property(UnwatchedEpisodes)) + [container.content(TVshows) | container.content(seasons)] + !StringCompare(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                <visible>!IsEmpty(ListItem.Property(UnwatchedEpisodes)) + [container.content(TVshows) | container.content(seasons)] + !String.IsEqual(ListItem.Property(UnwatchedEpisodes),0)</visible>
                 <animation effect="fade" time="160" delay="100">Visible</animation>
                 <animation effect="fade" end="0">Hidden</animation>
                 <control type="image">
@@ -229,22 +229,22 @@
     </include>
 
     <include name="SlimListItemCount">
-        <animation effect="slide" start="0,0" end="0,-405" time="0" condition="StringCompare(Container.NumItems,1)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-324" time="0" condition="StringCompare(Container.NumItems,2)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-324" time="0" condition="StringCompare(Container.NumItems,3)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-243" time="0" condition="StringCompare(Container.NumItems,4)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-243" time="0" condition="StringCompare(Container.NumItems,5)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-162" time="0" condition="StringCompare(Container.NumItems,6)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-162" time="0" condition="StringCompare(Container.NumItems,7)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-81" time="0" condition="StringCompare(Container.NumItems,8)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-81" time="0" condition="StringCompare(Container.NumItems,9)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-405" time="0" condition="String.IsEqual(Container.NumItems,1)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-324" time="0" condition="String.IsEqual(Container.NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-324" time="0" condition="String.IsEqual(Container.NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-243" time="0" condition="String.IsEqual(Container.NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-243" time="0" condition="String.IsEqual(Container.NumItems,5)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-162" time="0" condition="String.IsEqual(Container.NumItems,6)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-162" time="0" condition="String.IsEqual(Container.NumItems,7)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-81" time="0" condition="String.IsEqual(Container.NumItems,8)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-81" time="0" condition="String.IsEqual(Container.NumItems,9)">conditional</animation>
     </include>
     <include name="LargeListItemCount">
-        <animation effect="slide" start="0,0" end="0,-333" time="0" condition="StringCompare(Container.NumItems,1)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="StringCompare(Container.NumItems,2)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="StringCompare(Container.NumItems,3)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="StringCompare(Container.NumItems,4)">conditional</animation>
-        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="StringCompare(Container.NumItems,5)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-333" time="0" condition="String.IsEqual(Container.NumItems,1)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="String.IsEqual(Container.NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="String.IsEqual(Container.NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="String.IsEqual(Container.NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="String.IsEqual(Container.NumItems,5)">conditional</animation>
     </include>
     <include name="SlimListSlider">
         <control type="group" description="Slider">
@@ -280,7 +280,7 @@
             <aspectratio>keep</aspectratio>
         </control>
         <control type="image" description="border">
-            <visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !StringCompare(ListItem.Label,..)</visible>
+            <visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !String.IsEqual(ListItem.Label,..)</visible>
             <centerleft>480</centerleft>
             <centertop>450</centertop>
             <width>600</width>
@@ -288,7 +288,7 @@
             <texture background="true" border="3">$VAR[dvdbox]</texture>
         </control>
         <control type="group">
-            <visible>!StringCompare(ListItem.Label,..)</visible>
+            <visible>!ListItem.IsParentFolder</visible>
             <visible>!IsEmpty(ListItem.Artist)</visible>
             <left>120</left>
             <top>770</top>
@@ -488,7 +488,7 @@
             <texture>badges/3d.png</texture>
         </control>
         <control type="image">
-            <visible>ListItem.IsCollection + !SubString(ListItem.Label,..)</visible>
+            <visible>ListItem.IsCollection + !ListItem.IsParentFolder</visible>
             <top>28</top>
             <left>42r</left>
             <height>50</height>
