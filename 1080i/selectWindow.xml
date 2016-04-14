@@ -4,7 +4,7 @@
     <defaultcontrol always="true">2000</defaultcontrol>
 
     <backgroundcolor>background</backgroundcolor>
-    <include>DialogOpenClose</include>
+    <include>Dialogßopenclose</include>
     <controls>
         <control type="group">
             <control type="image" id="1999" description="Background image">

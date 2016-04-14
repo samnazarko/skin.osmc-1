@@ -3,7 +3,7 @@
     <defaultcontrol always="true">52</defaultcontrol>
 
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <control type="group">
             <top>75</top>

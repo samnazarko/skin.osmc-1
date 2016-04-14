@@ -3,7 +3,7 @@
     <defaultcontrol always="true">2</defaultcontrol>
 
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>BlackBackground</include>
         <include>WindowsTopInfos</include>

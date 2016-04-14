@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="120">
     <defaultcontrol always="true">101</defaultcontrol>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <control type="image">
             <left>160</left>

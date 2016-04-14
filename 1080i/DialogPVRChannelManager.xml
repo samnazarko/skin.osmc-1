@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">20</defaultcontrol>
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>BlackBackground</include>
         <control type="image">

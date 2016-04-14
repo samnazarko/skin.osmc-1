@@ -2,7 +2,7 @@
 <window id="2001">
     <defaultcontrol always="true">300</defaultcontrol>
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>osmc_back</include>
         <include>MusicInfo</include>

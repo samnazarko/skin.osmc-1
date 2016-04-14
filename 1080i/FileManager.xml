@@ -3,7 +3,7 @@
     <defaultcontrol always="true">20</defaultcontrol>
 
     <backgroundcolor>0xffffffff</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <onunload condition="!Skin.HasSetting(FirstRun)">Skin.SetBool(FirstRun)</onunload>
     <controls>
         <include>BlackBackground</include>

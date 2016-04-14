@@ -4,7 +4,7 @@
     <defaultcontrol>10</defaultcontrol>
     <menucontrol>9000</menucontrol>
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>BlackBackground</include>
         <control type="label" id="29">
@@ -79,7 +79,7 @@
             </control>
         </control>
         <control type="group" id="50">
-            <include>OpenClose</include>
+            <include>openclose</include>
             <control type="group">
                 <description>TV Guide Timeline</description>
                 <visible>Control.IsVisible(10)</visible>

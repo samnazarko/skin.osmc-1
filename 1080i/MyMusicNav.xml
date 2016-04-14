@@ -4,7 +4,7 @@
     <menucontrol>9000</menucontrol>
     <backgroundcolor>background</backgroundcolor>
     <views>50</views>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>osmc_back</include>
         <!--views-->

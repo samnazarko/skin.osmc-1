@@ -4,7 +4,7 @@
     <defaultcontrol>14</defaultcontrol>
     <menucontrol>9000</menucontrol>
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>BlackBackground</include>
         <control type="label" id="29">
@@ -16,7 +16,7 @@
             <visible>False</visible>
         </control>
         <control type="group" id="50">
-            <include>OpenClose</include>
+            <include>openclose</include>
             <control type="group">
                 <description>Timers group</description>
                 <visible>Control.IsVisible(14)</visible>

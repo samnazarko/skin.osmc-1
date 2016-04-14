@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="146">
     <defaultcontrol always="true">300</defaultcontrol>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <backgroundcolor>background</backgroundcolor>
     <controls>
         <include>BlackBackground</include>

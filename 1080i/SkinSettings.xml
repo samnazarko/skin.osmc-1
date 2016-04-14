@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">575</defaultcontrol>
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>osmc_back</include>
         <control type="label">

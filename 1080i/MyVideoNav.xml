@@ -14,7 +14,7 @@
    500 Fanart
    501 Widelist
    -->
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <control type="panel" id="50">
             <onup>noop</onup>

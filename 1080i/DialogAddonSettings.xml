@@ -3,7 +3,7 @@
     <defaultcontrol always="true">9</defaultcontrol>
 
     <backgroundcolor>background</backgroundcolor>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <controls>
         <include>BlackBackground</include>
         <control type="image" description="Line top">

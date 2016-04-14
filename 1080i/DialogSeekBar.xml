@@ -2,7 +2,7 @@
 <window type="dialog" id="115">
     <onload>Dialog.Close(142)</onload>
     <defaultcontrol always="true">901</defaultcontrol>
-    <include>OpenClose</include>
+    <include>openclose</include>
     <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
     <visible>Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
     <animation effect="fade" start="0" end="100" time="400">Visible</animation>
