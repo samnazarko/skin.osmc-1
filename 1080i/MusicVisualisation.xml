@@ -187,7 +187,6 @@
         <control type="group" id="0">
             <left>0</left>
             <top>0</top>
-            <visible>Player.ShowCodec</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" description="Info Background">
                 <left>0</left>

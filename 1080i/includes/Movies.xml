@@ -39,12 +39,6 @@
                     <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
                     <onclick>Playmedia(special://skin/plists/moviesrandom.xsp)</onclick>
                 </control>
-                <control type="button" id="113">
-                    <font>font45</font>
-                    <label>590</label>
-                    <onfocus>Skin.SetString(movieshome,special://skin/plists/moviesrandom.xsp)</onfocus>
-                    <onclick>Playmedia(special://skin/plists/moviesrandom.xsp)</onclick>
-                </control>
                 <control type="button" id="114">
                     <font>font45</font>
                     <label>unwatched</label>

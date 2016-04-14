@@ -310,7 +310,6 @@
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <orientation>vertical</orientation>
-                <include>VisibleFadeEffect</include>
                 <control type="group">
                     <description>WindowsTopInfos</description>
                     <width>500</width>
