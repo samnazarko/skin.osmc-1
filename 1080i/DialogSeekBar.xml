@@ -137,80 +137,80 @@
                 <control type="image" description="Buffer icon">
                     <visible>Player.Caching</visible>
                     <left>0</left>
-                    <include>OSDbarIcons</include>
+                    
                     <texture border="2">busy/Busy.png</texture>
                     <animation effect="rotate" start="360" end="0" center="auto" time="1200" loop="true" pulse="true" condition="true">conditional</animation>
                 </control>
                 <control type="image" description="Pause">
                     <visible>Player.Paused + !Player.Caching</visible>
                     <left>10</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPauseNf.png</texture>
                 </control>
                 <control type="image" description="Play">
                     <visible>player.playing</visible>
                     <left>10</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="FF">
                     <left>-10</left>
                     <visible>player.forwarding2x | player.forwarding4x | player.forwarding8x | player.forwarding16x | player.forwarding32x</visible>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="FFFF">
                     <visible>player.forwarding4x | player.forwarding8x | player.forwarding16x | player.forwarding32x</visible>
                     <left>0</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="2FFFF">
                     <visible>player.forwarding8x | player.forwarding16x | player.forwarding32x</visible>
                     <left>10</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="4FFFF">
                     <visible>player.forwarding16x | player.forwarding32x</visible>
                     <left>20</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="8FFFF">
                     <visible>player.forwarding32x</visible>
                     <left>30</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="RF">
                     <left>-10</left>
                     <visible>player.rewinding2x | player.rewinding4x | player.rewinding8x | player.rewinding16x | player.rewinding32x</visible>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2" flipx="true">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="RFFF">
                     <visible>player.rewinding4x | player.rewinding8x | player.rewinding16x | player.rewinding32x</visible>
                     <left>0</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2" flipx="true">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="2RFFF">
                     <visible>player.rewinding8x | player.rewinding16x | player.rewinding32x</visible>
                     <left>10</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2" flipx="true">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="4RFFF">
                     <visible>player.rewinding16x | player.rewinding32x</visible>
                     <left>20</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2" flipx="true">Seekbar/OSDPlayNF.png</texture>
                 </control>
                 <control type="image" description="8RFFF">
                     <visible>player.rewinding32x</visible>
                     <left>30</left>
-                    <include>OSDbarIcons</include>
+
                     <texture border="2" flipx="true">Seekbar/OSDPlayNF.png</texture>
                 </control>
             </control>
