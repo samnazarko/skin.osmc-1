@@ -137,7 +137,7 @@
                 <control type="image" description="Buffer icon">
                     <visible>Player.Caching</visible>
                     <left>0</left>
-                    
+
                     <texture border="2">busy/Busy.png</texture>
                     <animation effect="rotate" start="360" end="0" center="auto" time="1200" loop="true" pulse="true" condition="true">conditional</animation>
                 </control>
