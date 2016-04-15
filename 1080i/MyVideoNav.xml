@@ -15,53 +15,44 @@
             <visible>Control.IsVisible(50)</visible>
             <control type="list" id="50">
                 <left>50</left>
-                <centertop>540</centertop>
+                <centertop>560</centertop>
                 <width>500</width>
-                <height>880</height>
+                <height>800</height>
                 <onleft>9000</onleft>
                 <onright>60</onright>
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <viewtype label="535">list</viewtype>
                 <pagecontrol>60</pagecontrol>
-                <scrolltime tween="sine" easing="inout">300</scrolltime>
-                <itemlayout height="110" width="500">
-                    <control type="textbox">
+                <scrolltime>300</scrolltime>
+                <itemlayout height="80" width="500">
+                    <control type="label">
                         <left>40</left>
                         <width>450</width>
-                        <height>110</height>
+                        <height>100</height>
                         <textcolor>black</textcolor>
                         <font>font40</font>
-                        <align>left</align>
-                        <aligny>top</aligny>
+                        <align>right</align>
+                        <aligny>center</aligny>
                         <info>ListItem.Label</info>
-                    </control>
-                    <control type="image" description="WatchStatus">
-                        <visible>Integer.IsEqual(ListItem.PlayCount,0)</visible>
-                        <top>5</top>
-                        <height>100</height>
-                        <width>20</width>
-                        <texture>white.png</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout height="110" width="500">
-                    <control type="textbox">
+                <focusedlayout height="80" width="500">
+                    <control type="label">
                         <left>40</left>
                         <width>450</width>
-                        <height>110</height>
+                        <height>100</height>
                         <font>font40</font>
-                        <align>left</align>
-                        <aligny>top</aligny>
+                        <align>right</align>
+                        <aligny>center</aligny>
                         <info>ListItem.Label</info>
                     </control>
-                    <control type="image" description="WatchStatus">
-                        <visible>Integer.IsEqual(ListItem.PlayCount,0)</visible>
-                        <top>5</top>
-                        <height>100</height>
-                        <width>20</width>
-                        <texture>white.png</texture>
-                    </control>
                 </focusedlayout>
+            </control>
+            <control type="image">
+                <width>1920</width>
+                <height>200</height>
+                <texture>topfade.png</texture>
             </control>
             <control type="image">
                 <visible>Container(50).HasNext</visible>
@@ -84,7 +75,7 @@
             <control type="image">
                 <visible>!ListItem.IsParentFolder</visible>
                 <animation effect="slide" start="1420" end="0" time="200">VisibleChange</animation>
-                <left>550</left>
+                <left>600</left>
                 <width>1420</width>
                 <height>1080</height>
                 <aspectratio align="right">scale</aspectratio>
@@ -170,6 +161,12 @@
             </control>
         </control>
         <!--VIEWSEND-->
+        <control type="image">
+            <visible>ControlGroup(9000).HasFocus</visible>
+            <width>1920</width>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <texture>darken.png</texture>
+        </control>
         <control type="group" description="Side menu 9000 group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() + !Window.IsVisible(traktContextMenu.xml)</visible>
             <animation effect="slide" start="-470,0" end="0,0" time="300">VisibleChange</animation>

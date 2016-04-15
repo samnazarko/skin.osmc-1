@@ -165,7 +165,7 @@
                 </control>
                 <control type="image">
                     <visible>Control.HasFocus(542)</visible>
-                    <left>-200</left>
+                    <left>-250</left>
                     <width>1600</width>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <texture>darken.png</texture>

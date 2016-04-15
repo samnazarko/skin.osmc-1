@@ -66,40 +66,58 @@
             <width>50</width>
             <texture flipy="true">arrow.png</texture>
         </control>
-         <control type="group">
-             <left>400</left>
-                    <control type="image">
-                        <left>450</left>
-                        <top>180</top>
-                        <height>400</height>
-                        <width>400</width>
-                        <aspectratio align="top">keep</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                    </control>
-                    <control type="textbox">
-                        <left>890</left>
-                        <top>220</top>
-                        <height>160</height>
-                        <width>350</width>
-                        <textcolor>main</textcolor>
-                        <label>[B]$INFO[ListItem.Label] $INFO[ListItem.AddonVersion][CR][/B]$INFO[Container(531).ListItem.Addon.Creator,by ]</label>
-                    </control>
-                    <control type="textbox">
-                        <left>890</left>
-                        <top>400</top>
-                        <height>200</height>
-                        <width>350</width>
-                        <label>[COLOR red]$INFO[ListItem.AddonDisclaimer][/COLOR]</label>
-                    </control>
-                    <control type="textbox">
-                        <left>450</left>
-                        <top>600</top>
-                        <height>310</height>
-                        <width>700</width>
-                        <textcolor>black</textcolor>
-                        <label>$INFO[ListItem.AddonDescription]</label>
-                    </control>
-                </control>
+        <control type="image">
+            <visible>!ListItem.IsParentFolder</visible>
+            <animation effect="slide" start="1420" end="0" time="200">VisibleChange</animation>
+            <left>600</left>
+            <width>1420</width>
+            <height>1080</height>
+            <aspectratio align="right">scale</aspectratio>
+            <texture flipx="true">mainbackground.png</texture>
+        </control>
+        <control type="group">
+            <visible>!ListItem.IsParentFolder</visible>
+            <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="80">Visible</animation>
+            <left>400</left>
+            <control type="image">
+                <left>450</left>
+                <top>180</top>
+                <height>400</height>
+                <width>400</width>
+                <aspectratio align="top">keep</aspectratio>
+                <texture>$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="textbox">
+                <left>890</left>
+                <top>220</top>
+                <height>160</height>
+                <width>350</width>
+                <textcolor>main</textcolor>
+                <label>[B]$INFO[ListItem.Label] $INFO[ListItem.AddonVersion][CR][/B]$INFO[Container(531).ListItem.Addon.Creator,by ]</label>
+            </control>
+            <control type="textbox">
+                <left>890</left>
+                <top>400</top>
+                <height>200</height>
+                <width>350</width>
+                <label>[COLOR red]$INFO[ListItem.AddonDisclaimer][/COLOR]</label>
+            </control>
+            <control type="textbox">
+                <left>450</left>
+                <top>600</top>
+                <height>310</height>
+                <width>700</width>
+                <textcolor>black</textcolor>
+                <label>$INFO[ListItem.AddonDescription]</label>
+            </control>
+        </control>
+        <control type="image">
+            <visible>ControlGroup(9000).HasFocus</visible>
+            <width>1920</width>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <texture>darken.png</texture>
+        </control>
         <control type="group" description="Side menu 9000 group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() + !Window.IsVisible(traktContextMenu.xml)</visible>
             <animation effect="slide" start="-470,0" end="0,0" time="300">VisibleChange</animation>
