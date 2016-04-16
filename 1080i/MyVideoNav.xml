@@ -4,10 +4,6 @@
     <menucontrol>9000</menucontrol>
     <backgroundcolor>white</backgroundcolor>
     <views>50</views>
-    <!--
-   50 Icons
-
-   -->
     <include>openclose</include>
     <controls>
         <include>osmc_back</include>
@@ -17,7 +13,7 @@
                 <left>50</left>
                 <centertop>560</centertop>
                 <width>500</width>
-                <height>800</height>
+                <height>820</height>
                 <onleft>9000</onleft>
                 <onright>60</onright>
                 <onup>noop</onup>
@@ -49,11 +45,7 @@
                     </control>
                 </focusedlayout>
             </control>
-            <control type="image">
-                <width>1920</width>
-                <height>200</height>
-                <texture>topfade.png</texture>
-            </control>
+            <include>fader</include>
             <control type="image">
                 <visible>Container(50).HasNext</visible>
                 <include>visiblefade</include>

@@ -59,4 +59,14 @@
         <font>font30</font>
         <align>right</align>
     </include>
+
+    <include name="fader">
+        <control type="image">
+            <animation effect="fade" end="0">WindowClose</animation>
+            <animation effect="fade" end="100" delay="300">WindowOpen</animation>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>topfade.png</texture>
+        </control>
+    </include>
 </includes>
