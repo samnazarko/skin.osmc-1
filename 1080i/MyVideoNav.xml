@@ -82,7 +82,7 @@
                     <width>600</width>
                     <height>600</height>
                     <aspectratio align="center">keep</aspectratio>
-                    <texture>$INFO[Listitem.Icon]</texture>
+                    <texture>$INFO[Listitem.Art(poster)]</texture>
                 </control>
                 <control type="progress">
                     <centerleft>900</centerleft>

@@ -38,6 +38,7 @@
                     <aligny>top</aligny>
                     <align>right</align>
                     <label>20343</label>
+                    <onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
                 </control>
                 <control type="button" id="9004">
                     <!--MUSIC-->
