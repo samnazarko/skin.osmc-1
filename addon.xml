@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.osmc" version="0.0.1" name="OSMC" provider-name="FastColors">
     <requires>
-        <import addon="xbmc.gui" version="5.11.0"/>
+        <import addon="xbmc.gui" version="5.12.0"/>
     </requires>
     <extension
             point="xbmc.gui.skin"
